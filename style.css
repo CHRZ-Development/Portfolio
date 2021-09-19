@@ -34,7 +34,8 @@ image {
 }
 .topBanner {
     width: 100%;
+    image-rendering: pixelated;
 }
 .icoWebSite {
-    width: 10%;
+    width: 5%;
 }
