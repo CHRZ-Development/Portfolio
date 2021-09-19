@@ -1,0 +1,40 @@
+.titleBanner {
+    font-family: "Impact", sans-serif;
+}
+
+.topWebsite {
+    background-color: darkgray;
+}
+.iconBanner {
+    background-color: darkgray;
+    padding: 0.5em 1.5em;
+}
+
+.mainNav {
+    background: darkgray;
+    text-align: center;
+}
+
+.navButton {
+    /* Color management */
+    background-color: #3A3B3C;
+    box-shadow: 2px 2px 0 #242526;
+    color: white;
+    /* Size button */
+    padding: 0.5em 1.5em;
+    /* Position button */
+    position: relative;
+    display: inline-block;
+
+    font-family: "Impact", sans-serif; /* font custom */
+}
+
+image {
+    image-rendering: optimizeQuality;
+}
+.topBanner {
+    width: 100%;
+}
+.icoWebSite {
+    width: 10%;
+}
