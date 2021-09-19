@@ -8,7 +8,6 @@
         <!-- load CSS -->
         <link rel="stylesheet"
               href="style.css">
-        <script type="text/javascript" src="scripts.js"></script>
     </head>
 
     <body>
@@ -17,7 +16,8 @@
             <div class="iconBanner">
                 <img class="icoWebSite"
                      src="https://eapi.pcloud.com/getpubthumb?code=XZfydVZKGR9ojqsd2YEL8ow5bm8xzf3GGkk&linkpassword=undefined&size=512x512&crop=0&type=auto"
-                     alt="Icon de la page">
+                     alt="Icon de la page"
+                     onclick="redirectionPage('acceuil')">
                 <span class="titleBanner">CHRZ Development</span>
             </div>
         </header>
@@ -33,16 +33,14 @@
 
                 <!-- Navigation Bar -->
                 <nav class="mainNav">
-                    <button class="navButton"
-                            onclick="homeButton()"> Acceuil.</button>
-                    <button class="navButton"
-                            onclick="window.location.href = 'projets';"> Projets.</button>
-                    <button class="navButton"
-                            onclick="window.location.href = 'contact';"> Contact.</button>
+                    <button class="navButton" onclick="redirectionPage('acceuil')">Acceuil</button>
+                    <button class="navButton" onclick="redirectionPage('projets')">Projets</button>
+                    <button class="navButton" onclick="redirectionPage('contact')">Contact</button>
                 </nav>
             </div>
 
         </main>
+        <script type="text/javascript" src="scripts.js"></script>
     </body>
 
     <footer>
