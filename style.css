@@ -1,22 +1,36 @@
+@font-face {
+    font-family: GeoSansLight;
+    src: url("GeosansLight.ttf");
+}
+
+html {
+    background-color: #181818;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
 .topWebsite {
-    background-color: darkgray;
+    background-color: #181818;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 150px;
+    image-rendering: high-quality
 }
 
 .mainNav {
-    background: darkgray;
+    background-color: #181818;
     text-align: center;
 }
 
 .navButton {
     /* Color management */
-    background-color: #3A3B3C;
-    border-color: #3A3B3C;
-    box-shadow: 2px 1px 0 #242526;
+    background-color: #212121;
+    border-color: #3d3d3d;
+    box-shadow: 4px 3px 0 #101010;
     color: white;
     /* Size button */
     height: 55%;
@@ -27,17 +41,8 @@ body {
     position: center;
     display: inline-block;
 
-    font-family: "Impact", sans-serif; /* font custom */
+    font-size: 118%;
+    font-weight: bold;
+    font-family: GeoSansLight, sans-serif; /* font custom */
 }
 
-.topBanner {
-    width: 100%;
-    min-width: 150px;
-    image-rendering: high-quality;
-}
-.icoWebSite {
-    width: 4%;
-    min-width: 38px;
-    image-rendering: high-quality;
-    transform: rotate(35deg);
-}
