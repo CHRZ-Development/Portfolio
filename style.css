@@ -1,13 +1,10 @@
-.titleBanner {
-    font-family: "Impact", sans-serif;
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .topWebsite {
     background-color: darkgray;
-}
-.iconBanner {
-    background-color: darkgray;
-    padding: 0.5em 1.5em;
 }
 
 .mainNav {
@@ -18,24 +15,29 @@
 .navButton {
     /* Color management */
     background-color: #3A3B3C;
-    box-shadow: 2px 2px 0 #242526;
+    border-color: #3A3B3C;
+    box-shadow: 2px 1px 0 #242526;
     color: white;
     /* Size button */
-    padding: 0.5em 1.5em;
+    height: 55%;
+    width: 20%;
+    min-width: 100px;
+    min-height: 35px;
     /* Position button */
-    position: relative;
+    position: center;
     display: inline-block;
 
     font-family: "Impact", sans-serif; /* font custom */
 }
 
-image {
-    image-rendering: optimizeQuality;
-}
 .topBanner {
     width: 100%;
-    image-rendering: pixelated;
+    min-width: 150px;
+    image-rendering: high-quality;
 }
 .icoWebSite {
-    width: 5%;
+    width: 4%;
+    min-width: 38px;
+    image-rendering: high-quality;
+    transform: rotate(35deg);
 }

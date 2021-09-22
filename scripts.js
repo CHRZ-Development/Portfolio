@@ -1,6 +1,12 @@
+/* Event button */
+document.getElementById("homeButton").addEventListener("click", ev => {
+    window.location.href = "acceuil";
+})
 
-/**
- * It allow to change the current page displayed on the screen.
- * @param page specify the next page.
- */
-function redirectionPage(page) { window.location.href = page; }
+document.getElementById("projectButton").addEventListener("click", ev => {
+    window.location.href = "projets";
+})
+
+document.getElementById("contactButton").addEventListener("click", ev => {
+    window.location.href = "contact";
+})
