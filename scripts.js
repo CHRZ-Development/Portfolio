@@ -10,3 +10,7 @@ document.getElementById("projectButton").addEventListener("click", ev => {
 document.getElementById("contactButton").addEventListener("click", ev => {
     window.location.href = "contact";
 })
+
+document.getElementById("menuIcon").addEventListener("click", ev => {
+
+})

@@ -4,6 +4,8 @@
 }
 
 html {
+    font-family: GeoSansLight, "sans-serif";
+    color: white;
     background-color: #181818;
 }
 
@@ -12,18 +14,48 @@ body {
     padding: 0;
 }
 
-.topWebsite {
-    background-color: #181818;
+#navigationBar {
+    background-color: #3d3d3d;
+}
+
+#youtubePanel {
+    background-color: #3d3d3d;
+    padding: 0 5%;
+    margin: 5% 10%;
+    border: #181818;
+    border-radius: 10px;
+}
+
+#menuIcon {
+    width: 4%;
+    margin: 0 1%;
+}
+
+#figureBannerWebSite {
+    /* position */
+    margin: 0;
+    padding: 0;
+    /* color */
+    background-color: #3d3d3d;
+    /* border */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#bannerWebSite {
+    background-color: #3d3d3d;
     margin: 0;
     padding: 0;
     width: 100%;
     min-width: 150px;
-    image-rendering: high-quality
+    image-rendering: high-quality;
+    border-radius: 15px
 }
 
 .mainNav {
     background-color: #181818;
     text-align: center;
+    padding-top: 0.2%;
 }
 
 .navButton {
@@ -37,12 +69,15 @@ body {
     width: 20%;
     min-width: 100px;
     min-height: 35px;
+    /* Size font */
+    font-size: 118%;
+    font-weight: bold;
+    /* Size border */
+    border-radius: 6px;
     /* Position button */
     position: center;
     display: inline-block;
-
-    font-size: 118%;
-    font-weight: bold;
+    /* Font */
     font-family: GeoSansLight, sans-serif; /* font custom */
 }
 
