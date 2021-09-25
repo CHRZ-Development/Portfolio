@@ -1,51 +1,57 @@
-@font-face {
+/**=- Fonts -=**/
+@font-face
+{
     font-family: GeoSansLight;
     src: url("GeosansLight.ttf");
 }
 
-html {
-    font-family: GeoSansLight, "sans-serif";
+/**=- General settings -=**/
+html
+{
+    /* Color management */
     color: white;
     background-color: #181818;
+    /* font */
+    font-family: GeoSansLight, "sans-serif";
 }
-
-body {
+body
+{
+    /* position */
     margin: 0;
     padding: 0;
 }
+h1
+{
+    font-weight: bold;
+}
+pre
+{
+    font-family: GeoSansLight, sans-serif;
+}
 
-#navigationBar {
+/**=- per ID -=**/
+#navigationBar
+{
     background-color: #3d3d3d;
 }
-
-#youtubePanel {
-    /* Color management */
-    background-color: #3d3d3d;*
-    box-shadow: 4px 3px 0 #101010;
-    border: #181818;
-    /*- position */
-    padding: 0 5%;
-    margin: 5% 10%;
-    border-radius: 10px;
-}
-
-#menuIcon {
+#menuIcon
+{
     width: 4%;
     margin: 0 1%;
 }
-
-#figureBannerWebSite {
+#figureBannerWebSite
+{
     /* position */
     margin: 0;
     padding: 0;
     /* color */
     background-color: #3d3d3d;
     /* border */
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
 }
-
-#bannerWebSite {
+#bannerWebSite
+{
     background-color: #3d3d3d;
     margin: 0;
     padding: 0;
@@ -54,14 +60,29 @@ body {
     image-rendering: high-quality;
     border-radius: 15px
 }
-
-.mainNav {
-    background-color: #181818;
-    text-align: center;
-    padding-top: 0.2%;
+#illustrationYoutube
+{
+    width: 100%;
+    border-radius: 7px;
 }
 
-.navButton {
+/* per CLASS */
+.panel {
+    /* Color management */
+    background-color: #3d3d3d;*
+box-shadow: 4px 3px 0 #101010;
+    border: #181818;
+    /*- position */
+    padding: 0.1% 5%;
+    margin: 5% 10%;
+    border-radius: 10px;
+}
+.mainNav
+{
+    text-align: center;
+}
+.navButton
+{
     /* Color management */
     background-color: #212121;
     border-color: #3d3d3d;
@@ -75,6 +96,7 @@ body {
     /* Size font */
     font-size: 118%;
     font-weight: bold;
+    text-decoration: underline;
     /* Size border */
     border-radius: 6px;
     /* Position button */
