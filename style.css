@@ -19,10 +19,13 @@ body {
 }
 
 #youtubePanel {
-    background-color: #3d3d3d;
+    /* Color management */
+    background-color: #3d3d3d;*
+    box-shadow: 4px 3px 0 #101010;
+    border: #181818;
+    /*- position */
     padding: 0 5%;
     margin: 5% 10%;
-    border: #181818;
     border-radius: 10px;
 }
 
