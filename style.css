@@ -6,6 +6,13 @@
 }
 
 
+/**=- Animations -=**/
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 100%; }
+}
+
+
 /**=- General settings -=**/
 html
 {
@@ -21,6 +28,8 @@ body
     /* position */
     margin: 0;
     padding: 0;
+    /* animation */
+    animation: fadein 0.5s linear 0s 1;
 }
 
 h1
@@ -40,25 +49,19 @@ pre
     background-color: #3d3d3d;
 }
 
+#alwaysTopNav
+{
+    /* position */
+    position: fixed; /* always on top */
+    width: 100%;
+    /* color */
+    background-color: #212121;
+}
 
 #menuIcon
 {
     width: 4%;
     margin: 0 1%;
-}
-
-#figureBannerWebSite
-{
-    display: inline-block;
-    height: 0;
-    /* position */
-    margin: 0;
-    padding: 0;
-    /* color */
-    background-color: #3d3d3d;
-    /* border */
-    border-bottom-left-radius: 25%;
-    border-bottom-right-radius: 25%;
 }
 
 #bannerWebSite
@@ -119,6 +122,7 @@ pre
     /* Font */
     font-family: GeoSansLight, sans-serif; /* font custom */
 }
+/* when the mouse is on the button */
 .navButton:hover {
     background-color: #303030;
 }
