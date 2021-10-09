@@ -5,6 +5,7 @@
     src: url("GeosansLight.ttf");
 }
 
+
 /**=- General settings -=**/
 html
 {
@@ -14,33 +15,42 @@ html
     /* font */
     font-family: GeoSansLight, "sans-serif";
 }
+
 body
 {
     /* position */
     margin: 0;
     padding: 0;
 }
+
 h1
 {
     font-weight: bold;
 }
+
 pre
 {
     font-family: GeoSansLight, sans-serif;
 }
+
 
 /**=- per ID -=**/
 #navigationBar
 {
     background-color: #3d3d3d;
 }
+
+
 #menuIcon
 {
     width: 4%;
     margin: 0 1%;
 }
+
 #figureBannerWebSite
 {
+    display: inline-block;
+    height: 0;
     /* position */
     margin: 0;
     padding: 0;
@@ -50,37 +60,41 @@ pre
     border-bottom-left-radius: 25%;
     border-bottom-right-radius: 25%;
 }
+
 #bannerWebSite
 {
-    background-color: #3d3d3d;
     margin: 0;
-    padding: 0;
     width: 100%;
     min-width: 150px;
-    image-rendering: high-quality;
-    border-radius: 15px
 }
+
 #illustrationYoutube
 {
     width: 100%;
     border-radius: 7px;
+    image-rendering: pixelated;
 }
 
+
 /* per CLASS */
-.panel {
+.panel
+{
+    display: inline-block;
     /* Color management */
-    background-color: #3d3d3d;*
-box-shadow: 4px 3px 0 #101010;
+    background-color: #3d3d3d;
+    box-shadow: 4px 3px 0 #101010;
     border: #181818;
     /*- position */
     padding: 0.1% 5%;
     margin: 5% 10%;
     border-radius: 10px;
 }
+
 .mainNav
 {
     text-align: center;
 }
+
 .navButton
 {
     /* Color management */
@@ -90,7 +104,7 @@ box-shadow: 4px 3px 0 #101010;
     color: white;
     /* Size button */
     height: 55%;
-    width: 20%;
+    width: 15%;
     min-width: 100px;
     min-height: 35px;
     /* Size font */
@@ -101,8 +115,10 @@ box-shadow: 4px 3px 0 #101010;
     border-radius: 6px;
     /* Position button */
     position: center;
-    display: inline-block;
+    float: top;
     /* Font */
     font-family: GeoSansLight, sans-serif; /* font custom */
 }
-
+.navButton:hover {
+    background-color: #303030;
+}
