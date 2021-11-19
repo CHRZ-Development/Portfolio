@@ -4,7 +4,7 @@
  */
 
 
-/**=- Event button -=**/
+/**=- Events buttons -=**/
 
 /**
  * It allow to create a button with a listener
@@ -31,8 +31,7 @@ class ButtonsEvent
                 {   // Finish
                     clearInterval(elementInter);
                     window.location.href = props.ref;
-                } else
-                {   // Fadeout animation process
+                } else { // Fadeout animation process
                     opacity -= 3;
                     document.body.style.opacity = opacity + '%';
                 }
@@ -43,14 +42,10 @@ class ButtonsEvent
 
 // Navigation bar
 new ButtonsEvent({elementId: "homeButton",ref: "index.html"});
-new ButtonsEvent({elementId: "projectButton",ref: "projets"})
-new ButtonsEvent({elementId: "contactButton",ref: "contact"})
-new ButtonsEvent({elementId: "videosButton",ref: "videos"})
-
+new ButtonsEvent({elementId: "projectButton",ref: "projets"});
+new ButtonsEvent({elementId: "contactButton",ref: "contact"});
+new ButtonsEvent({elementId: "videosButton",ref: "videos"});
 
 document.getElementById("menuIcon").addEventListener("click", ev => {
 
 })
-
-
-
