@@ -1,7 +1,7 @@
 
 #sectionAccueil {
     display: inline-block;
-    background-color: #383838;
+    background-color: #252725;
     border-radius: 10px;
     height: 13em;
     padding-top: 2%;
@@ -16,6 +16,7 @@
     width: 100%;
 }
 #sectionAccueil img {
+    image-rendering: high-quality;
     width: 10%;
     height: 10%;
     margin-right: 5%;
@@ -29,6 +30,5 @@
     border-right: solid #383838 1px;
     display: inline-block;
     padding: 1% 1% 1% 1%;
-    border-radius: 10px;
     z-index: 1;
 }
