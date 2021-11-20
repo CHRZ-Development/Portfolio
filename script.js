@@ -29,6 +29,7 @@ function addEventListenerOverButton(button, id) {
     })
 }
 
+// Animation de "Focus".
 addEventListenerOverButton(nav1button0, "nav1Button0");     // Accueil
 addEventListenerOverButton(nav1button1, "nav1Button1");     // Videos
 addEventListenerOverButton(nav1button2, "nav1Button2");     // Projets
@@ -36,6 +37,7 @@ addEventListenerOverButton(nav1button3, "nav1Button3");     // Competance
 addEventListenerOverButton(nav1button4, "nav1Button4");     // Contact
 
 
+// Quand le souris se retire de la barre de navigation, tous les boutons reviennent a la normale.
 navBar1.addEventListener("pointerleave", ev => {
     let navsButtons = [nav1button0, nav1button1, nav1button2, nav1button3, nav1button4];
 
