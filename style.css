@@ -44,14 +44,15 @@ html body {
 
 
 #sectionAccueil {
-    position: relative;
-    display: inline-block;
     background-color: #252725;
     border-radius: 10px;
-    height: 13em;
+    height: 13%;
+
     padding-top: 2%;
     padding-left: 5%;
     padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 0 3px 10px #3f2341;
 }
 #sectionAccueil p {
@@ -67,6 +68,7 @@ html body {
     height: 10%;
     margin-right: 5%;
     display: inline-block;
+    cursor: pointer;
 }
 
 #sectionNavBar1 {
@@ -92,9 +94,9 @@ html body {
     image-rendering: high-quality;
 
     position: absolute;
-    margin-left: 22px;
+    margin-left: 20%;
     top: 310px;
-    left: 35vw;
+    left: 20vw;
     height: 58px;
     width: 32px;
 
@@ -125,6 +127,21 @@ html body {
     z-index: -1;
 }
 
+#bannerProjet {
+    position: absolute;
+
+    background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZKV1JZPoL9BLPDMX0RLURHyXQ8k4UNUwmV&linkpassword=undefined&size=1920x1080&crop=0&type=auto");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 1080px;
+    margin: -19% auto;
+    overflow: hidden;
+
+    z-index: -1;
+}
+
 #titleSectionDevInProgress {
     margin-top: 10%;
     padding-left: 15%;
@@ -134,45 +151,69 @@ html body {
 }
 
 #illustrationSection0 {
-    display: block;
-
     background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZSiDJZdUfzK0lMLrfNr88Iyw9zXfhax63V&linkpassword=undefined&size=620x345&crop=0&type=auto");
     background-size: contain;
     background-repeat: no-repeat;
 
-    height: 345px;
-    width: 100%;
+    height: 18vw;
+    width: 90%;
+    border-radius: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 #illustrationSection0:hover {
     background-image: url("https://i.ibb.co/Vxmtkr3/illustration-Animated-Super-Mario-Bros3.gif");
 }
-#section0DevInProgress {
+
+#illustrationSection1 {
+    background-image: url("https://camo.githubusercontent.com/6b78d5078db1fa1b404e34f301dc43ad51adb91980acf9ac6134fda3ed2b67a8/68747470733a2f2f656170692e70636c6f75642e636f6d2f6765747075627468756d623f636f64653d585a526964305a544470586a4a744774584862324d6a784a4236773537764d42345630266c696e6b70617373776f72643d756e646566696e65642673697a653d31303738783139302663726f703d3026747970653d6175746f");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    height: 18vw;
+    width: 90%;
+    border-radius: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.sectionsDevInProgress {
     position: relative;
     display: inline-block;
     background-color: #252725;
 
     width: 30%;
     padding: 1% 1% 1% 1%;
-    margin-left: 5%;
+    margin-left: 1%;
     margin-top: 1%;
     border-radius: 10px;
+
+    box-shadow: 0 0 15px #3f2341;
 }
-#informationSection0 p {
+.informationSections p {
     font-family: 'Source Code Pro', monospace;
     font-size: 90%;
     margin-top: -2%;
 }
-#informationSection0 u:hover {
+.informationSections u:hover {
     color: aquamarine;
+    cursor: pointer;
 }
-
 
 .navBar1 {
     background-image: url('https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto');
+    background-size: contain;
+    background-repeat: no-repeat;
+
     position: absolute;
     height: 64px;
     width: 256px;
     display: inline-block;
+
+    cursor: pointer;
 }
 .navBar1 p {
     font-size: 135%;

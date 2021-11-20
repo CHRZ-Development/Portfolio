@@ -12,40 +12,36 @@
     
     <body style="margin: 0 0 0 0; padding: 0 0 0 0">
         <header>
-
+            <!-- Top nav bar -->
+            <div id="sectionNavBar1">
+                <nav id="nav1Button0"
+                     onclick="window.location.href = 'index.html'"
+                     style="left: 16vw;"
+                     class="navBar1"><p><b>ACCUEIL</b><p></nav>
+                <nav id="nav1Button1"
+                     onclick="window.location.href = 'videos/index.html'"
+                     style="left: 30vw;"
+                     class="navBar1"><p><b>VIDEOS</b></p></nav>
+                <nav id="nav1Button2"
+                     onclick="window.location.href = 'projets/index.html'"
+                     style="left: 44vw;"
+                     class="navBar1"><p><b>PROJETS</b></p></nav>
+                <nav id="nav1Button3"
+                     onclick="window.location.href = 'skills/index.html'"
+                     style="left: 58vw;"
+                     class="navBar1"><p><b>COMPETENCE</b></p></nav>
+                <nav id="nav1Button4"
+                     onclick="window.location.href = 'contact/index.html'"
+                     style="left: 72vw;"
+                     class="navBar1"><p><b>CONTACT</b></p></nav>
+            </div>
         </header>
 
         <main>
+            <!-- Web site banner -->
             <div>
-                <!-- Top nav bar -->
-                <div id="sectionNavBar1">
-                    <nav id="nav1Button0"
-                         onclick="window.location.href = 'index.html'"
-                         style="left: 16vw"
-                         class="navBar1"><p><b>ACCUEIL</b><p></nav>
-                    <nav id="nav1Button1"
-                         onclick="window.location.href = 'videos/index.html'"
-                         style="left: 30vw;"
-                         class="navBar1"><p><b>VIDEOS</b></p></nav>
-                    <nav id="nav1Button2"
-                         onclick="window.location.href = 'projets/index.html'"
-                         style="left: 44vw;"
-                         class="navBar1"><p><b>PROJETS</b></p></nav>
-                    <nav id="nav1Button3"
-                         onclick="window.location.href = 'skills/index.html'"
-                         style="left: 58vw;"
-                         class="navBar1"><p><b>COMPETENCE</b></p></nav>
-                    <nav id="nav1Button4"
-                         onclick="window.location.href = 'contact/index.html'"
-                         style="left: 72vw;"
-                         class="navBar1"><p><b>CONTACT</b></p></nav>
-                </div>
-
-                <!-- Web site banner -->
                 <div id="homeTop">
-                    <div id="bannerCHRZ">
-
-                    </div>
+                    <div id="bannerCHRZ"></div>
                     <div id="bucheronPerso"></div>
                 </div>
             </div>
@@ -87,15 +83,17 @@
                     <p><u><b>En cours de development !</b></u></p>
                 </div>
 
-                <div id="section0DevInProgress">
+                <!-- SuperMarioBros 3 -->
+                <div class="sectionsDevInProgress">
                     <!-- Image illustration -->
                     <div id="illustrationSection0"></div>
 
                     <!-- little information -->
-                    <section id="informationSection0">
-                        <p style="margin-top: 0; font-size: 120%"><u><b>SuperMarioBros 3</b></u></p>
-                        <p>Une copie du jeux SuperMarioBros 3 est en cours de development</p>
-                        <p>Codé en Python avec la librairie pygame</p>
+                    <section class="informationSections">
+                        <p style="margin-top: -3%; font-size: 120%"><u><b>SuperMarioBros 3</b></u></p>
+                        <p>Une copie du jeux SuperMarioBros 3 est en cours de développement !</p>
+                        <p>Ce jeux est disponible en tant que bêta.</p>
+                        <p>Codé uniquement sur le langage Python et grâce à la librairie pygame.</p>
                         <p>Plus de détails sur ce projets, vous pouvez vous y rendre dans
                             <u onclick="window.location.href = 'projets/index.html'">projets</u>
                             ou bien sur le
@@ -107,15 +105,49 @@
                     <!-- Logo for access the project -->
                     <section>
                         <img class="animSocialNetwork"
-                             style="width: 10%; margin-left: 40%"
+                             style="width: 10%; margin-left: 40%; cursor: pointer;"
                              onclick="window.location.href = 'https://github.com/NaulaN/SuperMarioBros3-pygame'"
                              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                              alt="Github logo">
                     </section>
                 </div>
 
-                <div>
+                <!-- Escarbot project -->
+                <div class="sectionsDevInProgress">
+                    <!-- Image illustration -->
+                    <div id="illustrationSection1"></div>
 
+                    <!-- little information -->
+                    <section class="informationSections">
+                        <p style="margin-top: -3%; font-size: 120%"><u><b>Escarbot (Bot Discord)</b></u></p>
+                        <p>Un bot discord multi-usage !</p>
+                        <p>En cours de migration vers le langage Java pour cause de compatibilité et de support.</p>
+                        <p>Sera pour le coup codé en Java mais, il est toujours en Python</p>
+                        <p>Plus de détails, dans
+                            <u onclick="window.location.href = 'projets/index.html'">projets</u>
+                            ou bien sur le
+                            <u onclick="window.location.href = 'https://github.com/NaulaN/Escarbot-java'">Github</u>
+                            du code source
+                        </p>
+                    </section>
+
+                    <!-- Logo for access the project -->
+                    <section>
+                        <img style="display: inline-block; margin-left: 15%; width: 10%;"
+                             src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
+                        <img class="animSocialNetwork"
+                             style="width: 10%; cursor: pointer;"
+                             onclick="window.location.href = 'https://github.com/NaulaN/Escarbot-py'"
+                             src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                             alt="Github logo">
+                        <img style="display: inline-block; margin-left: 25%; width: 8%;"
+                             src="http://assets.stickpng.com/images/58480979cef1014c0b5e4901.png">
+                        <img class="animSocialNetwork"
+                             style="width: 10%; cursor: pointer;"
+                             onclick="window.location.href = 'https://github.com/NaulaN/Escarbot-java'"
+                             src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                             alt="Github logo">
+                    </section>
                 </div>
             </div>
         </main>
