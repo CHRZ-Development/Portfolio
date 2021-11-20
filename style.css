@@ -179,6 +179,22 @@ html body {
     margin-right: auto;
 }
 
+#illustrationSection2 {
+    background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZCGg0ZgcAoYt2G81p98A4AOu5bymo8IWfk&linkpassword=undefined&size=1280x720&crop=0&type=auto");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    height: 18vw;
+    width: 90%;
+    border-radius: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+#illustrationSection2:hover {
+
+}
+
 
 .sectionsDevInProgress {
     position: relative;
