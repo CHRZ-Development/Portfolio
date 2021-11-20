@@ -1,8 +1,5 @@
 <!doctype html>
-<html lang="fr"
-      style="background: #171917;
-             color: white;
-             min-width: 900px;">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport"
@@ -22,35 +19,31 @@
             <div>
                 <div id="sectionNavBar1">
                     <!-- Top nav bar -->
-                    <nav onmouseover="changeBackground(this)"
-                         onmouseout="defaultBackground(this, '#252725')"
+                    <nav id="nav1Button0"
                          onclick="window.location.href = 'index.html'"
-                         style="border-left: solid #383838 1px;"
-                         class="navBar1"><u><b>ACCUEIL</b></u> </nav>
-                    <nav onmouseover="changeBackground(this)"
-                         onmouseout="defaultBackground(this, '#252725')"
+                         style="left: 16vw"
+                         class="navBar1"><p><b>ACCUEIL</b><p></nav>
+                    <nav id="nav1Button1"
                          onclick="window.location.href = 'videos/index.html'"
-                         class="navBar1"><u><b>VIDEOS</b></u></nav>
-                    <nav onmouseover="changeBackground(this)"
-                         onmouseout="defaultBackground(this, '#252725')"
+                         style="left: 30vw;"
+                         class="navBar1"><p><b>VIDEOS</b></p></nav>
+                    <nav id="nav1Button2"
                          onclick="window.location.href = 'projets/index.html'"
-                         class="navBar1"><u><b>PROJETS</b></u></nav>
-                    <nav onmouseover="changeBackground(this)"
-                         onmouseout="defaultBackground(this, '#252725')"
+                         style="left: 44vw;"
+                         class="navBar1"><p><b>PROJETS</b></p></nav>
+                    <nav id="nav1Button3"
                          onclick="window.location.href = 'skills/index.html'"
-                         class="navBar1"><u><b>COMPETENCE</b></u></nav>
-                    <nav onmouseover="changeBackground(this)"
-                         onmouseout="defaultBackground(this, '#252725')"
+                         style="left: 58vw;"
+                         class="navBar1"><p><b>COMPETENCE</b></p></nav>
+                    <nav id="nav1Button4"
                          onclick="window.location.href = 'contact/index.html'"
-                         class="navBar1"><u><b>CONTACT</b></u></nav>
-                    <script> function changeBackground(element) { element.style.backgroundColor = '#383838'; }
-                             function defaultBackground(element, color) { element.style.backgroundColor = color; } </script>
+                         style="left: 72vw;"
+                         class="navBar1"><p><b>CONTACT</b></p></nav>
                 </div>
-
                 <!-- Web site banner -->
                 <div id="homeTop">
                     <div id="bannerCHRZ">
-                        <img style="z-index: -1; margin: -18% auto;"
+                        <img style="margin: -18% auto;"
                              src="https://eapi.pcloud.com/getpubthumb?code=xvDotalK&linkpassword=undefined&size=1920x1080&crop=0&type=auto"
                              alt="Banniere du site https://chrz-development.fr">
                     </div>
@@ -72,26 +65,18 @@
                     <section style="margin-top: 11%">
                         <img class="animSocialNetwork"
                              onclick="window.location.href = 'http://instagram.chrz-development.fr'"
-                             onmouseover="this.style.animationPlayState = 'running';"
-                             onmouseout="this.style.animationPlayState = 'paused';"
                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
                              alt="Instagram logo">
                         <img class="animSocialNetwork"
                              onclick="window.location.href = 'http://github.chrz-development.fr'"
-                             onmouseover="this.style.animationPlayState = 'running';"
-                             onmouseout="this.style.animationPlayState = 'paused';"
                              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                              alt="Github logo">
                         <img class="animSocialNetwork"
                              onclick="window.location.href = 'http://youtube.chrz-development.fr'"
-                             onmouseover="this.style.animationPlayState = 'running';"
-                             onmouseout="this.style.animationPlayState = 'paused';"
                              src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c545.png"
                              alt="Youtube logo">
                         <img class="animSocialNetwork"
                              onclick="window.location.href = 'http://discord.chrz-development.fr'"
-                             onmouseover="this.style.animationPlayState = 'running';"
-                             onmouseout="this.style.animationPlayState = 'paused';"
                              src="https://seeklogo.com/images/D/discord-logo-134E148657-seeklogo.com.png"
                              alt="Discord logo">
                     </section>
@@ -102,5 +87,7 @@
         <footer id="footerCopyright">
             <p><b>© 2019-2021 CHRZ Development</b></p>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>

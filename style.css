@@ -3,7 +3,7 @@
 
 @keyframes upAndDown {
     0% { transform: scale(100%, 100%); }
-    35% { transform: scale(120%, 120%); }
+    35% { transform: scale(110%, 110%); }
     75% { transform: scale(90%, 90%); }
     100% { transform: scale(100%, 100%); }
 }
@@ -15,6 +15,34 @@
     85% { top: 300px; }
     100% { top: 310px; }
 }
+
+@keyframes opacityIn {
+    from { opacity: 45%; }
+    to { opacity: 100%;}
+}
+
+@keyframes opacityOut {
+    from { opacity: 100% }
+    to { opacity: 45%;}
+}
+
+@keyframes opacityInAt0 {
+    from { opacity: 0; }
+    to { opacity: 100%;}
+}
+
+
+html {
+    background: #171917;
+    color: white;
+    width: 100%;
+    min-width: 768px
+}
+html body {
+    animation-name: opacityInAt0;
+    animation-duration: 1s;
+}
+
 
 #sectionAccueil {
     position: relative;
@@ -44,13 +72,9 @@
 
 #sectionNavBar1 {
     position: relative;
-    display: block;
+    height: 64px;
     margin: 0 auto;
-    width: 80%;
-    background-color: #252725;
-    border-radius: 5px;
     text-align: center;
-    box-shadow: 0 0 10px #3f2341;
 }
 
 #footerCopyright {
@@ -80,13 +104,12 @@
     animation-iteration-count: infinite;
 }
 #homeTop {
-    image-rendering: high-quality;
-
     position: relative;
+    display: block;
 
     height: 370px;
+    min-width: 900px;
     text-align: center;
-    box-shadow: 0 3px 5px #3f2341
 }
 #bannerCHRZ {
     position: absolute;
@@ -98,13 +121,18 @@
 }
 
 .navBar1 {
-    position: relative;
-    font-size: 115%;
-    font-family: "./GeosansLight.tff", sans-serif;
-    border-right: solid #383838 1px;
+    background-image: url('https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto');
+    position: absolute;
+    height: 64px;
+    width: 256px;
     display: inline-block;
-    padding: 1% 1% 1% 1%;
-    z-index: 1;
+}
+.navBar1 p {
+    font-size: 135%;
+    font-family: "./GeosansLight.tff", sans-serif;
+}
+.navBar1:hover {
+    color: #6a1794;
 }
 
 .animSocialNetwork {
@@ -115,3 +143,4 @@
     animation-iteration-count: infinite;
     animation-play-state: paused;
 }
+.animSocialNetwork:hover { animation-play-state: running; }
