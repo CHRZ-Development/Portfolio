@@ -34,7 +34,6 @@
 html {
     background: #171917;
     color: white;
-    width: 100%;
     min-width: 768px
 }
 html body {
@@ -72,10 +71,18 @@ html body {
 }
 
 #sectionNavBar1 {
-    position: relative;
+    display: grid;
+
     height: 64px;
-    margin: 0 auto;
-    text-align: center;
+    width: 90%;
+
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    grid-column-align: center;
+    -ms-grid-column-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #footerCopyright {
@@ -192,7 +199,20 @@ html body {
     margin-right: auto;
 }
 #illustrationSection2:hover {
+    background-image: url("https://i.postimg.cc/B62mxGkY/Sans-titre.gif");
+}
 
+#illustrationSection3 {
+    background-image: url("https://camo.githubusercontent.com/12388ce36f4e4bc0fc8886b648b1642e6d01c7f7210a498bcba9ca539efd5b47/68747470733a2f2f656170692e70636c6f75642e636f6d2f6765747075627468756d623f636f64653d585a463430305a3531536a4f4a62685538344f64434165336b32455356427476453358266c696e6b70617373776f72643d756e646566696e65642673697a653d31303738783139302663726f703d3026747970653d6175746f");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    height: 18vw;
+    width: 90%;
+    border-radius: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -224,16 +244,15 @@ html body {
     background-size: contain;
     background-repeat: no-repeat;
 
-    position: absolute;
+    font-size: 140%;
+    font-family: "./GeosansLight.tff", sans-serif;
+    text-align: center;
+
     height: 64px;
-    width: 256px;
-    display: inline-block;
+    width: 80%;
+    padding-top: 1.1vw;
 
     cursor: pointer;
-}
-.navBar1 p {
-    font-size: 135%;
-    font-family: "./GeosansLight.tff", sans-serif;
 }
 .navBar1:hover {
     color: #6a1794;
