@@ -1,0 +1,8 @@
+
+#vitrineProjet {
+    display: grid;
+
+    grid-template-columns: 1fr 22% 22% 22% 22% 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2%;
+}
