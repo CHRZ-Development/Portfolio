@@ -256,20 +256,35 @@ html body {
 
     font-family: "./GeosansLight.tff", sans-serif;
 
-    height: 64px;
     width: 100%;
     min-width: 95px;
+    height: 64px;
 
     cursor: pointer;
 }
-.navBar1 span { margin: auto; }
 /* le text a l'intérieur du bouton */
-@media only screen and (max-width: 750px) {
-    .navBar1 span { font-size: 85%; }
+@media only screen and (max-width: 660px) {
+    .navBar1 { height: 24px; }
+    .navBar1 span {
+        font-size: 85%;
+        margin: auto;
+    }
 }
 
-@media only screen and (min-width: 900px) {
-    .navBar1 span { font-size: 150%; }
+@media only screen and (min-width: 670px) and (max-width: 1000px) {
+    .navBar1 { height: 35px; }
+    .navBar1 span {
+        font-size: 85%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1001px){
+    .navBar1 { height: 64px; }
+    .navBar1 span {
+        font-size: 150%;
+        margin: auto;
+    }
 }
 .navBar1 span:hover { color: #6a1794; }
 
