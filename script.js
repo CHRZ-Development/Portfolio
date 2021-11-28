@@ -1,11 +1,16 @@
 
-
 let nav1button0 = document.getElementById("nav1Button0");
 let nav1button1 = document.getElementById("nav1Button1");
 let nav1button2 = document.getElementById("nav1Button2");
 let nav1button3 = document.getElementById("nav1Button3");
 let nav1button4 = document.getElementById("nav1Button4");
 let navBar1 = document.getElementById("sectionNavBar1");
+
+let buttonBar1 = document.getElementById("buttonBar1");
+let buttonBar2 = document.getElementById("buttonBar2");
+
+let bannerTop = document.getElementById("bannerCHRZ");
+let bannerTest = document.getElementById("bannerTest")
 
 
 /**
@@ -23,7 +28,7 @@ function addEventListenerOverButton(button, id) {
                 navsButtons[n].style.animationName = 'opacityOut';
             } else navsButtons[n].style.animationName = 'opacityIn';
 
-            navsButtons[n].style.animationDuration = '1s';
+            navsButtons[n].style.animationDuration = '.5s';
             navsButtons[n].style.animationFillMode = 'forwards';
         }
     })
@@ -43,4 +48,15 @@ navBar1.addEventListener("pointerleave", ev => {
 
     for(let n = 0; n < navsButtons.length; n++)
         navsButtons[n].style.animationName = 'opacityIn';
+})
+
+
+buttonBar1.addEventListener("mouseover", ev => {
+    bannerTop.style.opacity = '100%';
+    bannerTest.style.opacity = '0%';
+})
+
+buttonBar2.addEventListener("mouseover", ev => {
+    bannerTest.style.opacity = '100%';
+    bannerTop.style.opacity = '0%';
 })

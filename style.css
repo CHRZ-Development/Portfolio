@@ -97,25 +97,33 @@ html body {
 }
 #homeTop {
     position: relative;
-    display: block;
+    display: grid;
+    grid-template-rows: 95% 5%;
+    grid-template-columns: 1fr 85% 1fr;
+    grid-gap: 0;
+
 
     height: 370px;
     min-width: 900px;
     text-align: center;
 }
 #bannerCHRZ {
-    position: absolute;
-
-    background-image: url("https://eapi.pcloud.com/getpubthumb?code=xvDotalK&linkpassword=undefined&size=1920x1080&crop=0&type=auto");
+    background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZDxKJZN8hmg776ThHK4qfjorqFSkseNiGy&linkpassword=undefined&size=1917x437&crop=0&type=auto");
     background-size: contain;
     background-repeat: no-repeat;
 
     width: 100%;
-    height: 1080px;
-    margin: -19% auto;
-    overflow: hidden;
+    height: 100%;
+    opacity: 100%;
+}
+#bannerTest {
+    background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZ1lCJZBKTwWeQmtlXfqzpqNYwlkYDJpnj7&linkpassword=undefined&size=1742x370&crop=0&type=auto");
+    background-size: contain;
+    background-repeat: no-repeat;
 
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
 
 #bannerProjet {
@@ -316,6 +324,16 @@ html body {
 }
 /* ======================= */
 
+.buttonsBar {
+    display: inline-block;
+    height: 5px;
+    width: 45px;
+    background-color: darkgray;
+}
+.buttonsBar:hover {
+    background-color: aquamarine;
+    cursor: pointer;
+}
 
 .animSocialNetwork {
     position: relative;
