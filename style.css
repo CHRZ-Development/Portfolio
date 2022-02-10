@@ -301,11 +301,6 @@ header {
     grid-template-rows: 100%;
     grid-template-columns: 100%;
 
-    /*
-    background-image: url('https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto');
-    background-repeat: no-repeat;
-    background-size: contain;
-     */
     font-family: 'Press Start 2P', cursive;
     height: 64px;
     cursor: pointer;
@@ -346,6 +341,8 @@ header {
 
     grid-column-start: 1; grid-column-end: 1;
     grid-row: 1;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .navBar1Button0 img {
     z-index: -1;
@@ -364,6 +361,8 @@ header {
     grid-column-start: 2; grid-column-end: 2;
     grid-row: 1;
     width: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .navBar1Button1 img {
     z-index: -1;
@@ -381,6 +380,8 @@ header {
 
     grid-column-start: 3; grid-column-end: 3;
     grid-row: 1;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .navBar1Button2 img {
     z-index: -1;
@@ -398,13 +399,15 @@ header {
 
     grid-column-start: 4; grid-column-end: 4;
     grid-row: 1;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .navBar1Button3 img {
     z-index: -1;
 }
 .navBar1Button3 span {
     position: absolute;
-    font-size: 150%;
+    font-size: 140%;
 }
 
 .navBar1Button4
@@ -415,6 +418,8 @@ header {
 
     grid-column-start: 5; grid-column-end: 5;
     grid-row: 1;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .navBar1Button4 img {
     z-index: -1;
