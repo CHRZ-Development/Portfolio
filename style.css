@@ -36,10 +36,48 @@ html {
     color: white;
 }
 html body {
+    margin: 0;
+    padding: 0;
     animation-name: opacityInAt0;
     animation-duration: 1s;
 }
+header {
+    display: flex;
 
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    background-color: #252725;
+    position: fixed;
+    z-index: 1;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+#iconSectionNavBar1 {
+    width: 35%;
+    padding-left: 5px;
+}
+
+#iconSectionNavBar1 img {
+    display: inline-block;
+    float: left;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 20%;
+}
+
+#iconSectionNavBar1 p {
+    display: inline-block;
+    float: right;
+    margin: 0;
+}
 
 #sectionAccueil {
     background-color: #252725;
