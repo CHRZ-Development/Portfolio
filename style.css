@@ -130,8 +130,6 @@ header {
     image-rendering: high-quality;
 
     position: absolute;
-    margin-left: 20%;
-    top: 310px;
     left: 20vw;
     height: 58px;
     width: 32px;
@@ -139,6 +137,7 @@ header {
     animation-name: movePerso;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
+    z-index: 1;
 }
 #homeTop {
     position: relative;
@@ -149,26 +148,30 @@ header {
 
 
     height: 370px;
+    width: 95%;
     min-width: 900px;
     text-align: center;
 }
-#bannerCHRZ {
-    background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZDxKJZN8hmg776ThHK4qfjorqFSkseNiGy&linkpassword=undefined&size=1917x437&crop=0&type=auto");
-    background-size: contain;
-    background-repeat: no-repeat;
+#bannerCHRZ img {
+    display: block;
+    position: absolute;
 
+    top: 35px;
+    left: 0;
     width: 100%;
     height: 100%;
-    opacity: 100%;
+    opacity: 100%; /* TODO: mettre plutôt display: none */
+    z-index: -1;
 }
 #bannerTest {
-    background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZ1lCJZBKTwWeQmtlXfqzpqNYwlkYDJpnj7&linkpassword=undefined&size=1742x370&crop=0&type=auto");
-    background-size: contain;
-    background-repeat: no-repeat;
+    display: none;
+    position: absolute;
 
+    top: 35px;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    opacity: 0; /* TODO: mettre plutôt display: none */
+    z-index: -1;
 }
 
 #bannerProjet {
