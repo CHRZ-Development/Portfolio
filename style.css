@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 
 @keyframes upAndDown {
@@ -45,7 +46,7 @@ header {
     display: flex;
 
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     padding-top: 5px;
     padding-bottom: 5px;
@@ -60,7 +61,12 @@ header {
 
 
 #iconSectionNavBar1 {
-    width: 35%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
     padding-left: 5px;
 }
 
@@ -77,6 +83,7 @@ header {
     display: inline-block;
     float: right;
     margin: 0;
+    font-family: 'Press Start 2P', cursive;
 }
 
 #sectionAccueil {
@@ -278,15 +285,13 @@ header {
 /* * BARRE DE NAVIGATION * */
 
 /* div de la barre de navigation */
+
 #sectionNavBar1
 {
     display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 100%;
-
-    height: 64px;
-    width: 100%;
 }
 
 /* le bouton de la barre de navigation */
@@ -296,19 +301,16 @@ header {
     grid-template-rows: 100%;
     grid-template-columns: 100%;
 
+    /*
     background-image: url('https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto');
     background-repeat: no-repeat;
     background-size: contain;
-
-    font-family: "./GeosansLight.tff", sans-serif;
-
-    width: 100%;
-    min-width: 95px;
+     */
+    font-family: 'Press Start 2P', cursive;
     height: 64px;
-
     cursor: pointer;
 }
-/* le text a l'intérieur du bouton */
+/*
 @media only screen and (max-width: 660px) {
     .navBar1 { height: 24px; }
     .navBar1 span {
@@ -332,34 +334,96 @@ header {
         margin: auto;
     }
 }
+*/
 .navBar1 span:hover { color: #6a1794; }
 
 /* placement des boutons dans la barre de navigation */
 .navBar1Button0
 {
-    grid-column-start: 2; grid-column-end: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-column-start: 1; grid-column-end: 1;
     grid-row: 1;
 }
+.navBar1Button0 img {
+    z-index: -1;
+}
+.navBar1Button0 span {
+    position: absolute;
+    font-size: 150%;
+}
+
 .navBar1Button1
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-column-start: 2; grid-column-end: 2;
+    grid-row: 1;
+    width: 100%;
+}
+.navBar1Button1 img {
+    z-index: -1;
+}
+.navBar1Button1 span {
+    position: absolute;
+    font-size: 150%;
+}
+
+.navBar1Button2
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     grid-column-start: 3; grid-column-end: 3;
     grid-row: 1;
 }
-.navBar1Button2
+.navBar1Button2 img {
+    z-index: -1;
+}
+.navBar1Button2 span {
+    position: absolute;
+    font-size: 150%;
+}
+
+.navBar1Button3
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     grid-column-start: 4; grid-column-end: 4;
     grid-row: 1;
 }
-.navBar1Button3
+.navBar1Button3 img {
+    z-index: -1;
+}
+.navBar1Button3 span {
+    position: absolute;
+    font-size: 150%;
+}
+
+.navBar1Button4
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     grid-column-start: 5; grid-column-end: 5;
     grid-row: 1;
 }
-.navBar1Button4
-{
-    grid-column-start: 6; grid-column-end: 6;
-    grid-row: 1;
+.navBar1Button4 img {
+    z-index: -1;
 }
+.navBar1Button4 span {
+    position: absolute;
+    font-size: 150%;
+}
+
 /* ======================= */
 
 .buttonsBar {
