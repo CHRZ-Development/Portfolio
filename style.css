@@ -3,9 +3,9 @@
 
 
 @keyframes movePerso {
-    20% { top: 330px; }
+    20% { top: 360px; }
     50% { top: 300px; }
-    80% { top: 330px; }
+    80% { top: 360px; }
 }
 
 @keyframes opacityIn {
@@ -140,8 +140,8 @@ header {
 
 #bucheronPerso {
     position: absolute;
-    top: 330px;
-    left: 20vw;
+    top: 360px;
+    left: 30vw;
     height: 58px;
     width: 32px;
 
@@ -152,37 +152,53 @@ header {
     animation-iteration-count: infinite;
 }
 #homeTop {
-    position: relative;
-    display: grid;
-    grid-template-rows: 95% 5%;
-    grid-template-columns: 1fr 85% 1fr;
-    grid-gap: 0;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     height: 370px;
-    width: 95%;
-    min-width: 900px;
-    text-align: center;
 }
-#bannerCHRZ img {
-    display: block;
+#homeTop img {
     position: absolute;
 
-    top: 45px;
-    left: 0;
+    top: -200px;
     width: 100%;
-    height: 100%;
-    opacity: 100%; /* TODO: mettre plutôt display: none */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
     z-index: -1;
 }
-#bannerTest {
-    display: none;
+
+#bannerCHRZ {
+    display: block;
+    margin-top: 50px;
+    z-index: -1;
+    height: 370px;
+}
+#bannerCHRZ img {
     position: absolute;
 
-    top: 35px;
+    top: 60px;
+    left: 0;
     width: 100%;
-    height: 100%;
-    opacity: 0; /* TODO: mettre plutôt display: none */
+
+    z-index: -1;
+}
+
+#bannerTest {
+    display: none;
+    padding-top: 50px;
+    z-index: -1;
+    height: 370px;
+}
+#bannerTest img {
+    position: absolute;
+
+    top: 60px;
+    left: 0;
+    width: 100%;
+
     z-index: -1;
 }
 
@@ -194,20 +210,7 @@ header {
     font-family: 'Press Start 2P', cursive;
 }
 
-#bannerProjet {
-    position: absolute;
 
-    background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZKV1JZPoL9BLPDMX0RLURHyXQ8k4UNUwmV&linkpassword=undefined&size=1920x1080&crop=0&type=auto");
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    width: 100%;
-    height: 1080px;
-    margin: -19% auto;
-    overflow: hidden;
-
-    z-index: -1;
-}
 
 #titleSectionDevInProgress {
     margin-top: 10%;
@@ -219,45 +222,17 @@ header {
     border-bottom: solid #3f2341 1px;
 }
 
-#illustrationSection0 {
+.illustrationSection {
     display: grid;
-    height: 18vw;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
-#illustrationSection0 img {
+.illustrationSection img {
+    image-rendering: optimizeSpeed;
     display: block;
     width: 100%;
-}
-
-#illustrationSection1 {
-    background-image: url("https://camo.githubusercontent.com/6b78d5078db1fa1b404e34f301dc43ad51adb91980acf9ac6134fda3ed2b67a8/68747470733a2f2f656170692e70636c6f75642e636f6d2f6765747075627468756d623f636f64653d585a526964305a544470586a4a744774584862324d6a784a4236773537764d42345630266c696e6b70617373776f72643d756e646566696e65642673697a653d31303738783139302663726f703d3026747970653d6175746f");
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    height: 18vw;
-    width: 90%;
-    border-radius: 10px;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#illustrationSection2 {
-    background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZCGg0ZgcAoYt2G81p98A4AOu5bymo8IWfk&linkpassword=undefined&size=1280x720&crop=0&type=auto");
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    height: 18vw;
-    width: 90%;
-    border-radius: 10px;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-#illustrationSection2:hover {
-    background-image: url("https://i.postimg.cc/B62mxGkY/Sans-titre.gif");
 }
 
 #illustrationSection3 {

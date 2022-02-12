@@ -61,24 +61,30 @@
 
         <main>
             <!-- Web site banner -->
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <div id="homeTop">
-                    <div style="grid-column-start: 2; grid-column-end: 3;
-                                grid-row-start: 1; grid-row-end: 1;" id="bannerCHRZ">
+            <div style="display: flex;
+                        align-items: center;
+                        justify-content: center;">
+                <div style="display: grid;
+                            grid-template-columns: 80%;">
+                    <div id="bannerCHRZ"
+                         style="grid-column-start: 1; grid-column-end: 1;
+                                grid-row-start: 1; grid-row-end: 1;">
                         <img src="https://eapi.pcloud.com/getpubthumb?code=XZDxKJZN8hmg776ThHK4qfjorqFSkseNiGy&linkpassword=undefined&size=1917x437&crop=0&type=auto"
                              alt="CHRZ development banner">
                     </div>
-                    <div style="grid-column-start: 2; grid-column-end: 3;
-                                grid-row-start: 1; grid-row-end: 1;" id="bannerTest">
+                    <div id="bannerTest"
+                         style="grid-column-start: 1; grid-column-end: 1;
+                                grid-row-start: 1; grid-row-end: 1;">
                         <img src="https://eapi.pcloud.com/getpubthumb?code=XZ1lCJZBKTwWeQmtlXfqzpqNYwlkYDJpnj7&linkpassword=undefined&size=1742x370&crop=0&type=auto"
                              alt="Banner a remplacer"> <!-- TODO -->
                     </div>
-                    <div style="grid-column-start: 2; grid-column-end: 3;
-                                grid-row-start: 1; grid-row-end: 1;" id="bucheronPerso"></div>
+                    <div id="bucheronPerso"
+                         style="grid-column-start: 1; grid-column-end: 1;
+                                grid-row-start: 1; grid-row-end: 1;"></div>
                 </div>
             </div>
 
-            <div style="width: 100%; text-align: center;">
+            <div style="width: 100%; text-align: center; position: absolute">
                 <div class="buttonsBar" id="buttonBar1"></div>
                 <div class="buttonsBar" id="buttonBar2"></div>
             </div>
@@ -119,17 +125,17 @@
             <div id="vitrineDevIsProgress">
                 <!-- SuperMarioBros 3 -->
                 <div class="sectionsDevInProgress">
-                    <!-- Image illustration -->
-                    <div id="illustrationSection0">
-                        <img src="https://i.ibb.co/Vxmtkr3/illustration-Animated-Super-Mario-Bros3.gif"
+                    <!-- Images illustration -->
+                    <div class="illustrationSection">
+                        <img id="illustrationSection0img0" src="https://github.com/NaulaN/CHRZ-development_website/blob/master/res/illustration-Animated-Super-Mario-Bros3.gif?raw=true"
                              style="grid-column-start: 1; grid-column-end: 1; grid-row-start: 1; grid-row-end: 1;">
-                        <img src="https://eapi.pcloud.com/getpubthumb?code=XZSiDJZdUfzK0lMLrfNr88Iyw9zXfhax63V&linkpassword=undefined&size=620x345&crop=0&type=auto"
+                        <img id="illustrationSection0img1" src="https://eapi.pcloud.com/getpubthumb?code=XZSiDJZdUfzK0lMLrfNr88Iyw9zXfhax63V&linkpassword=undefined&size=620x345&crop=0&type=auto"
                              style="grid-column-start: 1; grid-column-end: 1; grid-row-start: 1; grid-row-end: 1;">
                     </div>
 
                     <!-- little information -->
                     <section class="informationSections">
-                        <p style="margin-top: -3%; font-size: 120%"><u><b>SuperMarioBros 3</b></u></p>
+                        <p style="font-size: 120%"><u><b>SuperMarioBros 3</b></u></p>
                         <p>Une copie du jeux SuperMarioBros 3 est en cours de développement !</p>
                         <p>Ce jeux est disponible en tant que bêta.</p>
                         <p>Codé uniquement sur le langage Python et grâce à la librairie pygame.</p>
@@ -142,11 +148,10 @@
                     </section>
 
                     <!-- Logo for access the project -->
-                    <section>
-                        <img class="animSocialNetwork"
-                             style="width: 10%; margin-left: 40%; cursor: pointer;"
+                    <section style="text-align: center;">
+                        <img style="width: 10%; cursor: pointer;"
                              onclick="window.location.href = 'https://github.com/NaulaN/SuperMarioBros3-pygame'"
-                             src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                             src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/github.png"
                              alt="Github logo">
                     </section>
                 </div>
@@ -154,7 +159,9 @@
                 <!-- Escarbot project -->
                 <div class="sectionsDevInProgress">
                     <!-- Image illustration -->
-                    <div id="illustrationSection1"></div>
+                    <div class="illustrationSection">
+                        <img src="https://camo.githubusercontent.com/6b78d5078db1fa1b404e34f301dc43ad51adb91980acf9ac6134fda3ed2b67a8/68747470733a2f2f656170692e70636c6f75642e636f6d2f6765747075627468756d623f636f64653d585a526964305a544470586a4a744774584862324d6a784a4236773537764d42345630266c696e6b70617373776f72643d756e646566696e65642673697a653d31303738783139302663726f703d3026747970653d6175746f">
+                    </div>
 
                     <!-- little information -->
                     <section class="informationSections">
@@ -171,20 +178,10 @@
                     </section>
 
                     <!--Logo for access the project-->
-                    <section>
-                        <img style="display: inline-block; margin-left: 15%; width: 10%;"
-                             src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
-                        <img class="animSocialNetwork"
-                             style="width: 10%; cursor: pointer;"
-                             onclick="window.location.href = 'https://github.com/NaulaN/Escarbot-py'"
-                             src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                             alt="Github logo">
-                        <img style="display: inline-block; margin-left: 25%; width: 8%;"
-                             src="http://assets.stickpng.com/images/58480979cef1014c0b5e4901.png">
-                        <img class="animSocialNetwork"
-                             style="width: 10%; cursor: pointer;"
+                    <section style="text-align: center">
+                        <img style="width: 10%; cursor: pointer;"
                              onclick="window.location.href = 'https://github.com/NaulaN/Escarbot-java'"
-                             src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                             src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/github.png"
                              alt="Github logo">
                     </section>
                 </div>

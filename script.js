@@ -10,7 +10,11 @@ let buttonBar1 = document.getElementById("buttonBar1");
 let buttonBar2 = document.getElementById("buttonBar2");
 
 let bannerTop = document.getElementById("bannerCHRZ");
-let bannerTest = document.getElementById("bannerTest")
+let bannerTest = document.getElementById("bannerTest");
+
+let superMarioBrosIllustration = document.getElementById("illustrationSection0");
+let superMarioBrosIllustrationImage0 = document.getElementById("illustrationSection0img0");
+let superMarioBrosIllustrationImage1 = document.getElementById("illustrationSection0img1");
 
 
 /**
@@ -22,41 +26,48 @@ let bannerTest = document.getElementById("bannerTest")
 function addEventListenerOverButton(button, id) {
     let navsButtons = [nav1button0, nav1button1, nav1button2, nav1button3, nav1button4];
 
-    button.addEventListener("mouseover", ev => {
+    button.addEventListener("mouseover", () => {
         for(let n = 0; n < navsButtons.length; n++) {
-            if(navsButtons[n].id !== id) {
+            if(navsButtons[n].id !== id)
                 navsButtons[n].style.animationName = 'opacityOut';
-            } else navsButtons[n].style.animationName = 'opacityIn';
+            else navsButtons[n].style.animationName = 'opacityIn';
 
             navsButtons[n].style.animationDuration = '.5s';
             navsButtons[n].style.animationFillMode = 'forwards';
         }
-    })
+    });
 }
 
 // Animation de "Focus".
 addEventListenerOverButton(nav1button0, "nav1Button0");     // Accueil
 addEventListenerOverButton(nav1button1, "nav1Button1");     // Videos
 addEventListenerOverButton(nav1button2, "nav1Button2");     // Projets
-addEventListenerOverButton(nav1button3, "nav1Button3");     // Competance
+addEventListenerOverButton(nav1button3, "nav1Button3");     // Competence
 addEventListenerOverButton(nav1button4, "nav1Button4");     // Contact
 
 
 // Quand le souris se retire de la barre de navigation, tous les boutons reviennent a la normale.
-navBar1.addEventListener("pointerleave", ev => {
+navBar1.addEventListener("pointerleave", () => {
     let navsButtons = [nav1button0, nav1button1, nav1button2, nav1button3, nav1button4];
 
     for(let n = 0; n < navsButtons.length; n++)
         navsButtons[n].style.animationName = 'opacityIn';
-})
+});
 
+buttonBar1.addEventListener("mouseover", () => {
+    bannerTop.style.display = 'block';
+    bannerTest.style.display = 'none';
+});
+buttonBar2.addEventListener("mouseover", () => {
+    bannerTest.style.display = 'block';
+    bannerTop.style.display = 'none';
+});
 
-buttonBar1.addEventListener("mouseover", ev => {
-    bannerTop.style.opacity = '100%';
-    bannerTest.style.opacity = '0%';
-})
-
-buttonBar2.addEventListener("mouseover", ev => {
-    bannerTest.style.opacity = '100%';
-    bannerTop.style.opacity = '0%';
-})
+superMarioBrosIllustration.addEventListener("mouseleave", () => {
+    superMarioBrosIllustrationImage0.style.display = "none";
+    superMarioBrosIllustrationImage1.style.display = "block";
+});
+superMarioBrosIllustration.addEventListener("mouseover", () => {
+    superMarioBrosIllustrationImage0.style.display = "block";
+    superMarioBrosIllustrationImage1.style.display = "none";
+});
