@@ -175,6 +175,7 @@ header {
     margin-top: 50px;
     z-index: -1;
     height: 370px;
+    aspect-ratio: 16/9;
 }
 #bannerCHRZ img {
     position: absolute;
