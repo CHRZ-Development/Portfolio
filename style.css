@@ -3,9 +3,9 @@
 
 
 @keyframes movePerso {
-    20% { top: 360px; }
+    20% { top: 340px; }
     50% { top: 300px; }
-    80% { top: 360px; }
+    80% { top: 340px; }
 }
 
 @keyframes opacityIn {
@@ -23,33 +23,67 @@
     to { opacity: 100%;}
 }
 
+@keyframes textSlide {
+    from { left: calc(100vw + 50%); }
+    to { left: -50%; }
+}
+
+@keyframes shadow-out {
+    from {
+        -webkit-box-shadow: 0 0 15px #3f2341;
+        -moz-box-shadow: 0 0 15px #3f2341;
+        box-shadow: 0 0 15px #3f2341;
+    }
+    to {
+        -webkit-box-shadow: 10px 10px 15px #311c33;
+        -moz-box-shadow: 10px 10px 15px #311c33;
+        box-shadow: 10px 10px 15px #311c33;
+    }
+}
+@keyframes shadow-in {
+    from {
+        -webkit-box-shadow: 10px 10px 15px #311c33;
+        -moz-box-shadow: 10px 10px 15px #311c33;
+        box-shadow: 10px 10px 15px #311c33;
+    }
+    to {
+        -webkit-box-shadow: 0 0 15px #3f2341;
+        -moz-box-shadow: 0 0 15px #3f2341;
+        box-shadow: 0 0 15px #3f2341;
+    }
+}
+
+
 html {
     background: #171917;
     color: white;
 }
+
 html body {
     margin: 0;
     padding: 0;
     animation-name: opacityInAt0;
     animation-duration: 1s;
 }
-header {
-    display: flex;
 
+#header {
+    display: flex;
     align-items: center;
     justify-content: space-around;
 
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 100%;
     background-color: #252725;
-    position: fixed;
-    z-index: 1;
+
+    position: -webkit-sticky;
+    position: sticky;
+
+    top: 29px;
+    width: 100%;
 
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-
 
 #iconSectionNavBar1 {
     display: flex;
@@ -61,9 +95,7 @@ header {
     padding-left: 5px;
 }
 
-#iconNavBar1 {
-    image-rendering: optimizeQuality;
-}
+#iconNavBar1 { image-rendering: optimizeSpeed; }
 
 #iconSectionNavBar1 img {
     display: inline-block;
@@ -105,6 +137,8 @@ header {
     text-align: left;
 }
 #bio-sectionAccueil p {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 85%;
     margin: 0;
 }
 
@@ -125,12 +159,48 @@ header {
     font-size: 80%;
     width: 100%;
 }
+#sectionAccueil:hover {
+    -webkit-animation-name: shadow-out;
+    -webkit-animation-duration: 500ms;
+    -moz-animation-name: shadow-out;
+    -moz-animation-duration: 500ms;
+    -o-animation-name: shadow-out;
+    -o-animation-duration: 500ms;
+    animation-name: shadow-out;
+    animation-duration: 500ms;
+
+    -webkit-animation-play-state: initial;
+    -moz-animation-play-state: initial;
+    -o-animation-play-state: initial;
+    animation-play-state: initial;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+#sectionAccueil:not(:hover) {
+    -webkit-animation-name: shadow-in;
+    -webkit-animation-duration: 500ms;
+    -moz-animation-name: shadow-in;
+    -moz-animation-duration: 500ms;
+    -o-animation-name: shadow-in;
+    -o-animation-duration: 500ms;
+    animation-name: shadow-in;
+    animation-duration: 500ms;
+
+    -webkit-animation-play-state: initial;
+    -moz-animation-play-state: initial;
+    -o-animation-play-state: initial;
+    animation-play-state: initial;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
 
 
 #footerCopyright {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 5%;
+    margin: 10% auto 0;
     text-align: center;
 }
 #footerCopyright p {
@@ -140,7 +210,7 @@ header {
 
 #bucheronPerso {
     position: absolute;
-    top: 360px;
+    top: 330px;
     left: 30vw;
     height: 58px;
     width: 32px;
@@ -170,38 +240,58 @@ header {
     z-index: -1;
 }
 
-#bannerCHRZ {
-    display: block;
-    margin-top: 50px;
-    z-index: -1;
-    height: 370px;
-    aspect-ratio: 16/9;
+#structureWebSite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#bannerCHRZ img {
+#structureWebSite div {
+    text-align: left;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-left: 0.5px solid #242624;
+    border-right: 0.5px solid #242624;
+}
+
+#bannerInfoUseful {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    background-color: tomato;
+
+    height: 20px;
+}
+#bannerInfoUseful p {
     position: absolute;
-
-    top: 60px;
-    left: 0;
     width: 100%;
-
-    z-index: -1;
+    margin: 0;
 }
+
+#textScrollTop {
+    font-family: Arial, sans-serif;
+}
+
 
 #bannerTest {
     display: none;
-    padding-top: 50px;
-    z-index: -1;
-    height: 370px;
-}
-#bannerTest img {
-    position: absolute;
 
-    top: 60px;
-    left: 0;
-    width: 100%;
+    text-align: center;
 
     z-index: -1;
 }
+
+#bannerCHRZ {
+    text-align: center;
+
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    padding-left: 35px
+}
+
 
 .title-sectionAccueil {
     padding-top: 5px;
@@ -210,8 +300,6 @@ header {
     font-size: 135%;
     font-family: 'Press Start 2P', cursive;
 }
-
-
 
 #titleSectionDevInProgress {
     margin-top: 10%;
@@ -230,11 +318,8 @@ header {
     margin-right: auto;
     margin-bottom: 20px;
 }
-.illustrationSection img {
-    image-rendering: optimizeSpeed;
-    display: block;
-    width: 100%;
-}
+.illustrationSection img { width: 100%; }
+#superMarioBrosIllustrationImage1:hover { z-index: -1; }
 
 #illustrationSection3 {
     background-image: url("https://camo.githubusercontent.com/12388ce36f4e4bc0fc8886b648b1642e6d01c7f7210a498bcba9ca539efd5b47/68747470733a2f2f656170692e70636c6f75642e636f6d2f6765747075627468756d623f636f64653d585a463430305a3531536a4f4a62685538344f64434165336b32455356427476453358266c696e6b70617373776f72643d756e646566696e65642673697a653d31303738783139302663726f703d3026747970653d6175746f");
@@ -261,10 +346,52 @@ header {
     width: 25%;
     background-color: #252725;
     border-radius: 10px;
+
+    -webkit-box-shadow: 0 0 15px #3f2341;
+    -moz-box-shadow: 0 0 15px #3f2341;
     box-shadow: 0 0 15px #3f2341;
+
     border-left: 5px solid #2d0161;
     border-right: 5px solid #2d0161;
-    padding: 5px;
+    padding-top: 5px;
+}
+.sectionsDevInProgress:hover {
+    -webkit-animation-name: shadow-out;
+    -webkit-animation-duration: 500ms;
+    -moz-animation-name: shadow-out;
+    -moz-animation-duration: 500ms;
+    -o-animation-name: shadow-out;
+    -o-animation-duration: 500ms;
+    animation-name: shadow-out;
+    animation-duration: 500ms;
+
+    -webkit-animation-play-state: initial;
+    -moz-animation-play-state: initial;
+    -o-animation-play-state: initial;
+    animation-play-state: initial;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.sectionsDevInProgress:not(:hover) {
+    -webkit-animation-name: shadow-in;
+    -webkit-animation-duration: 500ms;
+    -moz-animation-name: shadow-in;
+    -moz-animation-duration: 500ms;
+    -o-animation-name: shadow-in;
+    -o-animation-duration: 500ms;
+    animation-name: shadow-in;
+    animation-duration: 500ms;
+
+    -webkit-animation-play-state: initial;
+    -moz-animation-play-state: initial;
+    -o-animation-play-state: initial;
+    animation-play-state: initial;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 .informationSections p {
     font-family: 'Source Code Pro', monospace;
@@ -278,17 +405,15 @@ header {
 .woodBar {
     position: absolute;
 
-    top: 64px;
+    top: -30px;
     width: 100%;
     height: 32px;
+    z-index: -1;
 
     background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wood.png");
     background-repeat: repeat-x;
     background-size: contain;
-
-    box-shadow: 0 2px 15px black;
 }
-
 
 /* ======================= */
 /* * BARRE DE NAVIGATION * */
@@ -449,4 +574,27 @@ header {
 .buttonsBar:hover {
     background-color: aquamarine;
     cursor: pointer;
+}
+
+#structureWebSite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1%;
+
+    font-family: 'Source Code Pro', monospace;
+}
+
+#structureWebSite div {
+    width: calc(70vw/5);
+}
+
+#structureWebSite a {
+    color: white;
+    text-decoration: none;
+}
+
+#structureWebSite h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: calc(100vw/75);
 }

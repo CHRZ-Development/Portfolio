@@ -12,10 +12,15 @@ let buttonBar2 = document.getElementById("buttonBar2");
 let bannerTop = document.getElementById("bannerCHRZ");
 let bannerTest = document.getElementById("bannerTest");
 
-let superMarioBrosIllustration = document.getElementById("illustrationSection0");
-let superMarioBrosIllustrationImage0 = document.getElementById("illustrationSection0img0");
-let superMarioBrosIllustrationImage1 = document.getElementById("illustrationSection0img1");
+let header = document.getElementById("header");
 
+
+let h = document.getElementById("topBanner").clientHeight;
+if (h > 0) header.style.marginTop = "calc(100vh - " + h + "px - 75px)";
+document.addEventListener("mouseover", () => {
+    let h = document.getElementById("topBanner").clientHeight;
+    if (h > 0) header.style.marginTop = "calc(100vh - " + h + "px - 75px)";
+});
 
 /**
  * Crée une ecoute d'evenement pour un bouton lorsque il est en contact de la souris
@@ -61,13 +66,4 @@ buttonBar1.addEventListener("mouseover", () => {
 buttonBar2.addEventListener("mouseover", () => {
     bannerTest.style.display = 'block';
     bannerTop.style.display = 'none';
-});
-
-superMarioBrosIllustration.addEventListener("mouseleave", () => {
-    superMarioBrosIllustrationImage0.style.display = "none";
-    superMarioBrosIllustrationImage1.style.display = "block";
-});
-superMarioBrosIllustration.addEventListener("mouseover", () => {
-    superMarioBrosIllustrationImage0.style.display = "block";
-    superMarioBrosIllustrationImage1.style.display = "none";
 });

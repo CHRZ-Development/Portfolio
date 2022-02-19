@@ -16,11 +16,3 @@ header {
     border-bottom-right-radius: 10px;
 }
 
-#vitrineProjet {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 32px;
-
-    gap: 2%;
-}

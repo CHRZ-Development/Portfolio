@@ -11,71 +11,20 @@
     </head>
     
     <body>
-        <header>
-            <div id="iconSectionNavBar1">
-                <img id="iconNavBar1" src="https://github.com/NaulaN/CHRZ-development_website/blob/master/res/logos/beetleAnimated.gif?raw=true"
-                     alt="Icon animated CHRZ Development">
-                <p><b>CHRZ Development</b></p>
+        <header id="topBanner">
+            <div id="bannerInfoUseful">
+                <marquee id="textScrollTop" behavior="scroll">💻 Ce site est en cours de développement. 🔍 Un bug ? Un problème ? 📧 Contactez-moi sur <a href="https://mail.google.com/mail/?view=cm&source=mailto&to=nchrzaszcz.pro@gmail.com">nchrzaszcz.pro@gmail.com</a></marquee>
             </div>
-            <!-- Top nav bar -->
-            <div id="sectionNavBar1">
-                <nav id="nav1Button0"
-                     class="navBar1Button0  navBar1"
-                     onclick="window.location.href = 'index.html'">
-                    <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
-                         alt="Button img">
-                    <span><b>ACCUEIL</b></span>
-                </nav>
-                <nav id="nav1Button1"
-                     class="navBar1Button1  navBar1"
-                     onclick="window.location.href = 'videos/index.html'">
-                    <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
-                         alt="Button img">
-                    <span><b>VIDEOS</b></span>
-                </nav>
-                <nav id="nav1Button2"
-                     class="navBar1Button2  navBar1"
-                     onclick="window.location.href = 'projets/index.html'">
-                    <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
-                         alt="Button img">
-                    <span><b>PROJETS</b></span>
-                </nav>
-                <nav id="nav1Button3"
-                     class="navBar1Button3  navBar1"
-                     onclick="window.location.href = 'skills/index.html'">
-                    <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
-                         alt="Button img">
-                    <span><b>COMPETENCE</b></span>
-                </nav>
-                <nav id="nav1Button4"
-                     class="navBar1Button4  navBar1"
-                     onclick="window.location.href = 'contact/index.html'">
-                    <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
-                         alt="Button img">
-                    <span><b>CONTACT</b></span>
-                </nav>
-            </div>
-        </header>
-
-        <div class="woodBar"></div>
-
-        <main>
             <!-- Web site banner -->
-            <div style="display: flex;
-                        align-items: center;
-                        justify-content: center;">
-                <div style="display: grid;
-                            grid-template-columns: 80%;">
-                    <div id="bannerCHRZ"
-                         style="grid-column-start: 1; grid-column-end: 1;
-                                grid-row-start: 1; grid-row-end: 1;">
-                        <img src="https://eapi.pcloud.com/getpubthumb?code=XZDxKJZN8hmg776ThHK4qfjorqFSkseNiGy&linkpassword=undefined&size=1917x437&crop=0&type=auto"
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <div style="display: grid; grid-template-columns: 100%;">
+                    <div id="bannerCHRZ">
+                        <img style="width: 80%;" src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/chrz-development-banner.png"
                              alt="CHRZ development banner">
                     </div>
                     <div id="bannerTest"
-                         style="grid-column-start: 1; grid-column-end: 1;
-                                grid-row-start: 1; grid-row-end: 1;">
-                        <img src="https://eapi.pcloud.com/getpubthumb?code=XZ1lCJZBKTwWeQmtlXfqzpqNYwlkYDJpnj7&linkpassword=undefined&size=1742x370&crop=0&type=auto"
+                         style="grid-column-start: 1; grid-column-end: 1; grid-row-start: 1; grid-row-end: 1;">
+                        <img src="https://eapi.pcloud.com/getpubthumb?code=XZ1lCJZBKTwWeQmtlXfqzpqNYwlkYDJpnj7&linkpassword=undefined&size=1085x436&crop=0&type=auto"
                              alt="Banner a remplacer"> <!-- TODO -->
                     </div>
                     <div id="bucheronPerso"
@@ -90,16 +39,19 @@
             </div>
 
             <div id="sectionAccueil">
-                <p class="title-sectionAccueil"><b><u>Bio:</u></b></p>
+                <p id="bio" class="title-sectionAccueil"><b><u>Bio:</u></b></p>
 
                 <div id="bio-sectionAccueil">
                     <p><b>Je suis passionné dans le développement depuis plusieurs années aujourd'hui</b></p>
-                    <p><b>Principalement orienté dans le "Game Development" et principalement sur du language Python ou bien Java</b></p>
+                    <p><b>Principalement orienté dans le "Game Development" et principalement sur du langage Python ou bien Java</b></p>
 
                     <p style="margin-top: 2%"><b>Développeur depuis 2019</b></p>
                 </div>
 
-                <p class="title-sectionAccueil" style="margin-top: 20px;"><b><u>Mes reseaux:</u></b></p>
+                <div>
+                    <img >
+                    <p id="mes-reseaux" class="title-sectionAccueil" style="margin-top: 20px;"><b><u>Mes reseaux:</u></b></p>
+                </div>
 
                 <div id="socials-sectionAccueil">
                     <img onclick="window.location.href = 'http://instagram.chrz-development.fr'"
@@ -119,18 +71,74 @@
                          alt="Discord logo">
                 </div>
             </div>
+        </header>
 
-            <div><p id="titleSectionDevInProgress"><u><b>En cours de development !</b></u></p></div>
+        <main>
+            <div id="header">
+                <div class="woodBar"></div>
+
+                <div id="iconSectionNavBar1">
+                    <img id="iconNavBar1" src="https://github.com/NaulaN/CHRZ-development_website/blob/master/res/logos/beetleAnimated.gif?raw=true"
+                         alt="Icon animated CHRZ Development">
+                    <p><b>CHRZ Development</b></p>
+                </div>
+                <!-- Top nav bar -->
+                <div id="sectionNavBar1">
+                    <nav id="nav1Button0"
+                         class="navBar1Button0  navBar1"
+                         onclick="window.location.href = 'index.html'">
+                        <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
+                             alt="Button img">
+                        <span><b>ACCUEIL</b></span>
+                    </nav>
+                    <nav id="nav1Button1"
+                         class="navBar1Button1  navBar1"
+                         onclick="window.location.href = 'videos/index.html'">
+                        <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
+                             alt="Button img">
+                        <span><b>VIDEOS</b></span>
+                    </nav>
+                    <nav id="nav1Button2"
+                         class="navBar1Button2  navBar1"
+                         onclick="window.location.href = 'projets/index.html'">
+                        <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
+                             alt="Button img">
+                        <span><b>PROJETS</b></span>
+                    </nav>
+                    <nav id="nav1Button3"
+                         class="navBar1Button3  navBar1"
+                         onclick="window.location.href = 'skills/index.html'">
+                        <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
+                             alt="Button img">
+                        <span><b>COMPETENCE</b></span>
+                    </nav>
+                    <nav id="nav1Button4"
+                         class="navBar1Button4  navBar1"
+                         onclick="window.location.href = 'contact/index.html'">
+                        <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
+                             alt="Button img">
+                        <span><b>CONTACT</b></span>
+                    </nav>
+                </div>
+            </div>
+
+            <div><p id="titleSectionDevInProgress"><u><b>En cours de développement !</b></u></p></div>
 
             <div id="vitrineDevIsProgress">
                 <!-- SuperMarioBros 3 -->
-                <div class="sectionsDevInProgress">
+                <div id="SuperMariobros3" class="sectionsDevInProgress">
                     <!-- Images illustration -->
-                    <div class="illustrationSection">
-                        <img id="illustrationSection0img0" src="https://github.com/NaulaN/CHRZ-development_website/blob/master/res/illustration-Animated-Super-Mario-Bros3.gif?raw=true"
-                             style="grid-column-start: 1; grid-column-end: 1; grid-row-start: 1; grid-row-end: 1;">
-                        <img id="illustrationSection0img1" src="https://eapi.pcloud.com/getpubthumb?code=XZSiDJZdUfzK0lMLrfNr88Iyw9zXfhax63V&linkpassword=undefined&size=620x345&crop=0&type=auto"
-                             style="grid-column-start: 1; grid-column-end: 1; grid-row-start: 1; grid-row-end: 1;">
+                    <div class="illustrationSection" id="illustrationSection0">
+                        <iframe id="superMarioBrosIllustrationImage0"
+                                src="https://www.youtube.com/embed/qsRPmR4ChBw?start=5"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                style="width: 100%; height: 100%; grid-column-start: 1; grid-column-end: 1; grid-row-start: 1; grid-row-end: 1;">
+                        </iframe>
+                        <img id="superMarioBrosIllustrationImage1" src="https://eapi.pcloud.com/getpubthumb?code=XZSiDJZdUfzK0lMLrfNr88Iyw9zXfhax63V&linkpassword=undefined&size=620x345&crop=0&type=auto"
+                             style="width: 100%; height: 100%; grid-column-start: 1; grid-column-end: 1; grid-row-start: 1; grid-row-end: 1;">
                     </div>
 
                     <!-- little information -->
@@ -140,7 +148,7 @@
                         <p>Ce jeux est disponible en tant que bêta.</p>
                         <p>Codé uniquement sur le langage Python et grâce à la librairie pygame.</p>
                         <p>Plus de détails sur ce projets, vous pouvez vous y rendre dans
-                            <u onclick="window.location.href = 'projets/index.html'">projets</u>
+                            <u onclick="window.location.href = './projets/index.html'">projets</u>
                             ou bien sur le
                             <u onclick="window.location.href = 'https://github.com/NaulaN/SuperMarioBros3-pygame'">Github</u>
                             du code source
@@ -189,7 +197,44 @@
         </main>
 
         <footer id="footerCopyright">
-            <p><b>© 2019-2021 CHRZ Development</b></p>
+            <p><b>© 2019-2022 CHRZ Development</b></p>
+
+            <div id="structureWebSite">
+                <div>
+                    <h1><a href="index.html">Accueil</a></h1>
+                    <ul>
+                        <li><a href="index.html#bio">Bio</a></li>
+                        <li><a href="index.html#mes-reseaux">Mes réseaux</a></li>
+                        <li><a href="index.html#titleSectionDevInProgress">En cours de développement</a></li>
+                        <ul>
+                            <li><a href="index.html#SuperMariobros3">SuperMarioBros3</a></li>
+                            <li>Escarbot</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div>
+                    <h1>Vidéos</h1>
+                </div>
+
+                <div>
+                    <h1>Projets</h1>
+                    <ul>
+                        <li>SuperMarioBros3</li>
+                        <li>Escarbot</li>
+                        <li>AventuraBuild</li>
+                        <li>CHRZ Radio</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h1>Competence</h1>
+                </div>
+
+                <div>
+                    <h1>Contact</h1>
+                </div>
+            </div>
         </footer>
 
         <script src="script.js"></script>
