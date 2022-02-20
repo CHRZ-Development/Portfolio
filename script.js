@@ -9,7 +9,7 @@ let navBar1 = document.getElementById("sectionNavBar1");
 let buttonBar1 = document.getElementById("buttonBar1");
 let buttonBar2 = document.getElementById("buttonBar2");
 
-let bannerTop = document.getElementById("bannerCHRZ");
+let bannerTop = document.getElementById("bannerCHRZ2");
 let bannerTest = document.getElementById("bannerTest");
 
 let header = document.getElementById("header");
@@ -27,7 +27,7 @@ function floorResize()
     let width = document.body.clientWidth;
 
     let style = "48px ";
-    for (let i = 0; i < width/64; i++) style = style + "48px ";
+    for (let i = 0; i < width/48; i++) style = style + "48px ";
     style = style + "48px";
 
     floor.style.gridTemplateColumns = style;

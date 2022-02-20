@@ -63,7 +63,7 @@ html body {
 }
 
 header {
-    background: linear-gradient(#50b7e6, #dbeef9);
+    background: linear-gradient(#83cced, #dbeef9);
 }
 
 #header {
@@ -289,9 +289,6 @@ header {
 
     image-rendering: pixelated;
 
-    -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter: drop-shadow(5px 5px 5px #222);
-
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
@@ -472,6 +469,8 @@ header {
     transform: rotate(-90deg);
     width: 100%;
     height: 100%;
+
+    z-index: 1;
 }
 
 #village {
@@ -483,7 +482,7 @@ header {
 
     image-rendering: pixelated;
     overflow: hidden;
-    z-index: -1;
+    width: 100%;
 }
 
 #village img {
