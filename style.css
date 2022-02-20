@@ -2,11 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 
-@keyframes movePerso {
-    20% { top: 340px; }
-    50% { top: 300px; }
-    80% { top: 340px; }
-}
+
 
 @keyframes opacityIn {
     from { opacity: 45%; }
@@ -66,6 +62,10 @@ html body {
     animation-duration: 1s;
 }
 
+header {
+    background: linear-gradient(#50b7e6, #dbeef9);
+}
+
 #header {
     display: flex;
     align-items: center;
@@ -97,6 +97,10 @@ html body {
 
 #iconNavBar1 { image-rendering: optimizeSpeed; }
 
+#topBanner {
+    height: calc(100vh - 75px);
+}
+
 #iconSectionNavBar1 img {
     display: inline-block;
     float: left;
@@ -116,12 +120,12 @@ html body {
 #sectionAccueil {
     background-color: #252725;
     border-radius: 10px;
-    height: 15%;
-    width: 40%;
+    width: 40vw;
 
-    border-left: 5px solid #2d0161;
-    border-right: 5px solid #2d0161;
+    border-left: 5px solid #9c21b7;
+    border-right: 5px solid #9d20b7;
 
+    margin-top: 5%;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -209,17 +213,16 @@ html body {
 }
 
 #bucheronPerso {
+    image-rendering: pixelated;
     position: absolute;
-    top: 330px;
-    left: 30vw;
+    top: -150px;
+    left: 10vw;
     height: 58px;
     width: 32px;
+    z-index: 1;
 
     background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZC6DJZL5nMQBio1XfCimi0kgf82uJuAvFy&linkpassword=undefined&size=32x58&crop=0&type=auto");
 
-    animation-name: movePerso;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
 }
 #homeTop {
     display: flex;
@@ -283,6 +286,11 @@ html body {
 
 #bannerCHRZ {
     text-align: center;
+
+    image-rendering: pixelated;
+
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 
     grid-column-start: 1;
     grid-column-end: 1;
@@ -405,14 +413,67 @@ html body {
 .woodBar {
     position: absolute;
 
-    top: -30px;
+    top: -25px;
     width: 100%;
     height: 32px;
     z-index: -1;
+    box-shadow: 0 0 10px black;
 
     background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wood.png");
     background-repeat: repeat-x;
     background-size: contain;
+}
+#floor {
+    display: grid;
+    grid-template-columns: 32px;
+
+    image-rendering: pixelated;
+    -webkit-filter: drop-shadow(0px 5px 5px #222);
+    filter: drop-shadow(0px 5px 5px #222);
+    overflow: hidden;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+#floor #corner-left {
+    width: 100%;
+    height: 100%;
+
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#floor #corner-right {
+    width: 100%;
+    height: 100%;
+}
+#floor #rock-corner {
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+}
+
+#floor .dirt-left {
+    width: 100%;
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.rock-bottom {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+#minigame {
+    position: absolute;
+    top: -90px;
+    width: 100%;
+    height: 100%;
 }
 
 /* ======================= */

@@ -19,7 +19,7 @@
             <div style="display: flex; align-items: center; justify-content: center;">
                 <div style="display: grid; grid-template-columns: 100%;">
                     <div id="bannerCHRZ">
-                        <img style="width: 80%;" src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/chrz-development-banner.png"
+                        <img style="width: 80%;" src="res/chrz-development-banner-transparent.png"
                              alt="CHRZ development banner">
                     </div>
                     <div id="bannerTest"
@@ -27,9 +27,6 @@
                         <img src="https://eapi.pcloud.com/getpubthumb?code=XZ1lCJZBKTwWeQmtlXfqzpqNYwlkYDJpnj7&linkpassword=undefined&size=1085x436&crop=0&type=auto"
                              alt="Banner a remplacer"> <!-- TODO -->
                     </div>
-                    <div id="bucheronPerso"
-                         style="grid-column-start: 1; grid-column-end: 1;
-                                grid-row-start: 1; grid-row-end: 1;"></div>
                 </div>
             </div>
 
@@ -38,44 +35,27 @@
                 <div class="buttonsBar" id="buttonBar2"></div>
             </div>
 
-            <div id="sectionAccueil">
-                <p id="bio" class="title-sectionAccueil"><b><u>Bio:</u></b></p>
 
-                <div id="bio-sectionAccueil">
-                    <p><b>Je suis passionné dans le développement depuis plusieurs années aujourd'hui</b></p>
-                    <p><b>Principalement orienté dans le "Game Development" et principalement sur du langage Python ou bien Java</b></p>
-
-                    <p style="margin-top: 2%"><b>Développeur depuis 2019</b></p>
-                </div>
-
-                <div>
-                    <img >
-                    <p id="mes-reseaux" class="title-sectionAccueil" style="margin-top: 20px;"><b><u>Mes reseaux:</u></b></p>
-                </div>
-
-                <div id="socials-sectionAccueil">
-                    <img onclick="window.location.href = 'http://instagram.chrz-development.fr'"
-                         src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/instagram.png"
-                         alt="Instagram logo">
-                    <img onclick="window.location.href = 'http://youtube.chrz-development.fr'"
-                         src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/youtube.png"
-                         alt="Youtube logo">
-                    <img onclick="window.location.href = 'http://github.chrz-development.fr'"
-                         src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/github.png"
-                         alt="Github logo">
-                    <img onclick="window.location.href = 'http://discord.chrz-development.fr'"
-                         src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/discord.png"
-                         alt="Discord logo">
-                    <img onclick="window.location.href = 'https://www.linkedin.com/in/naulan-chrzaszcz-83893622b/'"
-                         src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/linkedin.png"
-                         alt="Discord logo">
-                </div>
-            </div>
         </header>
 
         <main>
             <div id="header">
-                <div class="woodBar"></div>
+
+                <div id="minigame">
+                    <div id="floor">
+                        <img id="corner-left" src="res/floors/corner-left.png">
+                        <img class="dirt-left" src="res/floors/dirt-left.png">
+                        <img id="corner-right" src="res/floors/corner-right.png">
+                        <img id="rock-corner" src="res/floors/dirt-left.png">
+                        <img class="rock-bottom" src="res/floors/rock-bottom.png"
+                             style="grid-row-start: 3; grid-row-end: 3; width: 100%; height: 100%">
+                    </div>
+                    <div id="village">
+
+                    </div>
+                </div>
+
+                <div id="bucheronPerso"></div>
 
                 <div id="iconSectionNavBar1">
                     <img id="iconNavBar1" src="https://github.com/NaulaN/CHRZ-development_website/blob/master/res/logos/beetleAnimated.gif?raw=true"
@@ -119,6 +99,40 @@
                              alt="Button img">
                         <span><b>CONTACT</b></span>
                     </nav>
+                </div>
+            </div>
+
+            <div id="sectionAccueil">
+                <p id="bio" class="title-sectionAccueil"><b><u>Bio:</u></b></p>
+
+                <div id="bio-sectionAccueil">
+                    <p><b>Je suis passionné dans le développement depuis plusieurs années aujourd'hui</b></p>
+                    <p><b>Principalement orienté dans le "Game Development" et principalement sur du langage Python ou bien Java</b></p>
+
+                    <p style="margin-top: 2%"><b>Développeur depuis 2019</b></p>
+                </div>
+
+                <div>
+                    <img > <!-- TODO -->
+                    <p id="mes-reseaux" class="title-sectionAccueil" style="margin-top: 20px;"><b><u>Mes reseaux:</u></b></p>
+                </div>
+
+                <div id="socials-sectionAccueil">
+                    <img onclick="window.location.href = 'http://instagram.chrz-development.fr'"
+                         src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/instagram.png"
+                         alt="Instagram logo">
+                    <img onclick="window.location.href = 'http://youtube.chrz-development.fr'"
+                         src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/youtube.png"
+                         alt="Youtube logo">
+                    <img onclick="window.location.href = 'http://github.chrz-development.fr'"
+                         src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/github.png"
+                         alt="Github logo">
+                    <img onclick="window.location.href = 'http://discord.chrz-development.fr'"
+                         src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/discord.png"
+                         alt="Discord logo">
+                    <img onclick="window.location.href = 'https://www.linkedin.com/in/naulan-chrzaszcz-83893622b/'"
+                         src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/linkedin.png"
+                         alt="Discord logo">
                 </div>
             </div>
 

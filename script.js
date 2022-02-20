@@ -14,13 +14,75 @@ let bannerTest = document.getElementById("bannerTest");
 
 let header = document.getElementById("header");
 
+let corner_right = document.getElementById("corner-right");
+let corner_rock = document.getElementById("rock-corner");
+let floor = document.getElementById("floor");
 
-let h = document.getElementById("topBanner").clientHeight;
-if (h > 0) header.style.marginTop = "calc(100vh - " + h + "px - 75px)";
-document.addEventListener("mouseover", () => {
-    let h = document.getElementById("topBanner").clientHeight;
-    if (h > 0) header.style.marginTop = "calc(100vh - " + h + "px - 75px)";
-});
+
+let floors = [];
+function floorResize()
+{
+    let width = document.body.clientWidth;
+
+    let style = "32px ";
+    for (let i = 0; i < width/32; i++) style = style + "32px ";
+    style = style + "32px";
+
+    floor.style.gridTemplateColumns = style;
+
+
+    for (let i = 0; i < floors.length; i++) floors[i].remove();
+    floors = [];
+
+    for (let i = 2; i < width/32; i++) {
+        const floor_top = document.createElement("img");
+        const rock_top = document.createElement("img");
+        const rock_bottom = document.createElement("img");
+        floor_top.src = "res/floors/floor-top.png";
+        floor_top.alt = "floor-top";
+        rock_bottom.src = "res/floors/rock-bottom.png";
+        rock_bottom.alt = "floor-top";
+        rock_bottom.className = "rock-bottom";
+        rock_top.src ="res/floors/rock-top_" +  Math.round(Math.random()*4) + ".png";
+        rock_top.alt = "rock-top";
+        floor_top.style.gridColumnStart = i.toString();
+        floor_top.style.gridColumnEnd = i.toString();
+        rock_bottom.style.gridColumnStart = i.toString();
+        rock_bottom.style.gridColumnEnd = i.toString();
+        rock_top.style.gridColumnStart = i.toString();
+        rock_top.style.gridColumnEnd = i.toString();
+        floor_top.style.gridRowStart = "1";
+        rock_top.style.gridRowStart = "2";
+        rock_bottom.style.gridRowStart = "3";
+        floor_top.style.width = "100%";
+        floor_top.style.height = "100%";
+        rock_top.style.width = "100%";
+        rock_top.style.height = "100%";
+        floors.push(floor_top);
+
+        floor.appendChild(floor_top);
+        floor.appendChild(rock_top);
+        floor.appendChild(rock_bottom);
+    }
+    const rock_bottom = document.createElement("img");
+    rock_bottom.src = "res/floors/rock-bottom.png";
+    rock_bottom.alt = "floor-top";
+    rock_bottom.className = "rock-bottom";
+    rock_bottom.style.gridColumnStart = (floors.length+2).toString();
+    rock_bottom.style.gridColumnEnd = (floors.length+2).toString();
+    floor.appendChild(rock_bottom);
+
+    corner_right.style.gridColumnStart = (floors.length+2).toString();
+    corner_right.style.gridColumnEnd = (floors.length+2).toString();
+    corner_right.style.gridRowStart = "1";
+    corner_rock.style.gridColumnStart = (floors.length+2).toString();
+    corner_rock.style.gridColumnEnd = (floors.length+2).toString();
+    corner_rock.style.gridRowStart = "2";
+}
+
+floorResize();
+window.addEventListener("resize", floorResize);
+
 
 /**
  * Crée une ecoute d'evenement pour un bouton lorsque il est en contact de la souris
