@@ -14,9 +14,11 @@ let bannerTest = document.getElementById("bannerTest");
 
 let header = document.getElementById("header");
 
+let rock_bottom_right = document.getElementById("rock-bottom-right");
 let corner_right = document.getElementById("corner-right");
 let corner_rock = document.getElementById("rock-corner");
 let floor = document.getElementById("floor");
+let village = document.getElementById("village");
 
 
 let floors = [];
@@ -24,9 +26,9 @@ function floorResize()
 {
     let width = document.body.clientWidth;
 
-    let style = "32px ";
-    for (let i = 0; i < width/32; i++) style = style + "32px ";
-    style = style + "32px";
+    let style = "48px ";
+    for (let i = 0; i < width/64; i++) style = style + "48px ";
+    style = style + "48px";
 
     floor.style.gridTemplateColumns = style;
 
@@ -34,7 +36,7 @@ function floorResize()
     for (let i = 0; i < floors.length; i++) floors[i].remove();
     floors = [];
 
-    for (let i = 2; i < width/32; i++) {
+    for (let i = 2; i < width/48; i++) {
         const floor_top = document.createElement("img");
         const rock_top = document.createElement("img");
         const rock_bottom = document.createElement("img");
@@ -64,24 +66,35 @@ function floorResize()
         floor.appendChild(rock_top);
         floor.appendChild(rock_bottom);
     }
-    const rock_bottom = document.createElement("img");
-    rock_bottom.src = "res/floors/rock-bottom.png";
-    rock_bottom.alt = "floor-top";
-    rock_bottom.className = "rock-bottom";
-    rock_bottom.style.gridColumnStart = (floors.length+2).toString();
-    rock_bottom.style.gridColumnEnd = (floors.length+2).toString();
-    floor.appendChild(rock_bottom);
-
     corner_right.style.gridColumnStart = (floors.length+2).toString();
     corner_right.style.gridColumnEnd = (floors.length+2).toString();
     corner_right.style.gridRowStart = "1";
     corner_rock.style.gridColumnStart = (floors.length+2).toString();
     corner_rock.style.gridColumnEnd = (floors.length+2).toString();
     corner_rock.style.gridRowStart = "2";
+    rock_bottom_right.style.gridColumnStart = (floors.length+2).toString();
+    rock_bottom_right.style.gridColumnEnd = (floors.length+2).toString();
+    rock_bottom_right.style.gridRowStart = "3";
 }
 
 floorResize();
 window.addEventListener("resize", floorResize);
+
+
+let width = document.body.clientWidth;
+
+let style = "";
+for (let i = 0; i < width/64; i++) style = style + "64px ";
+
+village.style.gridTemplateColumns = style;
+window.addEventListener("resize", () => {
+    let width = document.body.clientWidth;
+
+    let style = "";
+    for (let i = 0; i < width/64; i++) style = style + "64px ";
+
+    village.style.gridTemplateColumns = style;
+})
 
 
 /**
