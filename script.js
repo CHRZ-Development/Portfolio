@@ -40,12 +40,12 @@ function floorResize()
         const floor_top = document.createElement("img");
         const rock_top = document.createElement("img");
         const rock_bottom = document.createElement("img");
-        floor_top.src = "res/floors/floor-top.png";
+        floor_top.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png";
         floor_top.alt = "floor-top";
-        rock_bottom.src = "res/floors/rock-bottom.png";
+        rock_bottom.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png";
         rock_bottom.alt = "floor-top";
         rock_bottom.className = "rock-bottom";
-        rock_top.src ="res/floors/rock-top_" +  Math.round(Math.random()*4) + ".png";
+        rock_top.src ="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_" +  Math.round(Math.random()*4) + ".png";
         rock_top.alt = "rock-top";
         floor_top.style.gridColumnStart = i.toString();
         floor_top.style.gridColumnEnd = i.toString();
