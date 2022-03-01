@@ -28,57 +28,59 @@ const village = document.getElementById("village");
 let floors = [];
 function floorResize()
 {
-    let width = document.body.clientWidth;
+    if (floor != null) {
+        let width = document.body.clientWidth;
 
-    let style = "48px ";
-    for (let i = 0; i < width/48; i++) style = style + "48px ";
-    style = style + "48px";
+        let style = "48px ";
+        for (let i = 0; i < width/48; i++) style = style + "48px ";
+        style = style + "48px";
 
-    floor.style.gridTemplateColumns = style;
+        floor.style.gridTemplateColumns = style;
 
 
-    for (let i = 0; i < floors.length; i++) floors[i].remove();
-    floors = [];
+        for (let i = 0; i < floors.length; i++) floors[i].remove();
+        floors = [];
 
-    for (let i = 2; i < width/48; i++) {
-        const floor_top = document.createElement("img");
-        const rock_top = document.createElement("img");
-        const rock_bottom = document.createElement("img");
-        floor_top.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png";
-        floor_top.alt = "floor-top";
-        rock_bottom.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png";
-        rock_bottom.alt = "floor-top";
-        rock_bottom.className = "rock-bottom";
-        rock_top.src ="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_" +  Math.round(Math.random()*4) + ".png";
-        rock_top.alt = "rock-top";
-        floor_top.style.gridColumnStart = i.toString();
-        floor_top.style.gridColumnEnd = i.toString();
-        rock_bottom.style.gridColumnStart = i.toString();
-        rock_bottom.style.gridColumnEnd = i.toString();
-        rock_top.style.gridColumnStart = i.toString();
-        rock_top.style.gridColumnEnd = i.toString();
-        floor_top.style.gridRowStart = "1";
-        rock_top.style.gridRowStart = "2";
-        rock_bottom.style.gridRowStart = "3";
-        floor_top.style.width = "100%";
-        floor_top.style.height = "100%";
-        rock_top.style.width = "100%";
-        rock_top.style.height = "100%";
-        floors.push(floor_top);
+        for (let i = 2; i < width/48; i++) {
+            const floor_top = document.createElement("img");
+            const rock_top = document.createElement("img");
+            const rock_bottom = document.createElement("img");
+            floor_top.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png";
+            floor_top.alt = "floor-top";
+            rock_bottom.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png";
+            rock_bottom.alt = "floor-top";
+            rock_bottom.className = "rock-bottom";
+            rock_top.src ="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_" +  Math.round(Math.random()*4) + ".png";
+            rock_top.alt = "rock-top";
+            floor_top.style.gridColumnStart = i.toString();
+            floor_top.style.gridColumnEnd = i.toString();
+            rock_bottom.style.gridColumnStart = i.toString();
+            rock_bottom.style.gridColumnEnd = i.toString();
+            rock_top.style.gridColumnStart = i.toString();
+            rock_top.style.gridColumnEnd = i.toString();
+            floor_top.style.gridRowStart = "1";
+            rock_top.style.gridRowStart = "2";
+            rock_bottom.style.gridRowStart = "3";
+            floor_top.style.width = "100%";
+            floor_top.style.height = "100%";
+            rock_top.style.width = "100%";
+            rock_top.style.height = "100%";
+            floors.push(floor_top);
 
-        floor.appendChild(floor_top);
-        floor.appendChild(rock_top);
-        floor.appendChild(rock_bottom);
+            floor.appendChild(floor_top);
+            floor.appendChild(rock_top);
+            floor.appendChild(rock_bottom);
+        }
+        corner_right.style.gridColumnStart = (floors.length+2).toString();
+        corner_right.style.gridColumnEnd = (floors.length+2).toString();
+        corner_right.style.gridRowStart = "1";
+        corner_rock.style.gridColumnStart = (floors.length+2).toString();
+        corner_rock.style.gridColumnEnd = (floors.length+2).toString();
+        corner_rock.style.gridRowStart = "2";
+        rock_bottom_right.style.gridColumnStart = (floors.length+2).toString();
+        rock_bottom_right.style.gridColumnEnd = (floors.length+2).toString();
+        rock_bottom_right.style.gridRowStart = "3";
     }
-    corner_right.style.gridColumnStart = (floors.length+2).toString();
-    corner_right.style.gridColumnEnd = (floors.length+2).toString();
-    corner_right.style.gridRowStart = "1";
-    corner_rock.style.gridColumnStart = (floors.length+2).toString();
-    corner_rock.style.gridColumnEnd = (floors.length+2).toString();
-    corner_rock.style.gridRowStart = "2";
-    rock_bottom_right.style.gridColumnStart = (floors.length+2).toString();
-    rock_bottom_right.style.gridColumnEnd = (floors.length+2).toString();
-    rock_bottom_right.style.gridRowStart = "3";
 }
 
 floorResize();
@@ -106,10 +108,12 @@ function navBarShowOrNot(width)
  */
 function resizeFloor(width)
 {
-    let style = "";
-    for (let i = 0; i < width/64; i++) style = style + "64px ";
+    if (floor != null) {
+        let style = "";
+        for (let i = 0; i < width/64; i++) style = style + "64px ";
 
-    village.style.gridTemplateColumns = style;
+        village.style.gridTemplateColumns = style;
+    }
 }
 
 resizeFloor(document.body.clientWidth);
@@ -126,10 +130,11 @@ window.addEventListener("resize", () => {
 let isMenuClick = false;
 // Fait disparaître le menu quand il est trop haut pour ne pas qu'il fasse moche
 window.addEventListener("scroll", (ev) => {
-    if (window.scrollY < document.getElementById("topBanner").clientHeight) {
-        dropDownMenu.style.display = "none";
-        isMenuClick = false;
-    }
+    if (document.getElementById("topBanner") != null)
+        if (window.scrollY < document.getElementById("topBanner").clientHeight) {
+            dropDownMenu.style.display = "none";
+            isMenuClick = false;
+        }
 })
 
 navMenuButton.addEventListener("click", () => {
@@ -142,8 +147,9 @@ navMenuButton.addEventListener("click", () => {
         isMenuClick = false;
     }
 
-    if (window.scrollY < document.getElementById("topBanner").clientHeight)
-        window.scrollTo(0, header.clientHeight + dropDownMenu.clientHeight - 32*3);
+    if (document.getElementById("topBanner") != null)
+        if (window.scrollY < document.getElementById("topBanner").clientHeight)
+            window.scrollTo(0, header.clientHeight + dropDownMenu.clientHeight - 32*3);
 })
 // si il clique ailleurs que sur le l'icon du menu deroulant
 document.addEventListener("click", (ev) => {

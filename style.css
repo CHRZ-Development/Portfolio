@@ -73,6 +73,7 @@ header {
 
     padding-top: 5px;
     padding-bottom: 5px;
+
     background-color: #252725;
 
     position: -webkit-sticky;
@@ -99,9 +100,7 @@ header {
 
 #iconNavBar1 { image-rendering: optimizeSpeed; }
 
-#topBanner {
-    height: calc(100vh - 75px);
-}
+#topBanner { height: calc(100vh - 75px); }
 
 
 #iconSectionNavBar1 img {
@@ -532,6 +531,8 @@ header {
     height: 86.5vh;
     width: 40vw;
 
+    font-family: 'Press Start 2P', cursive;
+
     left: calc(100vw - 40vw);
     top: calc(100vh - 86.5vh);
 
@@ -540,9 +541,9 @@ header {
     background-color: #252525;
     z-index: 1;
 }
-#drop-down-menu p {
-    border-top: white solid 1px;
-}
+#drop-down-menu p { border-top: white solid 1px; }
+#drop-down-menu a { color: white; }
+#drop-down-menu a:hover { color: #6a1794; }
 
 /* le bouton de la barre de navigation */
 .navBar1

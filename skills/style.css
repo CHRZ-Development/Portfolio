@@ -10,7 +10,10 @@ header {
     padding-top: 5px;
     padding-bottom: 5px;
     width: 100%;
+
+    background: none;
     background-color: #252725;
+
     position: fixed;
     z-index: 1;
 
