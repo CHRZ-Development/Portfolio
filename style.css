@@ -92,6 +92,8 @@ header {
     justify-content: center;
     gap: 5px;
 
+    width: 25%;
+
     padding-left: 5px;
 }
 
@@ -100,6 +102,7 @@ header {
 #topBanner {
     height: calc(100vh - 75px);
 }
+
 
 #iconSectionNavBar1 img {
     display: inline-block;
@@ -508,6 +511,7 @@ header {
 {
     display: grid;
 
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 100%;
 }
@@ -522,32 +526,8 @@ header {
     font-family: 'Press Start 2P', cursive;
     height: 64px;
     cursor: pointer;
+    grid-gap: 4px;
 }
-/*
-@media only screen and (max-width: 660px) {
-    .navBar1 { height: 24px; }
-    .navBar1 span {
-        font-size: 85%;
-        margin: auto;
-    }
-}
-
-@media only screen and (min-width: 670px) and (max-width: 1000px) {
-    .navBar1 { height: 35px; }
-    .navBar1 span {
-        font-size: 85%;
-        margin: auto;
-    }
-}
-
-@media only screen and (min-width: 1001px){
-    .navBar1 { height: 64px; }
-    .navBar1 span {
-        font-size: 150%;
-        margin: auto;
-    }
-}
-*/
 .navBar1 span:hover { color: #6a1794; }
 
 /* placement des boutons dans la barre de navigation */
@@ -559,14 +539,15 @@ header {
 
     grid-column-start: 1; grid-column-end: 1;
     grid-row: 1;
-    padding-left: 2px;
-    padding-right: 2px;
 }
-.navBar1Button0 img {
+.navBar1Button0 > img {
     z-index: -1;
+
+    object-fit: contain;
 }
-.navBar1Button0 span {
+.navBar1Button0 > span {
     position: absolute;
+
     font-size: 150%;
 }
 
@@ -578,15 +559,15 @@ header {
 
     grid-column-start: 2; grid-column-end: 2;
     grid-row: 1;
-    width: 100%;
-    padding-left: 2px;
-    padding-right: 2px;
 }
-.navBar1Button1 img {
+.navBar1Button1 > img {
     z-index: -1;
+
+    object-fit: contain;
 }
-.navBar1Button1 span {
+.navBar1Button1 > span {
     position: absolute;
+
     font-size: 150%;
 }
 
@@ -598,14 +579,15 @@ header {
 
     grid-column-start: 3; grid-column-end: 3;
     grid-row: 1;
-    padding-left: 2px;
-    padding-right: 2px;
 }
-.navBar1Button2 img {
+.navBar1Button2 > img {
     z-index: -1;
+
+    object-fit: contain;
 }
-.navBar1Button2 span {
+.navBar1Button2 > span {
     position: absolute;
+
     font-size: 150%;
 }
 
@@ -617,33 +599,15 @@ header {
 
     grid-column-start: 4; grid-column-end: 4;
     grid-row: 1;
-    padding-left: 2px;
-    padding-right: 2px;
 }
-.navBar1Button3 img {
+.navBar1Button3 > img {
     z-index: -1;
-}
-.navBar1Button3 span {
-    position: absolute;
-    font-size: 140%;
-}
 
-.navBar1Button4
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    grid-column-start: 5; grid-column-end: 5;
-    grid-row: 1;
-    padding-left: 2px;
-    padding-right: 2px;
+    resize: block;
 }
-.navBar1Button4 img {
-    z-index: -1;
-}
-.navBar1Button4 span {
+.navBar1Button3 > span {
     position: absolute;
+
     font-size: 150%;
 }
 

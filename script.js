@@ -1,24 +1,25 @@
 
-let nav1button0 = document.getElementById("nav1Button0");
-let nav1button1 = document.getElementById("nav1Button1");
-let nav1button2 = document.getElementById("nav1Button2");
-let nav1button3 = document.getElementById("nav1Button3");
-let nav1button4 = document.getElementById("nav1Button4");
-let navBar1 = document.getElementById("sectionNavBar1");
+const nav1button0 = document.getElementById("nav1Button0");
+const nav1button1 = document.getElementById("nav1Button1");
+const nav1button2 = document.getElementById("nav1Button2");
+const nav1button3 = document.getElementById("nav1Button3");
+// const nav1button4 = document.getElementById("nav1Button4");
+const navBar1 = document.getElementById("sectionNavBar1");
 
-let buttonBar1 = document.getElementById("buttonBar1");
-let buttonBar2 = document.getElementById("buttonBar2");
+const buttonBar1 = document.getElementById("buttonBar1");
+const buttonBar2 = document.getElementById("buttonBar2");
+const buttonsNavImg = document.getElementsByClassName("navBar1");
 
-let bannerTop = document.getElementById("bannerCHRZ2");
-let bannerTest = document.getElementById("bannerTest");
+const bannerTop = document.getElementById("bannerCHRZ2");
+const bannerTest = document.getElementById("bannerTest");
 
-let header = document.getElementById("header");
+const header = document.getElementById("header");
 
-let rock_bottom_right = document.getElementById("rock-bottom-right");
-let corner_right = document.getElementById("corner-right");
-let corner_rock = document.getElementById("rock-corner");
-let floor = document.getElementById("floor");
-let village = document.getElementById("village");
+const rock_bottom_right = document.getElementById("rock-bottom-right");
+const corner_right = document.getElementById("corner-right");
+const corner_rock = document.getElementById("rock-corner");
+const floor = document.getElementById("floor");
+const village = document.getElementById("village");
 
 
 let floors = [];
@@ -81,19 +82,37 @@ floorResize();
 window.addEventListener("resize", floorResize);
 
 
-let width = document.body.clientWidth;
+/**
+ * Fait disparaitre ou non la barre de navigation selon la taille de la fenêtre.
+ * @param width Taille de la fenêtre où est afficher le site internet.
+ */
+function navBarShowOrNot(width)
+{
+    if (width < 1350)
+        buttonsNavImg.item(0).parentElement.style.display = "none";
+    else buttonsNavImg.item(0).parentElement.style.display = "grid";
+}
 
-let style = "";
-for (let i = 0; i < width/64; i++) style = style + "64px ";
-
-village.style.gridTemplateColumns = style;
-window.addEventListener("resize", () => {
-    let width = document.body.clientWidth;
-
+/**
+ * Augmente ou reduit la taille du sol selon la taille de la fenêtre.
+ * @param width Taille de la fenêtre où est afficher le site internet.
+ */
+function resizeFloor(width)
+{
     let style = "";
     for (let i = 0; i < width/64; i++) style = style + "64px ";
 
     village.style.gridTemplateColumns = style;
+}
+
+resizeFloor(document.body.clientWidth);
+navBarShowOrNot(document.body.clientWidth);
+window.addEventListener("resize", () => {
+    // Fait grandir ou réduit la taille du sol selon la taille de la fenêtre.
+    let width = document.body.clientWidth;
+
+    resizeFloor(width);
+    navBarShowOrNot(width);
 })
 
 
@@ -104,7 +123,7 @@ window.addEventListener("resize", () => {
  * @param id Un String qui contient l'ID du bouton concerner (ex: "nav1Button0")
  */
 function addEventListenerOverButton(button, id) {
-    let navsButtons = [nav1button0, nav1button1, nav1button2, nav1button3, nav1button4];
+    let navsButtons = [nav1button0, nav1button1, nav1button2, nav1button3];
 
     button.addEventListener("mouseover", () => {
         for(let n = 0; n < navsButtons.length; n++) {
@@ -123,12 +142,12 @@ addEventListenerOverButton(nav1button0, "nav1Button0");     // Accueil
 addEventListenerOverButton(nav1button1, "nav1Button1");     // Videos
 addEventListenerOverButton(nav1button2, "nav1Button2");     // Projets
 addEventListenerOverButton(nav1button3, "nav1Button3");     // Competence
-addEventListenerOverButton(nav1button4, "nav1Button4");     // Contact
+// addEventListenerOverButton(nav1button4, "nav1Button4");     // Contact
 
 
 // Quand le souris se retire de la barre de navigation, tous les boutons reviennent a la normale.
 navBar1.addEventListener("pointerleave", () => {
-    let navsButtons = [nav1button0, nav1button1, nav1button2, nav1button3, nav1button4];
+    let navsButtons = [nav1button0, nav1button1, nav1button2, nav1button3];
 
     for(let n = 0; n < navsButtons.length; n++)
         navsButtons[n].style.animationName = 'opacityIn';
