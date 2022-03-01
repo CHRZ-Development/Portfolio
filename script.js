@@ -122,7 +122,16 @@ window.addEventListener("resize", () => {
     navBarShowOrNot(width);
 })
 
+
 let isMenuClick = false;
+// Fait disparaître le menu quand il est trop haut pour ne pas qu'il fasse moche
+window.addEventListener("scroll", (ev) => {
+    if (window.scrollY < document.getElementById("topBanner").clientHeight) {
+        dropDownMenu.style.display = "none";
+        isMenuClick = false;
+    }
+})
+
 navMenuButton.addEventListener("click", () => {
     if (!isMenuClick) {
         dropDownMenu.style.display = "block";
@@ -133,19 +142,12 @@ navMenuButton.addEventListener("click", () => {
         isMenuClick = false;
     }
 
-    if (window.scrollY < header.clientHeight)
+    if (window.scrollY < document.getElementById("topBanner").clientHeight)
         window.scrollTo(0, header.clientHeight + dropDownMenu.clientHeight - 32*3);
 })
 // si il clique ailleurs que sur le l'icon du menu deroulant
 document.addEventListener("click", (ev) => {
     if (ev.target.id !== "icon-drop-down-navigation-bar" && isMenuClick) {
-        dropDownMenu.style.display = "none";
-        isMenuClick = false;
-    }
-})
-// Fait disparaître le menu quand il est trop haut pour ne pas qu'il fasse moche
-window.addEventListener("scroll", () => {
-    if (window.scrollY < header.clientHeight) {
         dropDownMenu.style.display = "none";
         isMenuClick = false;
     }
