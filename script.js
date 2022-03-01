@@ -144,13 +144,12 @@ document.addEventListener("click", (ev) => {
     }
 })
 // Fait disparaître le menu quand il est trop haut pour ne pas qu'il fasse moche
-window.addEventListener("scroll", (ev) => {
+window.addEventListener("scroll", () => {
     if (window.scrollY < header.clientHeight) {
         dropDownMenu.style.display = "none";
         isMenuClick = false;
     }
 })
-
 
 
 /**
