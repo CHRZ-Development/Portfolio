@@ -516,6 +516,34 @@ header {
     grid-template-rows: 100%;
 }
 
+#icon-drop-down-navigation-bar {
+    display: none;
+
+    height: 64px;
+    width: 64px;
+
+    background-color: white;
+}
+
+#drop-down-menu {
+    position: fixed;
+    display: none;
+
+    height: 86.5vh;
+    width: 40vw;
+
+    left: calc(100vw - 40vw);
+    top: calc(100vh - 86.5vh);
+
+    padding: 10px;
+
+    background-color: #252525;
+    z-index: 1;
+}
+#drop-down-menu p {
+    border-top: white solid 1px;
+}
+
 /* le bouton de la barre de navigation */
 .navBar1
 {

@@ -15,6 +15,9 @@ const bannerTest = document.getElementById("bannerTest");
 
 const header = document.getElementById("header");
 
+const navMenuButton = document.getElementById("icon-drop-down-navigation-bar");
+const dropDownMenu = document.getElementById("drop-down-menu");
+
 const rock_bottom_right = document.getElementById("rock-bottom-right");
 const corner_right = document.getElementById("corner-right");
 const corner_rock = document.getElementById("rock-corner");
@@ -88,9 +91,13 @@ window.addEventListener("resize", floorResize);
  */
 function navBarShowOrNot(width)
 {
-    if (width < 1350)
+    if (width < 1350) {
         buttonsNavImg.item(0).parentElement.style.display = "none";
-    else buttonsNavImg.item(0).parentElement.style.display = "grid";
+        navMenuButton.style.display = "block";
+    } else {
+        buttonsNavImg.item(0).parentElement.style.display = "grid";
+        navMenuButton.style.display = "none";
+    }
 }
 
 /**
@@ -113,6 +120,20 @@ window.addEventListener("resize", () => {
 
     resizeFloor(width);
     navBarShowOrNot(width);
+})
+
+let isMenuClick = false;
+navMenuButton.addEventListener("click", () => {
+    console.log(isMenuClick);
+
+    if (isMenuClick === false) {
+        dropDownMenu.style.display = "block";
+        dropDownMenu.style.top = header.style.top + 32*3 + "px";
+        isMenuClick = true;
+    } else if (isMenuClick === true) {
+        dropDownMenu.style.display = "none";
+        isMenuClick = false;
+    }
 })
 
 
