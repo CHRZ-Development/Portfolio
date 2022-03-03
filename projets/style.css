@@ -19,7 +19,7 @@ header {
     border-bottom-right-radius: 10px;
 }
 
-#vitrineProjet {
+.vitrineProjet {
     display: flex;
     align-items: center;
     justify-content: center;

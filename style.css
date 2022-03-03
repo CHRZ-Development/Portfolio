@@ -400,6 +400,7 @@ header {
     -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
+.informationSections { padding: 2%; }
 .informationSections p {
     font-family: 'Source Code Pro', monospace;
     font-size: 90%;
