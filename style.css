@@ -136,6 +136,43 @@ header {
     text-align: center;
 }
 
+#header-sectionAcceuil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("https://media-exp1.licdn.com/dms/image/C4E16AQFKM796iJvy9A/profile-displaybackgroundimage-shrink_200_800/0/1647170244581?e=1652918400&v=beta&t=brRyhYsnji4X2UEvZMt0hGwntT3AD4_NrLbhuixKqRM");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 5px;
+
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+}
+#header-sectionAcceuil > div > img {
+    border-radius: 100%;
+    width: 80%;
+    height: 80%;
+
+    -webkit-box-shadow: 0 0 10px black;
+    -moz-box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px black;
+}
+#header-sectionAcceuil h1 {
+    font-size: 150%;
+    font-family: 'Press Start 2P', cursive;
+
+    text-shadow: 0 0 10px black;
+}
+#header-sectionAcceuil h2 {
+    font-size: 90%;
+    font-family: 'Source Code Pro', monospace;
+
+    text-shadow: 0 0 10px black;
+}
 #bio-sectionAccueil {
     padding-left: 20px;
     padding-top: 10px;
@@ -144,7 +181,7 @@ header {
 }
 #bio-sectionAccueil p {
     font-family: 'Source Code Pro', monospace;
-    font-size: 85%;
+    font-size: 90%;
     margin: 0;
 }
 
@@ -304,7 +341,7 @@ header {
     padding-top: 5px;
     margin: 0 0 0 5px;
     text-align: left;
-    font-size: 135%;
+    font-size: 120%;
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -639,6 +676,11 @@ header {
     position: absolute;
 
     font-size: 150%;
+}
+
+#mes-formations {
+    height: 100%;
+    width: 100%;
 }
 
 /* ======================= */
