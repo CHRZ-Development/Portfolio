@@ -45,26 +45,44 @@ function floorResize()
             const floor_top = document.createElement("img");
             const rock_top = document.createElement("img");
             const rock_bottom = document.createElement("img");
+
             floor_top.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png";
             floor_top.alt = "floor-top";
+            floor_top.style.gridColumnStart = i.toString();
+            floor_top.style.gridColumnEnd = i.toString();
+            floor_top.style.gridRowStart = "2";
+            floor_top.style.width = "100%";
+            floor_top.style.height = "100%";
+
             rock_bottom.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png";
             rock_bottom.alt = "floor-top";
             rock_bottom.className = "rock-bottom";
-            rock_top.src ="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_" +  Math.round(Math.random()*4) + ".png";
-            rock_top.alt = "rock-top";
-            floor_top.style.gridColumnStart = i.toString();
-            floor_top.style.gridColumnEnd = i.toString();
             rock_bottom.style.gridColumnStart = i.toString();
             rock_bottom.style.gridColumnEnd = i.toString();
+            rock_bottom.style.gridRowStart = "4";
+
+            rock_top.src ="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_" +  Math.round(Math.random()*4) + ".png";
+            rock_top.alt = "rock-top";
             rock_top.style.gridColumnStart = i.toString();
             rock_top.style.gridColumnEnd = i.toString();
-            floor_top.style.gridRowStart = "1";
-            rock_top.style.gridRowStart = "2";
-            rock_bottom.style.gridRowStart = "3";
-            floor_top.style.width = "100%";
-            floor_top.style.height = "100%";
+            rock_top.style.gridRowStart = "3";
             rock_top.style.width = "100%";
             rock_top.style.height = "100%";
+
+            /* L'herbe sur le sol */
+            let grass_spawn_or_not = Math.random();
+            if (grass_spawn_or_not > .1 && grass_spawn_or_not < .5) {
+                const grass = document.createElement("img");
+                grass.src = "https://eapi.pcloud.com/getpubthumb?code=XZs6fzZAipX7SihVSzmvqn3sfQHpLFPvzLV&linkpassword=undefined&size=32x32&crop=0&type=auto";
+                grass.alt = "grass";
+                grass.style.gridColumnStart = i.toString();
+                grass.style.gridColumnEnd = i.toString()
+                grass.style.gridRowStart = "1";
+                grass.style.width = "100%";
+                grass.style.height = "100%";
+                floor.appendChild(grass);
+            }
+
             floors.push(floor_top);
 
             floor.appendChild(floor_top);
@@ -73,13 +91,13 @@ function floorResize()
         }
         corner_right.style.gridColumnStart = (floors.length+2).toString();
         corner_right.style.gridColumnEnd = (floors.length+2).toString();
-        corner_right.style.gridRowStart = "1";
+        corner_right.style.gridRowStart = "2";
         corner_rock.style.gridColumnStart = (floors.length+2).toString();
         corner_rock.style.gridColumnEnd = (floors.length+2).toString();
-        corner_rock.style.gridRowStart = "2";
+        corner_rock.style.gridRowStart = "3";
         rock_bottom_right.style.gridColumnStart = (floors.length+2).toString();
         rock_bottom_right.style.gridColumnEnd = (floors.length+2).toString();
-        rock_bottom_right.style.gridRowStart = "3";
+        rock_bottom_right.style.gridRowStart = "4";
     }
 }
 
