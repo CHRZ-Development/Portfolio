@@ -73,7 +73,7 @@ function floorResize()
             let grass_spawn_or_not = Math.random();
             if (grass_spawn_or_not > .1 && grass_spawn_or_not < .5) {
                 const grass = document.createElement("img");
-                grass.src = "https://eapi.pcloud.com/getpubthumb?code=XZs6fzZAipX7SihVSzmvqn3sfQHpLFPvzLV&linkpassword=undefined&size=32x32&crop=0&type=auto";
+                grass.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/grass.png";
                 grass.alt = "grass";
                 grass.style.gridColumnStart = i.toString();
                 grass.style.gridColumnEnd = i.toString()
