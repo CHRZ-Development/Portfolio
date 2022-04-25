@@ -550,7 +550,7 @@ header {
 
 #platform-floor {
     display: grid;
-    grid-template-rows: 48px 48px 48px 48px 48px;
+    grid-template-rows: 48px 48px 48px 48px 48px 48px 48px 48px;
     grid-template-columns: 48px 48px 48px 48px 48px 48px;
 
     image-rendering: pixelated;
