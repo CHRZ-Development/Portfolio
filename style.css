@@ -518,6 +518,17 @@ header {
     z-index: 1;
 }
 
+.torch {
+    position: absolute;
+    display: grid;
+
+    grid-template-rows: 48px 48px 48px;
+    grid-template-columns: 48px;
+
+    left: 300px;
+    top: 1020px;
+}
+
 #village {
     position: absolute;
     display: grid;
