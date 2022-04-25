@@ -254,7 +254,7 @@ header {
 #bucheronPerso {
     image-rendering: pixelated;
     position: absolute;
-    top: -55px;
+    top: -10px;
     left: 35vw;
     height: 58px;
     width: 32px;
