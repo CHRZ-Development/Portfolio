@@ -187,8 +187,12 @@ header {
 
 #socials-sectionAccueil {
     padding-top: 10px;
-}
 
+}
+#socials-sectionAccueil a {
+    font-style: normal;
+    text-underline: none;
+}
 #socials-sectionAccueil img {
     width: 46px;
     height: 46px;
