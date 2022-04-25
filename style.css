@@ -600,6 +600,23 @@ header {
     margin-right: auto;
 }
 
+#platform-profile {
+    position: relative;
+    display: grid;
+    grid-template-columns: 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px;
+    grid-template-rows: 48px;
+
+    top: -50px;
+    left: -690px;
+    z-index: -1;
+}
+
+#platform-profile img {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
 #icon-drop-down-navigation-bar {
     display: none;
 
