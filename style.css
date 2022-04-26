@@ -138,8 +138,11 @@ header {
 }
 
 .sectionAccueil {
+    position: relative;
     width: 100%;
-    height: 1000px;
+    height: auto;
+
+    top: -10px;
     z-index: -1;
 }
 
