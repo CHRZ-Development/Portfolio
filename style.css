@@ -550,16 +550,22 @@ header {
     grid-template-rows: 48px 48px 48px;
     grid-template-columns: 48px;
     z-index: 11;
-
-    animation-name: torch-anim;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
 }
 
 .torch img {
     image-rendering: pixelated;
     width: 100%;
     height: 100%;
+}
+
+.first-torch {
+    animation-name: torch-anim;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .light-torch {
