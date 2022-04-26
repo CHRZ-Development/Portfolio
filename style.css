@@ -65,6 +65,18 @@
     }
 }
 
+@keyframes torch-anim {
+    0% {
+        background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch0.png");
+    }
+    50% {
+        background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch1.png");
+    }
+    100% {
+        background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch2.png");
+    }
+}
+
 
 html {
     background: #171917;
@@ -538,6 +550,10 @@ header {
     grid-template-rows: 48px 48px 48px;
     grid-template-columns: 48px;
     z-index: 11;
+
+    animation-name: torch-anim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 .torch img {
