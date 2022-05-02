@@ -103,6 +103,15 @@ header {
     z-index: 256;
 }
 
+.email-link {
+    text-underline: none;
+    color: white;
+}
+.email-link:hover {
+    cursor: pointer;
+    color: snow;
+}
+
 #iconSectionNavBar1 {
     display: flex;
 
