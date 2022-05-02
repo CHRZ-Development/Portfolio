@@ -49,41 +49,20 @@
 }
 
 @keyframes bright {
-    0% {
-        transform: rotate(0deg) scale(100%, 100%);
-        transform-origin: center;
-    }
-
-    50% {
-        transform: rotate(180deg) scale(125%, 125%);
-        transform-origin: center;
-    }
-
-    100% {
-        transform: rotate(360deg) scale(100%, 100%);
-        transform-origin: center;
-    }
+    0% { transform: rotate(0deg) scale(100%, 100%); }
+    50% { transform: rotate(180deg) scale(125%, 125%); }
+    100% { transform: rotate(360deg) scale(100%, 100%); }
 }
 
 @keyframes torch-anim {
-    0% {
-        background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch0.png");
-    }
-    50% {
-        background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch1.png");
-    }
-    100% {
-        background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch2.png");
-    }
+    0% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch0.png"); }
+    50% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch1.png"); }
+    100% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch2.png"); }
 }
 
 @keyframes moulin-anim {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
 }
 
 
@@ -165,10 +144,11 @@ header {
 
     top: -10px;
     z-index: -1;
+    overflow: hidden;
 }
+.sectionAccueil p { overflow: hidden; }
 
-.sectionAccueil #bgVideo {
-}
+.sectionAccueil #bgVideo {}
 
 #header-sectionAcceuil {
     display: flex;
@@ -186,13 +166,11 @@ header {
     padding: 5px;
     z-index: 10;
 }
-
 #header-sectionAcceuil div {
     margin-left: 20px;
     width: 500px;
     text-align: center;
 }
-
 #header-sectionAcceuil img {
     border-radius: 100%;
     width: 100px;
@@ -217,6 +195,7 @@ header {
 
 #bio {
     font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
 }
 
 #socials-sectionAccueil {
@@ -583,6 +562,8 @@ header {
     animation-name: bright;
     animation-iteration-count: infinite;
     animation-duration: 20s;
+
+    transform-origin: center;
 }
 
 .hexagon {
@@ -640,12 +621,12 @@ that they form a hexagon */
 }
 
 #palle-moulin {
-    position: absolute;
-    display: grid;
-
     grid-row: 1/1;
     grid-column: 1/1;
 
+    position: absolute;
+
+    display: grid;
     grid-template-rows: 48px 48px 48px 48px 48px 48px 48px 48px 48px;
     grid-template-columns: 48px 48px 48px 48px 48px 48px 48px 48px 48px;
 
@@ -658,11 +639,13 @@ that they form a hexagon */
 
     transform-origin: center;
     image-rendering: pixelated;
+    overflow: hidden;
 }
 
 #palle-moulin img {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 #minigame {
