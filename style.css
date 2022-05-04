@@ -130,6 +130,17 @@ header {
 #topBanner { height: calc(100vh - 75px); }
 
 
+#lorraine-flag {
+    margin-left: 5px;
+    margin-right: 15px;
+
+    height: 30px;
+    width: 50px;
+
+    border: solid black;
+}
+
+
 #iconSectionNavBar1 img {
     display: inline-block;
     float: left;
