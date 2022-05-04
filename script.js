@@ -26,6 +26,7 @@ const village = document.getElementById("village");
 
 
 let floors = [];
+let _grass = [];
 function floorResize()
 {
     if (floor != null) {
@@ -34,12 +35,12 @@ function floorResize()
         let style = "48px ";
         for (let i = 0; i < width/48; i++) style = style + "48px ";
         style = style + "48px";
-
         floor.style.gridTemplateColumns = style;
 
-
         for (let i = 0; i < floors.length; i++) floors[i].remove();
+        for (let i = 0; i < _grass.length; i++) _grass[i].remove();
         floors = [];
+        _grass = [];
 
         for (let i = 2; i < width/48; i++) {
             const floor_top = document.createElement("img");
@@ -80,6 +81,9 @@ function floorResize()
                 grass.style.gridRowStart = "1";
                 grass.style.width = "100%";
                 grass.style.height = "100%";
+
+                _grass.push(grass);
+
                 floor.appendChild(grass);
             }
 
