@@ -93,6 +93,10 @@
 
                         <!-- first moulin -->
                         <div class="moulins" style="grid-column: 10/10; grid-row: 1/1;"></div>
+
+                        <div class="birds-fly" style="z-index: 1;"></div>
+                        <div class="birds-fly" style="z-index: 1; top: -5px; animation: birds-fly-frames 375ms linear infinite, birds-fly-move 19s linear infinite;"></div>
+                        <div class="birds-fly" style="z-index: 1; top: 30px; animation: birds-fly-frames 250ms linear infinite, birds-fly-move 15s linear infinite;"></div>
                     </div>
 
                     <div class="palle-moulin" style="left: 442px; top: -440px;">
@@ -121,7 +125,6 @@
 
                     <div id="bucheronPerso"></div>
 
-                    <div class="birds"></div>
                 </div>
 
                 <div style="width: 96vw; display: flex; justify-content: center; align-items: center; column-gap: 5%">
@@ -414,7 +417,7 @@
         </main>
 
         <footer id="footerCopyright">
-            <p><b>© 2019-2022 CHRZ Development</b><b>, Pixel art concus par CHRZASZCZ Naulan</b></p>
+            <p><b>© 2019-2022 CHRZ Development</b><b>, Pixel art concus par CHRZASZCZ Naulan¹</b></p>
 
             <div id="structureWebSite">
                 <div>
@@ -449,6 +452,8 @@
                 </div>
             </div>
         </footer>
+
+        <p>¹: Exception pour: l'oiseau, le papillion, ces sprites sheet viennent du jeu Stardew Valley</p>
 
         <script src="script.js"></script>
     </body>

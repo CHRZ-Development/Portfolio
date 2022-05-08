@@ -65,6 +65,17 @@
     to { transform: rotate(360deg); }
 }
 
+@keyframes birds-fly-frames {
+    0% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_1.png"); }
+    50% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_2.png"); }
+    100% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_3.png"); }
+}
+
+@keyframes birds-fly-move {
+    from { left: calc(100vw + 100px); }
+    to { left: -100px; }
+}
+
 
 html {
     background: #171917;
@@ -657,9 +668,7 @@ that they form a hexagon */
     grid-template-rows: 48px 48px 48px 48px 48px 48px 48px 48px 48px;
     grid-template-columns: 48px 48px 48px 48px 48px 48px 48px 48px 48px;
 
-    animation-name: moulin-anim;
-    animation-duration: 50s;
-    animation-iteration-count: infinite;
+    animation: moulin-anim 50s linear infinite;
 
     transform-origin: center;
     image-rendering: pixelated;
@@ -673,15 +682,20 @@ that they form a hexagon */
     overflow: hidden;
 }
 
-.birds {
-    position: relative;
+.birds-fly {
+    position: absolute;
+
+    animation: birds-fly-frames 500ms linear infinite, birds-fly-move 20s linear infinite;
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
     image-rendering: pixelated;
+    width: 32px;
+    height: 32px;
 }
+
 
 #minigame {
     position: absolute;
