@@ -67,7 +67,10 @@
 
 @keyframes birds-fly-frames {
     0% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_1.png"); }
-    50% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_2.png"); }
+    34% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_1.png"); }
+    35% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_2.png"); }
+    59% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_2.png"); }
+    60% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_3.png"); }
     100% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_3.png"); }
 }
 
@@ -262,41 +265,17 @@ header {
     width: 100%;
 }
 #sectionAccueil:hover {
-    -webkit-animation-name: shadow-out;
-    -webkit-animation-duration: 500ms;
-    -moz-animation-name: shadow-out;
-    -moz-animation-duration: 500ms;
-    -o-animation-name: shadow-out;
-    -o-animation-duration: 500ms;
     animation-name: shadow-out;
     animation-duration: 500ms;
 
-    -webkit-animation-play-state: initial;
-    -moz-animation-play-state: initial;
-    -o-animation-play-state: initial;
     animation-play-state: initial;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 #sectionAccueil:not(:hover) {
-    -webkit-animation-name: shadow-in;
-    -webkit-animation-duration: 500ms;
-    -moz-animation-name: shadow-in;
-    -moz-animation-duration: 500ms;
-    -o-animation-name: shadow-in;
-    -o-animation-duration: 500ms;
     animation-name: shadow-in;
     animation-duration: 500ms;
 
-    -webkit-animation-play-state: initial;
-    -moz-animation-play-state: initial;
-    -o-animation-play-state: initial;
     animation-play-state: initial;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
@@ -459,41 +438,17 @@ header {
     padding-top: 5px;
 }
 .sectionsDevInProgress:hover {
-    -webkit-animation-name: shadow-out;
-    -webkit-animation-duration: 500ms;
-    -moz-animation-name: shadow-out;
-    -moz-animation-duration: 500ms;
-    -o-animation-name: shadow-out;
-    -o-animation-duration: 500ms;
     animation-name: shadow-out;
     animation-duration: 500ms;
 
-    -webkit-animation-play-state: initial;
-    -moz-animation-play-state: initial;
-    -o-animation-play-state: initial;
     animation-play-state: initial;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 .sectionsDevInProgress:not(:hover) {
-    -webkit-animation-name: shadow-in;
-    -webkit-animation-duration: 500ms;
-    -moz-animation-name: shadow-in;
-    -moz-animation-duration: 500ms;
-    -o-animation-name: shadow-in;
-    -o-animation-duration: 500ms;
     animation-name: shadow-in;
     animation-duration: 500ms;
 
-    -webkit-animation-play-state: initial;
-    -moz-animation-play-state: initial;
-    -o-animation-play-state: initial;
     animation-play-state: initial;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 .informationSections { padding: 2%; }
