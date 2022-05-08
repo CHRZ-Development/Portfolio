@@ -6,12 +6,7 @@ const nav1button3 = document.getElementById("nav1Button3");
 // const nav1button4 = document.getElementById("nav1Button4");
 const navBar1 = document.getElementById("sectionNavBar1");
 
-const buttonBar1 = document.getElementById("buttonBar1");
-const buttonBar2 = document.getElementById("buttonBar2");
 const buttonsNavImg = document.getElementsByClassName("navBar1");
-
-const bannerTop = document.getElementById("bannerCHRZ2");
-const bannerTest = document.getElementById("bannerTest");
 
 const header = document.getElementById("header");
 
@@ -23,6 +18,8 @@ const corner_right = document.getElementById("corner-right");
 const corner_rock = document.getElementById("rock-corner");
 const floor = document.getElementById("floor");
 const village = document.getElementById("village");
+
+const moulins = document.getElementsByClassName("moulins");
 
 
 let floors = [];
@@ -107,6 +104,43 @@ function floorResize()
 
 floorResize();
 window.addEventListener("resize", floorResize);
+
+
+function createMoulin()
+{
+    for(let i = 0; i < moulins.length; i++)
+    {
+        let moulin = moulins[i];
+
+        for (let i = 1; i < 3; i++)
+            for (let j = 6; j >= 1; j--)
+            {
+                let moulin_tile = document.createElement("img");
+
+                if (i == 1)
+                    moulin_tile.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/moulin" + j + ".png";
+                else moulin_tile.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/moulin" + (j+5) + ".png";
+                moulin_tile.style.gridColumn = i + "/" + i;
+                moulin_tile.style.gridRow = (6-j) + "/" + (6-j);
+
+                // Bidouillage
+                if (j == 5 && i == 1 || j == 4 && i == 1) {
+                    moulin_tile.style.position = "relative";
+                    moulin_tile.style.top = "-20px"
+                }
+
+                moulin.appendChild(moulin_tile);
+            }
+
+        let moulin_final_tile = document.createElement("img");
+        moulin_final_tile.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/moulin11.png";
+        moulin_final_tile.style.gridColumn = "3/3";
+        moulin_final_tile.style.gridRow = "5/5";
+
+        moulin.appendChild(moulin_final_tile);
+    }
+}
+createMoulin();
 
 
 /**
@@ -217,14 +251,5 @@ navBar1.addEventListener("pointerleave", () => {
 
     for(let n = 0; n < navsButtons.length; n++)
         navsButtons[n].style.animationName = 'opacityIn';
-});
-
-buttonBar1.addEventListener("mouseover", () => {
-    bannerTop.style.display = 'block';
-    bannerTest.style.display = 'none';
-});
-buttonBar2.addEventListener("mouseover", () => {
-    bannerTest.style.display = 'block';
-    bannerTop.style.display = 'none';
 });
 

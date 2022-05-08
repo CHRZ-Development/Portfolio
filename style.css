@@ -127,7 +127,9 @@ header {
 
 #iconNavBar1 { image-rendering: optimizeSpeed; }
 
-#topBanner { height: calc(100vh - 75px); }
+#topBanner {
+    height: calc(100vh - 75px);
+}
 
 
 #lorraine-flag {
@@ -140,6 +142,15 @@ header {
     border: solid black;
 }
 
+.moulins {
+    display: grid;
+    grid-template-rows: 64px 64px 64px 64px 64px;
+    grid-template-columns: 64px 64px 64px;
+}
+.moulins img {
+    width: 100%;
+    height: 100%;
+}
 
 #iconSectionNavBar1 img {
     display: inline-block;
@@ -640,7 +651,7 @@ that they form a hexagon */
     overflow: hidden;
 }
 
-#palle-moulin {
+.palle-moulin {
     grid-row: 1/1;
     grid-column: 1/1;
 
@@ -649,9 +660,6 @@ that they form a hexagon */
     display: grid;
     grid-template-rows: 48px 48px 48px 48px 48px 48px 48px 48px 48px;
     grid-template-columns: 48px 48px 48px 48px 48px 48px 48px 48px 48px;
-
-    left: 442px;
-    top: -440px;
 
     animation-name: moulin-anim;
     animation-duration: 50s;
@@ -662,7 +670,7 @@ that they form a hexagon */
     overflow: hidden;
 }
 
-#palle-moulin img {
+.palle-moulin img {
     width: 100%;
     height: 100%;
     overflow: hidden;
