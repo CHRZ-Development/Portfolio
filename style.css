@@ -637,10 +637,10 @@ that they form a hexagon */
     overflow: hidden;
 }
 
-.birds-fly {
+.birds-brun-fly {
     position: absolute;
 
-    animation: birds-fly-frames 500ms linear infinite, birds-fly-move 20s linear infinite;
+    animation: birds-fly-frames 500ms linear infinite, birds-fly-move 30s linear infinite;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -650,7 +650,6 @@ that they form a hexagon */
     width: 32px;
     height: 32px;
 }
-
 
 #minigame {
     position: absolute;
