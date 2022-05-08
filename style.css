@@ -648,13 +648,9 @@ that they form a hexagon */
 #village img {
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 .palle-moulin {
-    grid-row: 1/1;
-    grid-column: 1/1;
-
     position: absolute;
 
     display: grid;
@@ -667,6 +663,7 @@ that they form a hexagon */
 
     transform-origin: center;
     image-rendering: pixelated;
+
     overflow: hidden;
 }
 
@@ -674,6 +671,16 @@ that they form a hexagon */
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+.birds {
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    image-rendering: pixelated;
 }
 
 #minigame {
