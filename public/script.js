@@ -43,7 +43,7 @@ function floorResize()
             const rock_top = document.createElement("img");
             const rock_bottom = document.createElement("img");
 
-            floor_top.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png";
+            floor_top.src = "<?php echo getenv('FLOOR_TOP'); ?>";
             floor_top.alt = "floor-top";
             floor_top.style.gridColumnStart = i.toString();
             floor_top.style.gridColumnEnd = i.toString();
@@ -51,14 +51,14 @@ function floorResize()
             floor_top.style.width = "100%";
             floor_top.style.height = "100%";
 
-            rock_bottom.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png";
-            rock_bottom.alt = "floor-top";
+            rock_bottom.src = "<?php echo getenv('ROCK_BOTTOM'); ?>";
+            rock_bottom.alt = "rock-bottom";
             rock_bottom.className = "rock-bottom";
             rock_bottom.style.gridColumnStart = i.toString();
             rock_bottom.style.gridColumnEnd = i.toString();
             rock_bottom.style.gridRowStart = "4";
 
-            rock_top.src ="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_" +  Math.round(Math.random()*4) + ".png";
+            rock_top.src ="<?php echo getenv('ROCK_TOP_ + " + Math.round(Math.random()*4) + "'); ?>";
             rock_top.alt = "rock-top";
             rock_top.style.gridColumnStart = i.toString();
             rock_top.style.gridColumnEnd = i.toString();
@@ -70,7 +70,7 @@ function floorResize()
             let grass_spawn_or_not = Math.random();
             if (grass_spawn_or_not > .1 && grass_spawn_or_not < .5) {
                 const grass = document.createElement("img");
-                grass.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/grass.png";
+                grass.src = "<?php echo getenv('GRASS_IMG'); ?>";
                 grass.alt = "grass";
                 grass.style.gridColumnStart = i.toString();
                 grass.style.gridColumnEnd = i.toString()
