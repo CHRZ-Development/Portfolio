@@ -178,15 +178,29 @@
                              alt="HOUSE=0;Tile=14">
 
                         <!-- Tree 1 near to house 0 -->
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-log-1.png" style="grid-column: 2/2; grid-row: 5/5; z-index: -1;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-1.png" style="grid-column: 2/2; grid-row: 4/4; z-index: -1;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-2.png" style="grid-column: 2/2; grid-row: 3/3; z-index: -1;">
+                        <img src="<?php echo getenv('TREE_LOG_1'); ?>"
+                             style="grid-column: 2/2; grid-row: 5/5; z-index: -1;"
+                             alt="TREE_LOG=0;Tile=1">
+                        <img src="<?php echo getenv('TREE_1'); ?>"
+                             style="grid-column: 2/2; grid-row: 4/4; z-index: -1;"
+                             alt="TREE=0;Tile=1">
+                        <img src="<?php echo getenv('TREE_2'); ?>"
+                             style="grid-column: 2/2; grid-row: 3/3; z-index: -1;"
+                             alt="TREE=0;Tile=2">
 
                         <!-- Tree 2 near to house 0 -->
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-log-1.png" style="position: relative; left: 45px; grid-column: 6/6; grid-row: 5/5; z-index: -1;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-1.png" style="position: relative; left: 45px; grid-column: 6/6; grid-row: 4/4; z-index: -1;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-1.png" style="position: relative; left: 45px; grid-column: 6/6; grid-row: 3/3; z-index: -1;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-2.png" style="position: relative; left: 45px; grid-column: 6/6; grid-row: 2/2; z-index: -1;">
+                        <img src="<?php echo getenv('TREE_LOG_1'); ?>"
+                             style="position: relative; left: 45px; grid-column: 6/6; grid-row: 5/5; z-index: -1;"
+                             alt="TREE_LOG=0;Tile=1">
+                        <img src="<?php echo getenv('TREE_1'); ?>"
+                             style="position: relative; left: 45px; grid-column: 6/6; grid-row: 4/4; z-index: -1;"
+                             alt="TREE=0;Tile=1">
+                        <img src="<?php echo getenv('TREE_1'); ?>"
+                             style="position: relative; left: 45px; grid-column: 6/6; grid-row: 3/3; z-index: -1;"
+                             alt="TREE=0;Tile=1">
+                        <img src="<?php echo getenv('TREE_2'); ?>"
+                             style="position: relative; left: 45px; grid-column: 6/6; grid-row: 2/2; z-index: -1;"
+                             alt="TREE=0;Tile=2">
 
                         <!-- first moulin -->
                         <div class="moulins" style="grid-column: 10/10; grid-row: 1/1;"></div>

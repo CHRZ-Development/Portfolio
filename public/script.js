@@ -117,8 +117,8 @@ function createMoulin()
                 let moulin_tile = document.createElement("img");
 
                 if (i == 1)
-                    moulin_tile.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/moulin" + j + ".png";
-                else moulin_tile.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/moulin" + (j+5) + ".png";
+                    moulin_tile.src = "<?php echo getenv('MOULIN_" + j + "'); ?>";
+                else moulin_tile.src = "<?php echo getenv('MOULIN_" + (j+5) + "'); ?>";
                 moulin_tile.style.gridColumn = i + "/" + i;
                 moulin_tile.style.gridRow = (6-j) + "/" + (6-j);
 
@@ -132,7 +132,7 @@ function createMoulin()
             }
 
         let moulin_final_tile = document.createElement("img");
-        moulin_final_tile.src = "https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/moulin11.png";
+        moulin_final_tile.src = "<?php echo getenv('MOULIN_11'); ?>";
         moulin_final_tile.style.gridColumn = "3/3";
         moulin_final_tile.style.gridRow = "5/5";
 
