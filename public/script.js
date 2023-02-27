@@ -1,4 +1,3 @@
-
 const nav1button0 = document.getElementById("nav1Button0");
 const nav1button1 = document.getElementById("nav1Button1");
 const nav1button2 = document.getElementById("nav1Button2");

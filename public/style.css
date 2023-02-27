@@ -126,6 +126,11 @@ header {
     color: snow;
 }
 
+.wheat {
+    height: 100%;
+    width: 100%;
+}
+
 #iconSectionNavBar1 {
     display: flex;
 

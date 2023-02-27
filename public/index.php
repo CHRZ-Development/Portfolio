@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>CHRZ Development</title>
+        <title><?php echo getenv('WEBSITE_TITLE'); ?></title>
 
         <link rel="icon" href="https://avatars.githubusercontent.com/u/67024770?s=400&u=24615cb4001020dbe7900d45f8c85a9c3c5d0725&v=4">
         <link rel="stylesheet" href="style.css">
@@ -34,51 +34,148 @@
             <div id="header">
                 <div id="minigame">
                     <div id="floor">
-                        <img id="corner-left" src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/corner-left.png" style="grid-row: 2/2;">
-                        <img class="dirt-left" src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/dirt-left.png" style="grid-row: 3/3;">
-                        <img id="corner-right" src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/corner-right.png">
-                        <img id="rock-corner" src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/dirt-left.png">
-                        <img class="rock-bottom" src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png" style="grid-row: 4/4; width: 100%; height: 100%">
-                        <img id="rock-bottom-right" class="rock-bottom" src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png">
+                        <img id="corner-left"
+                             src="<?php echo getenv('CORNER_LEFT'); ?>"
+                             style="grid-row: 2/2;"
+                             alt="corner-left">
+                        <img class="dirt-left"
+                             src="<?php echo getenv('DIRT_LEFT'); ?>"
+                             style="grid-row: 3/3;"
+                             alt="dirt-left">
+                        <img id="corner-right"
+                             src="<?php echo getenv('CORNER_RIGHT'); ?>"
+                             alt="corner-right">
+                        <img id="rock-corner"
+                             src="<?php echo getenv('DIRT_LEFT'); ?>"
+                             alt="rock-corner">
+                        <img class="rock-bottom"
+                             src="<?php echo getenv('ROCK_BOTTOM'); ?>"
+                             style="grid-row: 4/4; width: 100%; height: 100%"
+                             alt="rock-bottom">
+                        <img id="rock-bottom-right"
+                             class="rock-bottom"
+                             src="<?php echo getenv('ROCK_BOTTOM'); ?>"
+                             alt="rock-bottom-right">
 
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat-end.png" style="grid-row: 1/1; grid-column: 11/11; height: 100%; width: 100%; transform: rotateY(-180deg);">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 12/12; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 13/13; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 14/14; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 15/15; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 16/16; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 17/17; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 18/18; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 19/19; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 20/20; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 21/21; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat.png" style="grid-row: 1/1; grid-column: 22/22; height: 100%; width: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wheat-end.png" style="grid-row: 1/1; grid-column: 23/23; height: 100%; width: 100%;">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_END_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 11/11; transform: rotateY(-180deg);"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 12/12;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 13/13;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 14/14;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 15/15;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 16/16;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 17/17;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 18/18;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 19/19;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 20/20;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 21/21;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 22/22;"
+                             alt="wheat">
+                        <img class="wheat"
+                             src="<?php echo getenv('WHEAT_END_IMG'); ?>"
+                             style="grid-row: 1/1; grid-column: 23/23;"
+                             alt="wheat">
                     </div>
 
                     <div id="village">
                         <!-- House 0 -->
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-0.png" style="grid-column: 3/3; grid-row: 4/4;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-1.png" style="grid-column: 3/3; grid-row: 5/5;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-2.png" style="grid-column: 4/4; grid-row: 4/4;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-3.png" style="grid-column: 4/4; grid-row: 5/5;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-4.png" style="grid-column: 5/5; grid-row: 4/4;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-5.png" style="grid-column: 5/5; grid-row: 5/5;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-6.png" style="grid-column: 6/6; grid-row: 4/4;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-7.png" style="grid-column: 6/6; grid-row: 5/5;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-8.png" style="grid-column: 2/2; grid-row: 4/4;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-9.png" style="grid-column: 3/3; grid-row: 3/3;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-10.png" style="grid-column: 3/3; grid-row: 2/2;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-9.png" style="grid-column: 6/6; grid-row: 3/3; transform: rotateY(180deg)">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-10.png" style="grid-column: 6/6; grid-row: 2/2; transform: rotateY(180deg)">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-11.png" style="grid-column: 4/4; grid-row: 3/3;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-11.png" style="grid-column: 5/5; grid-row: 3/3;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-12.png" style="grid-column: 3/3; grid-row: 1/1;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-12.png" style="grid-column: 6/6; grid-row: 1/1; transform: rotateY(180deg)">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-13.png" style="grid-column: 4/4; grid-row: 1/1;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-13.png" style="grid-column: 5/5; grid-row: 1/1; transform: rotateY(180deg)">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-14.png" style="grid-column: 4/4; grid-row: 2/2;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/houses/0/house-14.png" style="grid-column: 5/5; grid-row: 2/2; transform: rotateY(180deg)">
+                        <img src="<?php echo getenv('HOUSE0_0'); ?>"
+                             style="grid-column: 3/3; grid-row: 4/4;"
+                             alt="HOUSE=0;Tile=0">
+                        <img src="<?php echo getenv('HOUSE0_1'); ?>"
+                             style="grid-column: 3/3; grid-row: 5/5;"
+                             alt="HOUSE=0;Tile=1">
+                        <img src="<?php echo getenv('HOUSE0_2'); ?>"
+                             style="grid-column: 4/4; grid-row: 4/4;"
+                             alt="HOUSE=0;Tile=2">
+                        <img src="<?php echo getenv('HOUSE0_3'); ?>"
+                             style="grid-column: 4/4; grid-row: 5/5;"
+                             alt="HOUSE=0;Tile=3">
+                        <img src="<?php echo getenv('HOUSE0_4'); ?>"
+                             style="grid-column: 5/5; grid-row: 4/4;"
+                             alt="HOUSE=0;Tile=4">
+                        <img src="<?php echo getenv('HOUSE0_5'); ?>"
+                             style="grid-column: 5/5; grid-row: 5/5;"
+                             alt="HOUSE=0;Tile=5">
+                        <img src="<?php echo getenv('HOUSE0_6'); ?>"
+                             style="grid-column: 6/6; grid-row: 4/4;"
+                             alt="HOUSE=0;Tile=6">
+                        <img src="<?php echo getenv('HOUSE0_7'); ?>"
+                             style="grid-column: 6/6; grid-row: 5/5;"
+                             alt="HOUSE=0;Tile=7">
+                        <img src="<?php echo getenv('HOUSE0_8'); ?>"
+                             style="grid-column: 2/2; grid-row: 4/4;"
+                             alt="HOUSE=0;Tile=8">
+                        <img src="<?php echo getenv('HOUSE0_9'); ?>"
+                             style="grid-column: 3/3; grid-row: 3/3;"
+                             alt="HOUSE=0;Tile=9">
+                        <img src="<?php echo getenv('HOUSE0_10'); ?>"
+                             style="grid-column: 3/3; grid-row: 2/2;"
+                             alt="HOUSE=0;Tile=10">
+                        <img src="<?php echo getenv('HOUSE0_9'); ?>"
+                             style="grid-column: 6/6; grid-row: 3/3; transform: rotateY(180deg)"
+                             alt="HOUSE=0;Tile=9">
+                        <img src="<?php echo getenv('HOUSE0_10'); ?>"
+                             style="grid-column: 6/6; grid-row: 2/2; transform: rotateY(180deg)"
+                             alt="HOUSE=0;Tile=10">
+                        <img src="<?php echo getenv('HOUSE0_11'); ?>"
+                             style="grid-column: 4/4; grid-row: 3/3;"
+                             alt="HOUSE=0;Tile=11">
+                        <img src="<?php echo getenv('HOUSE0_11'); ?>"
+                             style="grid-column: 5/5; grid-row: 3/3;"
+                             alt="HOUSE=0;Tile=11">
+                        <img src="<?php echo getenv('HOUSE0_12'); ?>"
+                             style="grid-column: 3/3; grid-row: 1/1;"
+                             alt="HOUSE=0;Tile=12">
+                        <img src="<?php echo getenv('HOUSE0_12'); ?>"
+                             style="grid-column: 6/6; grid-row: 1/1; transform: rotateY(180deg)"
+                             alt="HOUSE=0;Tile=12">
+                        <img src="<?php echo getenv('HOUSE0_13'); ?>"
+                             style="grid-column: 4/4; grid-row: 1/1;"
+                             alt="HOUSE=0;Tile=13">
+                        <img src="<?php echo getenv('HOUSE0_13'); ?>"
+                             style="grid-column: 5/5; grid-row: 1/1; transform: rotateY(180deg)"
+                             alt="HOUSE=0;Tile=13">
+                        <img src="<?php echo getenv('HOUSE0_14'); ?>"
+                             style="grid-column: 4/4; grid-row: 2/2;"
+                             alt="HOUSE=0;Tile=14">
+                        <img src="<?php echo getenv('HOUSE0_14'); ?>"
+                             style="grid-column: 5/5; grid-row: 2/2; transform: rotateY(180deg)"
+                             alt="HOUSE=0;Tile=14">
 
                         <!-- Tree 1 near to house 0 -->
                         <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-log-1.png" style="grid-column: 2/2; grid-row: 5/5; z-index: -1;">
