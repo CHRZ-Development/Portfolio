@@ -249,9 +249,9 @@
 
                     <div id="drop-down-menu">
                         <p><a href="./index.html">ACCEUIL</a></p>
-                        <p><a href="projets/index.html">PROJETS</a></p>
-                        <p><a href="skills/index.html">COMPETENCE</a></p>
-                        <p><a href="contact/index.html">CONTACT</a></p>
+                        <p><a href="projets/index.php">PROJETS</a></p>
+                        <p><a href="skills/index.php">COMPETENCE</a></p>
+                        <p><a href="contact/index.php">CONTACT</a></p>
                     </div>
 
                     <!-- Top nav bar -->
@@ -263,19 +263,19 @@
                             <span><b>ACCUEIL</b></span>
                         </nav>
                         <nav id="nav1Button1" class="navBar1Button1  navBar1"
-                             onclick="window.location.href = 'projets/index.html'">
+                             onclick="window.location.href = 'projets/index.php'">
                             <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
                                  alt="Button img">
                             <span><b>PROJETS</b></span>
                         </nav>
                         <nav id="nav1Button2" class="navBar1Button2  navBar1"
-                             onclick="window.location.href = 'skills/index.html'">
+                             onclick="window.location.href = 'skills/index.php'">
                             <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
                                  alt="Button img">
                             <span><b>COMPETENCE</b></span>
                         </nav>
                         <nav id="nav1Button3" class="navBar1Button3  navBar1"
-                             onclick="window.location.href = 'contact/index.html'">
+                             onclick="window.location.href = 'contact/index.php'">
                             <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
                                  alt="Button img">
                             <span><b>CONTACT</b></span>
@@ -483,7 +483,7 @@
                         <p>Ce jeux est disponible en tant que bêta.</p>
                         <p>Codé uniquement sur le langage Python et grâce à la librairie pygame.</p>
                         <p>Plus de détails sur ce projets, vous pouvez vous y rendre dans
-                            <u><a href="projets/index.html">projets</a></u> ou bien sur le
+                            <u><a href="projets/index.php">projets</a></u> ou bien sur le
                             <u><a href="https://github.com/NaulaN/SuperMarioBros3-pygame">Github</a></u> du code source
                         </p>
                     </section>
@@ -511,7 +511,7 @@
                         <p>En cours de migration vers le langage Java pour cause de compatibilité et de support.</p>
                         <p>Sera pour le coup codé en Java mais, il est toujours en Python</p>
                         <p>Plus de détails, dans
-                            <u><a href="projets/index.html">projets</a></u> ou bien sur le
+                            <u><a href="projets/index.php">projets</a></u> ou bien sur le
                             <u><a href="https://github.com/NaulaN/Escarbot-java">Github</a></u> du code source
                         </p>
                     </section>
@@ -545,12 +545,12 @@
                 </div>
 
                 <div>
-                    <h1><a href="projets/index.html">Projets</a></h1>
+                    <h1><a href="projets/index.php">Projets</a></h1>
                     <ul>
-                        <li><a href="projets/index.html#SuperMarioBros3">SuperMarioBros3</a></li>
-                        <li><a href="projets/index.html#Escarbot">Escarbot</a></li>
-                        <li><a href="projets/index.html#AventuraBuild">AventuraBuild</a></li>
-                        <li><a href="projets/index.html#CHRZ-Radio">CHRZ Radio</a></li>
+                        <li><a href="projets/index.php#SuperMarioBros3">SuperMarioBros3</a></li>
+                        <li><a href="projets/index.php#Escarbot">Escarbot</a></li>
+                        <li><a href="projets/index.php#AventuraBuild">AventuraBuild</a></li>
+                        <li><a href="projets/index.php#CHRZ-Radio">CHRZ Radio</a></li>
                     </ul>
                 </div>
 

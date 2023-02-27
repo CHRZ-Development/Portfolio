@@ -14,7 +14,7 @@
     <body>
         <header>
             <div id="iconSectionNavBar1">
-                <img id="iconNavBar1" src="../res/logos/beetleAnimated.gif">
+                <img id="iconNavBar1" src="../../res/logos/beetleAnimated.gif">
                 <p><b>CHRZ Development</b></p>
             </div>
 
@@ -22,8 +22,8 @@
 
             <div id="drop-down-menu">
                 <p><a href="../index.php">ACCEUIL</a></p>
-                <p><a href="../projets/index.html">PROJETS</a></p>
-                <p><a href="../skills/index.html">COMPETENCE</a></p>
+                <p><a href="../projets/index.php">PROJETS</a></p>
+                <p><a href="../skills/index.php">COMPETENCE</a></p>
                 <p><a href="/index.php">CONTACT</a></p>
             </div>
 
@@ -38,14 +38,14 @@
                 </nav>
                 <nav id="nav1Button1"
                      class="navBar1Button1  navBar1"
-                     onclick="window.location.href = '../projets/index.html'">
+                     onclick="window.location.href = '../projets/index.php'">
                     <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
                          alt="Button img">
                     <span><b>PROJETS</b></span>
                 </nav>
                 <nav id="nav1Button2"
                      class="navBar1Button2  navBar1"
-                     onclick="window.location.href = '../skills/index.html'">
+                     onclick="window.location.href = '../skills/index.php'">
                     <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
                          alt="Button img">
                     <span><b>COMPETENCE</b></span>

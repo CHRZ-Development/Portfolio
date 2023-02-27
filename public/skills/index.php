@@ -16,7 +16,7 @@
         <header>
             <div id="iconSectionNavBar1">
                 <img id="iconNavBar1"
-                     src="../res/logos/beetleAnimated.gif">
+                     src="../../res/logos/beetleAnimated.gif">
                 <p><b>CHRZ Development</b></p>
             </div>
 
@@ -24,9 +24,9 @@
 
             <div id="drop-down-menu">
                 <p><a href="../index.php">ACCEUIL</a></p>
-                <p><a href="../projets/index.html">PROJETS</a></p>
+                <p><a href="../projets/index.php">PROJETS</a></p>
                 <p><a href="/index.php">COMPETENCE</a></p>
-                <p><a href="../contact/index.html">CONTACT</a></p>
+                <p><a href="../contact/index.php">CONTACT</a></p>
             </div>
 
             <!-- Top nav bar -->
@@ -40,7 +40,7 @@
                 </nav>
                 <nav id="nav1Button1"
                      class="navBar1Button1  navBar1"
-                     onclick="window.location.href = '../projets/index.html'">
+                     onclick="window.location.href = '../projets/index.php'">
                     <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
                          alt="Button img">
                     <span><b>PROJETS</b></span>
@@ -54,7 +54,7 @@
                 </nav>
                 <nav id="nav1Button3"
                      class="navBar1Button3  navBar1"
-                     onclick="window.location.href = '../contact/index.html'">
+                     onclick="window.location.href = '../contact/index.php'">
                     <img src="https://eapi.pcloud.com/getpubthumb?code=XZPADJZYccxT6nA3yyTM0c5FQxYffcV8G2X&linkpassword=undefined&size=256x64&crop=0&type=auto"
                          alt="Button img">
                     <span><b>CONTACT</b></span>
@@ -71,7 +71,7 @@
                 <div class="sectionAccueil"
                      style="width: 45vw; display: flex; justify-content: center; align-content: center;">
                     <img style="border-radius: 10px;"
-                         src="../res/logos/iut-montreuil.png"
+                         src="../../res/logos/iut-montreuil.png"
                          alt="Logo IUT de Montreuil">
 
                     <div style="margin-left: 1vw; margin-right: 1vw; height: inherit; border-left: solid 1px #9d20b7"></div>
