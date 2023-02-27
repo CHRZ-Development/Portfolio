@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title><?php echo getenv('WEBSITE_TITLE'); ?></title>
 
-        <link rel="icon" href="https://avatars.githubusercontent.com/u/67024770?s=400&u=24615cb4001020dbe7900d45f8c85a9c3c5d0725&v=4">
+        <link rel="icon" href="<?php echo getenv('WEBSITE_ICON'); ?>">
         <link rel="stylesheet" href="style.css">
     </head>
     
@@ -16,15 +16,15 @@
             <div id="bannerInfoUseful">
                 <marquee id="textScrollTop"
                          behavior="scroll">
-                    💻 Ce site est en cours de développement, (Ici 👉 modification en <a href="https://naulan.github.io/CHRZ-development_website/index.html">temps réel</a>). 🔍 Un bug ? Un problème ? 📧 Contactez-moi sur
-                    <a class="email-link" href="https://mail.google.com/mail/?view=cm&source=mailto&to=nchrzaszcz.pro@gmail.com">nchrzaszcz.pro@gmail.com</a>
+                    💻 Ce site est en cours de développement. 🔍 Un bug ? Un problème ? 📧 Contactez-moi sur
+                    <a class="email-link" href="https://mail.google.com/mail/?view=cm&source=mailto&to=<?php echo getenv('CONTACT_MAIL'); ?>"><?php echo getenv('CONTACT_MAIL'); ?></a>
                 </marquee>
             </div>
 
             <!-- Web site banner -->
             <div id="bannerCHRZ">
                 <img style="width: 50vw;"
-                     src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/chrz-development-banner-transparent-blue.png"
+                     src="<?php echo getenv('WEBSITE_BANNER_IMG'); ?>"
                      alt="CHRZ development banner">
             </div>
         </header>
