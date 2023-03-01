@@ -43,7 +43,7 @@ function floorResize()
             const rock_top = document.createElement("img");
             const rock_bottom = document.createElement("img");
 
-            floor_top.src = "<?php echo getenv('FLOOR_TOP'); ?>";
+            floor_top.src = "<?=getenv('FLOOR_TOP')?>";
             floor_top.alt = "floor-top";
             floor_top.style.gridColumnStart = i.toString();
             floor_top.style.gridColumnEnd = i.toString();
@@ -51,14 +51,14 @@ function floorResize()
             floor_top.style.width = "100%";
             floor_top.style.height = "100%";
 
-            rock_bottom.src = "<?php echo getenv('ROCK_BOTTOM'); ?>";
+            rock_bottom.src = "<?=getenv('ROCK_BOTTOM')?>";
             rock_bottom.alt = "rock-bottom";
             rock_bottom.className = "rock-bottom";
             rock_bottom.style.gridColumnStart = i.toString();
             rock_bottom.style.gridColumnEnd = i.toString();
             rock_bottom.style.gridRowStart = "4";
 
-            rock_top.src ="<?php echo getenv('ROCK_TOP_ + " + Math.round(Math.random()*4) + "'); ?>";
+            rock_top.src ="<?=getenv('ROCK_TOP_ + " + Math.round(Math.random()*4) + "')?>";
             rock_top.alt = "rock-top";
             rock_top.style.gridColumnStart = i.toString();
             rock_top.style.gridColumnEnd = i.toString();
@@ -70,7 +70,7 @@ function floorResize()
             let grass_spawn_or_not = Math.random();
             if (grass_spawn_or_not > .1 && grass_spawn_or_not < .5) {
                 const grass = document.createElement("img");
-                grass.src = "<?php echo getenv('GRASS_IMG'); ?>";
+                grass.src = "<?=getenv('GRASS_IMG')?>";
                 grass.alt = "grass";
                 grass.style.gridColumnStart = i.toString();
                 grass.style.gridColumnEnd = i.toString()
@@ -117,8 +117,8 @@ function createMoulin()
                 let moulin_tile = document.createElement("img");
 
                 if (i == 1)
-                    moulin_tile.src = "<?php echo getenv('MOULIN_" + j + "'); ?>";
-                else moulin_tile.src = "<?php echo getenv('MOULIN_" + (j+5) + "'); ?>";
+                    moulin_tile.src = "<?=getenv('MOULIN_" + j + "')?>";
+                else moulin_tile.src = "<?=getenv('MOULIN_" + (j+5) + "')?>";
                 moulin_tile.style.gridColumn = i + "/" + i;
                 moulin_tile.style.gridRow = (6-j) + "/" + (6-j);
 
@@ -132,7 +132,7 @@ function createMoulin()
             }
 
         let moulin_final_tile = document.createElement("img");
-        moulin_final_tile.src = "<?php echo getenv('MOULIN_11'); ?>";
+        moulin_final_tile.src = "<?=getenv('MOULIN_11')?>";
         moulin_final_tile.style.gridColumn = "3/3";
         moulin_final_tile.style.gridRow = "5/5";
 

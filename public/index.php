@@ -1,12 +1,15 @@
+<?php
+require_once "Environment.php";
+?>
 <!doctype html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title><?php echo getenv('WEBSITE_TITLE'); ?></title>
+        <title><?=getenv('WEBSITE_TITLE')?></title>
 
-        <link rel="icon" href="<?php echo getenv('WEBSITE_ICON'); ?>">
+        <link rel="icon" href="<?=getenv('WEBSITE_ICON')?>">
         <link rel="stylesheet" href="style.css">
     </head>
     
@@ -17,14 +20,14 @@
                 <marquee id="textScrollTop"
                          behavior="scroll">
                     💻 Ce site est en cours de développement. 🔍 Un bug ? Un problème ? 📧 Contactez-moi sur
-                    <a class="email-link" href="https://mail.google.com/mail/?view=cm&source=mailto&to=<?php echo getenv('CONTACT_MAIL'); ?>"><?php echo getenv('CONTACT_MAIL'); ?></a>
+                    <a class="email-link" href="https://mail.google.com/mail/?view=cm&source=mailto&to=<?=getenv('CONTACT_MAIL')?>"><?=getenv('CONTACT_MAIL')?></a>
                 </marquee>
             </div>
 
             <!-- Web site banner -->
             <div id="bannerCHRZ">
                 <img style="width: 50vw;"
-                     src="<?php echo getenv('WEBSITE_BANNER_IMG'); ?>"
+                     src="<?=getenv('WEBSITE_BANNER_IMG')?>"
                      alt="CHRZ development banner">
             </div>
         </header>
@@ -35,170 +38,56 @@
                 <div id="minigame">
                     <div id="floor">
                         <img id="corner-left"
-                             src="<?php echo getenv('CORNER_LEFT'); ?>"
+                             src="<?=getenv('CORNER_LEFT')?>"
                              style="grid-row: 2/2;"
                              alt="corner-left">
                         <img class="dirt-left"
-                             src="<?php echo getenv('DIRT_LEFT'); ?>"
+                             src="<?=getenv('DIRT_LEFT')?>"
                              style="grid-row: 3/3;"
                              alt="dirt-left">
                         <img id="corner-right"
-                             src="<?php echo getenv('CORNER_RIGHT'); ?>"
+                             src="<?=getenv('CORNER_RIGHT')?>"
                              alt="corner-right">
                         <img id="rock-corner"
-                             src="<?php echo getenv('DIRT_LEFT'); ?>"
+                             src="<?=getenv('DIRT_LEFT')?>"
                              alt="rock-corner">
                         <img class="rock-bottom"
-                             src="<?php echo getenv('ROCK_BOTTOM'); ?>"
+                             src="<?=getenv('ROCK_BOTTOM')?>"
                              style="grid-row: 4/4; width: 100%; height: 100%"
                              alt="rock-bottom">
                         <img id="rock-bottom-right"
                              class="rock-bottom"
-                             src="<?php echo getenv('ROCK_BOTTOM'); ?>"
+                             src="<?=getenv('ROCK_BOTTOM')?>"
                              alt="rock-bottom-right">
 
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_END_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 11/11; transform: rotateY(-180deg);"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 12/12;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 13/13;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 14/14;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 15/15;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 16/16;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 17/17;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 18/18;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 19/19;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 20/20;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 21/21;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 22/22;"
-                             alt="wheat">
-                        <img class="wheat"
-                             src="<?php echo getenv('WHEAT_END_IMG'); ?>"
-                             style="grid-row: 1/1; grid-column: 23/23;"
-                             alt="wheat">
+                        <?=Environment::generateWheat(11, 1, 12)?>
                     </div>
 
                     <div id="village">
-                        <!-- House 0 -->
-                        <img src="<?php echo getenv('HOUSE0_0'); ?>"
-                             style="grid-column: 3/3; grid-row: 4/4;"
-                             alt="HOUSE=0;Tile=0">
-                        <img src="<?php echo getenv('HOUSE0_1'); ?>"
-                             style="grid-column: 3/3; grid-row: 5/5;"
-                             alt="HOUSE=0;Tile=1">
-                        <img src="<?php echo getenv('HOUSE0_2'); ?>"
-                             style="grid-column: 4/4; grid-row: 4/4;"
-                             alt="HOUSE=0;Tile=2">
-                        <img src="<?php echo getenv('HOUSE0_3'); ?>"
-                             style="grid-column: 4/4; grid-row: 5/5;"
-                             alt="HOUSE=0;Tile=3">
-                        <img src="<?php echo getenv('HOUSE0_4'); ?>"
-                             style="grid-column: 5/5; grid-row: 4/4;"
-                             alt="HOUSE=0;Tile=4">
-                        <img src="<?php echo getenv('HOUSE0_5'); ?>"
-                             style="grid-column: 5/5; grid-row: 5/5;"
-                             alt="HOUSE=0;Tile=5">
-                        <img src="<?php echo getenv('HOUSE0_6'); ?>"
-                             style="grid-column: 6/6; grid-row: 4/4;"
-                             alt="HOUSE=0;Tile=6">
-                        <img src="<?php echo getenv('HOUSE0_7'); ?>"
-                             style="grid-column: 6/6; grid-row: 5/5;"
-                             alt="HOUSE=0;Tile=7">
-                        <img src="<?php echo getenv('HOUSE0_8'); ?>"
-                             style="grid-column: 2/2; grid-row: 4/4;"
-                             alt="HOUSE=0;Tile=8">
-                        <img src="<?php echo getenv('HOUSE0_9'); ?>"
-                             style="grid-column: 3/3; grid-row: 3/3;"
-                             alt="HOUSE=0;Tile=9">
-                        <img src="<?php echo getenv('HOUSE0_10'); ?>"
-                             style="grid-column: 3/3; grid-row: 2/2;"
-                             alt="HOUSE=0;Tile=10">
-                        <img src="<?php echo getenv('HOUSE0_9'); ?>"
-                             style="grid-column: 6/6; grid-row: 3/3; transform: rotateY(180deg)"
-                             alt="HOUSE=0;Tile=9">
-                        <img src="<?php echo getenv('HOUSE0_10'); ?>"
-                             style="grid-column: 6/6; grid-row: 2/2; transform: rotateY(180deg)"
-                             alt="HOUSE=0;Tile=10">
-                        <img src="<?php echo getenv('HOUSE0_11'); ?>"
-                             style="grid-column: 4/4; grid-row: 3/3;"
-                             alt="HOUSE=0;Tile=11">
-                        <img src="<?php echo getenv('HOUSE0_11'); ?>"
-                             style="grid-column: 5/5; grid-row: 3/3;"
-                             alt="HOUSE=0;Tile=11">
-                        <img src="<?php echo getenv('HOUSE0_12'); ?>"
-                             style="grid-column: 3/3; grid-row: 1/1;"
-                             alt="HOUSE=0;Tile=12">
-                        <img src="<?php echo getenv('HOUSE0_12'); ?>"
-                             style="grid-column: 6/6; grid-row: 1/1; transform: rotateY(180deg)"
-                             alt="HOUSE=0;Tile=12">
-                        <img src="<?php echo getenv('HOUSE0_13'); ?>"
-                             style="grid-column: 4/4; grid-row: 1/1;"
-                             alt="HOUSE=0;Tile=13">
-                        <img src="<?php echo getenv('HOUSE0_13'); ?>"
-                             style="grid-column: 5/5; grid-row: 1/1; transform: rotateY(180deg)"
-                             alt="HOUSE=0;Tile=13">
-                        <img src="<?php echo getenv('HOUSE0_14'); ?>"
-                             style="grid-column: 4/4; grid-row: 2/2;"
-                             alt="HOUSE=0;Tile=14">
-                        <img src="<?php echo getenv('HOUSE0_14'); ?>"
-                             style="grid-column: 5/5; grid-row: 2/2; transform: rotateY(180deg)"
-                             alt="HOUSE=0;Tile=14">
+                        <?=Environment::generateHouse0(3, 4)?>
 
                         <!-- Tree 1 near to house 0 -->
-                        <img src="<?php echo getenv('TREE_LOG_1'); ?>"
+                        <img src="<?=getenv('TREE_LOG_1')?>"
                              style="grid-column: 2/2; grid-row: 5/5; z-index: -1;"
                              alt="TREE_LOG=0;Tile=1">
-                        <img src="<?php echo getenv('TREE_1'); ?>"
+                        <img src="<?=getenv('TREE_1')?>"
                              style="grid-column: 2/2; grid-row: 4/4; z-index: -1;"
                              alt="TREE=0;Tile=1">
-                        <img src="<?php echo getenv('TREE_2'); ?>"
+                        <img src="<?=getenv('TREE_2')?>"
                              style="grid-column: 2/2; grid-row: 3/3; z-index: -1;"
                              alt="TREE=0;Tile=2">
 
                         <!-- Tree 2 near to house 0 -->
-                        <img src="<?php echo getenv('TREE_LOG_1'); ?>"
+                        <img src="<?=getenv('TREE_LOG_1')?>"
                              style="position: relative; left: 45px; grid-column: 6/6; grid-row: 5/5; z-index: -1;"
                              alt="TREE_LOG=0;Tile=1">
-                        <img src="<?php echo getenv('TREE_1'); ?>"
+                        <img src="<?=getenv('TREE_1')?>"
                              style="position: relative; left: 45px; grid-column: 6/6; grid-row: 4/4; z-index: -1;"
                              alt="TREE=0;Tile=1">
-                        <img src="<?php echo getenv('TREE_1'); ?>"
+                        <img src="<?=getenv('TREE_1')?>"
                              style="position: relative; left: 45px; grid-column: 6/6; grid-row: 3/3; z-index: -1;"
                              alt="TREE=0;Tile=1">
-                        <img src="<?php echo getenv('TREE_2'); ?>"
+                        <img src="<?=getenv('TREE_2')?>"
                              style="position: relative; left: 45px; grid-column: 6/6; grid-row: 2/2; z-index: -1;"
                              alt="TREE=0;Tile=2">
 
