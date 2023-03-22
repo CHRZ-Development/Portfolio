@@ -2,7 +2,8 @@
 
 class Environment
 {
-    public static function generateHouse0($posXinit, $posYinit) { ?>
+    public static function generateHouse0($posXinit, $posYinit)
+    { ?>
         <img src="<?=getenv('HOUSE0_0')?>"
              style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit?>/<?=$posYinit?>;"
              alt="HOUSE=0;Tile=0">
@@ -68,7 +69,8 @@ class Environment
              alt="HOUSE=0;Tile=14">
     <?php }
 
-    public static function generateWheat($posXinit, $posYinit, $size) {
+    public static function generateWheat($posXinit, $posYinit, $size)
+    {
         if ($size == 1) { ?>
             <img class="wheat"
                  src="<?=getenv('WHEAT_IMG')?>"
@@ -101,4 +103,20 @@ class Environment
                  alt="wheat">
         <?php }
     }
+
+    public static function generateTree($posXinit, $posYinit, $size, $zIndex=0)
+    { ?>
+        <img src="<?=getenv('TREE_LOG_1')?>"
+             style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit?>/<?=$posYinit?>; z-index: <?=$zIndex?>;"
+             alt="TREE_LOG=0;Tile=1">
+        <?php
+            for ($i = 1; $i < $size; $i++) { ?>
+        <img src="<?=getenv('TREE_1')?>"
+             style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit-$i?>/<?=$posYinit-$i?>; z-index: <?=$zIndex?>;"
+             alt="TREE=0;Tile=1">
+        <?php } ?>
+        <img src="<?=getenv('TREE_2')?>"
+             style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit-$i?>/<?=$posYinit-$i?>; z-index: <?=$zIndex?>;"
+             alt="TREE=0;Tile=2">
+    <?php }
 }

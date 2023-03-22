@@ -66,30 +66,8 @@ require_once "Environment.php";
                     <div id="village">
                         <?=Environment::generateHouse0(3, 4)?>
 
-                        <!-- Tree 1 near to house 0 -->
-                        <img src="<?=getenv('TREE_LOG_1')?>"
-                             style="grid-column: 2/2; grid-row: 5/5; z-index: -1;"
-                             alt="TREE_LOG=0;Tile=1">
-                        <img src="<?=getenv('TREE_1')?>"
-                             style="grid-column: 2/2; grid-row: 4/4; z-index: -1;"
-                             alt="TREE=0;Tile=1">
-                        <img src="<?=getenv('TREE_2')?>"
-                             style="grid-column: 2/2; grid-row: 3/3; z-index: -1;"
-                             alt="TREE=0;Tile=2">
-
-                        <!-- Tree 2 near to house 0 -->
-                        <img src="<?=getenv('TREE_LOG_1')?>"
-                             style="position: relative; left: 45px; grid-column: 6/6; grid-row: 5/5; z-index: -1;"
-                             alt="TREE_LOG=0;Tile=1">
-                        <img src="<?=getenv('TREE_1')?>"
-                             style="position: relative; left: 45px; grid-column: 6/6; grid-row: 4/4; z-index: -1;"
-                             alt="TREE=0;Tile=1">
-                        <img src="<?=getenv('TREE_1')?>"
-                             style="position: relative; left: 45px; grid-column: 6/6; grid-row: 3/3; z-index: -1;"
-                             alt="TREE=0;Tile=1">
-                        <img src="<?=getenv('TREE_2')?>"
-                             style="position: relative; left: 45px; grid-column: 6/6; grid-row: 2/2; z-index: -1;"
-                             alt="TREE=0;Tile=2">
+                        <?=Environment::generateTree(2, 5, 3, -1)?>
+                        <?=Environment::generateTree(2, 5, 4)?>
 
                         <!-- first moulin -->
                         <div class="moulins" style="grid-column: 10/10; grid-row: 1/1;"></div>
