@@ -35,10 +35,9 @@ function floorResize()
                 "width": width
             },
             success: function (html) {
-                // TODO Don't remove wheat, change this part
-                while (floor.firstChild)
-                    floor.removeChild(floor.firstChild);
-                // TODO ------------------------------------
+                let wheat = $('#floor .wheat').detach()
+                $('#floor').empty().append(wheat);
+
                 floor.insertAdjacentHTML('beforeend', html);
             }
         });
