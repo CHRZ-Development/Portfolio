@@ -28,7 +28,7 @@ function floorResize(_width)
 
     $.ajax({
         type: "POST",
-        url: "./environments/resizeFloor.php",
+        url: "./environments/floorTileFiller.php",
         data: {
             "width": _width
         },
