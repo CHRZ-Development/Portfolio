@@ -48,6 +48,7 @@
                         <?=Environment::generateTree(2, 5, 4, -1, "position: relative; left: 45px")?>
                         <?=Environment::generateTree(6, 5, 3, -1, "position: relative; left: 45px")?>
 
+                        <!-- FIXME Wrong tile display on head of Moulin -->
                         <?=Environment::generateMoulin(10, 1)?>
 
                         <div class="birds-brun-fly" style="z-index: 1;"></div>
