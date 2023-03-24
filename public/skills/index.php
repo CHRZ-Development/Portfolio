@@ -16,7 +16,7 @@
         <header>
             <div id="iconSectionNavBar1">
                 <img id="iconNavBar1"
-                     src="../../res/logos/beetleAnimated.gif">
+                     src="../res/logos/beetleAnimated.gif">
                 <p><b>CHRZ Development</b></p>
             </div>
 
@@ -71,7 +71,7 @@
                 <div class="sectionAccueil"
                      style="width: 45vw; display: flex; justify-content: center; align-content: center;">
                     <img style="border-radius: 10px;"
-                         src="../../res/logos/iut-montreuil.png"
+                         src="../res/logos/iut-montreuil.png"
                          alt="Logo IUT de Montreuil">
 
                     <div style="margin-left: 1vw; margin-right: 1vw; height: inherit; border-left: solid 1px #9d20b7"></div>

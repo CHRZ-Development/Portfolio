@@ -18,8 +18,6 @@ const corner_rock = document.getElementById("rock-corner");
 const floor = document.getElementById("floor");
 const village = document.getElementById("village");
 
-let floors = [];
-let _grass = [];
 function floorResize()
 {
     if (floor != null) {
@@ -30,75 +28,31 @@ function floorResize()
         style = style + "48px";
         floor.style.gridTemplateColumns = style;
 
-        for (let i = 0; i < floors.length; i++) floors[i].remove();
-        for (let i = 0; i < _grass.length; i++) _grass[i].remove();
-        floors = [];
-        _grass = [];
-
-        for (let i = 2; i < width/48; i++) {
-            const floor_top = document.createElement("img");
-            const rock_top = document.createElement("img");
-            const rock_bottom = document.createElement("img");
-
-            floor_top.src = "<?=getenv('FLOOR_TOP')?>";
-            floor_top.alt = "floor-top";
-            floor_top.style.gridColumnStart = i.toString();
-            floor_top.style.gridColumnEnd = i.toString();
-            floor_top.style.gridRowStart = "2";
-            floor_top.style.width = "100%";
-            floor_top.style.height = "100%";
-
-            rock_bottom.src = "<?=getenv('ROCK_BOTTOM')?>";
-            rock_bottom.alt = "rock-bottom";
-            rock_bottom.className = "rock-bottom";
-            rock_bottom.style.gridColumnStart = i.toString();
-            rock_bottom.style.gridColumnEnd = i.toString();
-            rock_bottom.style.gridRowStart = "4";
-
-            rock_top.src ="<?=getenv('ROCK_TOP_ + " + Math.round(Math.random()*4) + "')?>";
-            rock_top.alt = "rock-top";
-            rock_top.style.gridColumnStart = i.toString();
-            rock_top.style.gridColumnEnd = i.toString();
-            rock_top.style.gridRowStart = "3";
-            rock_top.style.width = "100%";
-            rock_top.style.height = "100%";
-
-            /* L'herbe sur le sol */
-            let grass_spawn_or_not = Math.random();
-            if (grass_spawn_or_not > .1 && grass_spawn_or_not < .5) {
-                const grass = document.createElement("img");
-                grass.src = "<?=getenv('GRASS_IMG')?>";
-                grass.alt = "grass";
-                grass.style.gridColumnStart = i.toString();
-                grass.style.gridColumnEnd = i.toString()
-                grass.style.gridRowStart = "1";
-                grass.style.width = "100%";
-                grass.style.height = "100%";
-
-                _grass.push(grass);
-
-                floor.appendChild(grass);
+        $.ajax({
+            type: "POST",
+            url: "./environments/resizeFloor.php",
+            data: {
+                "width": width
+            },
+            success: function (html) {
+                while (floor.firstChild)
+                    floor.removeChild(floor.firstChild);
+                floor.insertAdjacentHTML('beforeend', html);
             }
+        });
 
-            floors.push(floor_top);
-
-            floor.appendChild(floor_top);
-            floor.appendChild(rock_top);
-            floor.appendChild(rock_bottom);
-        }
-        corner_right.style.gridColumnStart = (floors.length+2).toString();
-        corner_right.style.gridColumnEnd = (floors.length+2).toString();
+        corner_right.style.gridColumnStart = (Math.round(width/48)+2).toString();
+        corner_right.style.gridColumnEnd = (Math.round(width/48)+2).toString();
         corner_right.style.gridRowStart = "2";
-        corner_rock.style.gridColumnStart = (floors.length+2).toString();
-        corner_rock.style.gridColumnEnd = (floors.length+2).toString();
+        corner_rock.style.gridColumnStart = (Math.round(width/48)+2).toString();
+        corner_rock.style.gridColumnEnd = (Math.round(width/48)+2).toString();
         corner_rock.style.gridRowStart = "3";
-        rock_bottom_right.style.gridColumnStart = (floors.length+2).toString();
-        rock_bottom_right.style.gridColumnEnd = (floors.length+2).toString();
+        rock_bottom_right.style.gridColumnStart = (Math.round(width/48)+2).toString();
+        rock_bottom_right.style.gridColumnEnd = (Math.round(width/48)+2).toString();
         rock_bottom_right.style.gridRowStart = "4";
     }
 }
-
-floorResize();
+$(floorResize);     // document ready
 window.addEventListener("resize", floorResize);
 
 /**

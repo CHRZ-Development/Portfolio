@@ -15,7 +15,7 @@
     <body>
         <header>
             <div id="iconSectionNavBar1">
-                <img id="iconNavBar1" src="../../res/logos/beetleAnimated.gif">
+                <img id="iconNavBar1" src="../res/logos/beetleAnimated.gif">
                 <p><b>CHRZ Development</b></p>
             </div>
 

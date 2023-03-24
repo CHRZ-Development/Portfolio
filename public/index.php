@@ -1,6 +1,4 @@
-<?php
-require_once "Environment.php";
-?>
+<?php require_once "./environments/Environment.php"; ?>
 <!doctype html>
 <html lang="fr">
     <head>
@@ -11,6 +9,8 @@ require_once "Environment.php";
 
         <link rel="icon" href="<?=getenv('WEBSITE_ICON')?>">
         <link rel="stylesheet" href="style.css">
+
+        <script src="./librairies/jquery-3.6.4.min.js"></script>
     </head>
     
     <body>
@@ -37,29 +37,7 @@ require_once "Environment.php";
             <div id="header">
                 <div id="minigame">
                     <div id="floor">
-                        <img id="corner-left"
-                             src="<?=getenv('CORNER_LEFT')?>"
-                             style="grid-row: 2/2;"
-                             alt="corner-left">
-                        <img class="dirt-left"
-                             src="<?=getenv('DIRT_LEFT')?>"
-                             style="grid-row: 3/3;"
-                             alt="dirt-left">
-                        <img id="corner-right"
-                             src="<?=getenv('CORNER_RIGHT')?>"
-                             alt="corner-right">
-                        <img id="rock-corner"
-                             src="<?=getenv('DIRT_LEFT')?>"
-                             alt="rock-corner">
-                        <img class="rock-bottom"
-                             src="<?=getenv('ROCK_BOTTOM')?>"
-                             style="grid-row: 4/4; width: 100%; height: 100%"
-                             alt="rock-bottom">
-                        <img id="rock-bottom-right"
-                             class="rock-bottom"
-                             src="<?=getenv('ROCK_BOTTOM')?>"
-                             alt="rock-bottom-right">
-
+                        <!-- FIXME Wheat deleted by floorResize() JS function -->
                         <?=Environment::generateWheat(11, 1, 12)?>
                     </div>
 
@@ -102,7 +80,6 @@ require_once "Environment.php";
                     </div>
 
                     <div id="bucheronPerso"></div>
-
                 </div>
 
                 <div style="width: 96vw; display: flex; justify-content: center; align-items: center; column-gap: 5%">
