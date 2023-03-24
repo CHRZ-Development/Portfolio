@@ -70,37 +70,39 @@ class Environment
 
     public static function generateWheat($posXinit, $posYinit, $size)
     {
-        if ($size == 1) { ?>
-            <img class="wheat"
-                 src="<?= getenv('WHEAT_IMG') ?>"
-                 style="grid-row: <?= $posYinit ?>/<?= $posYinit ?>; grid-column: <?= $posXinit ?>/<?= $posXinit ?>;"
-                 alt="wheat">
-        <?php } else if ($size == 2) { ?>
-            <img class="wheat"
-                 src="<?= getenv('WHEAT_END_IMG') ?>"
-                 style="grid-row: <?= $posYinit ?>/<?= $posYinit ?>; grid-column: <?= $posXinit ?>/<?= $posXinit ?>; transform: rotateY(-180deg);"
-                 alt="wheat">
-            <img class="wheat"
-                 src="<?= getenv('WHEAT_END_IMG') ?>"
-                 style="grid-row: <?= $posYinit ?>/<?= $posYinit ?>; grid-column: <?= $posXinit + 1 ?>/<?= $posXinit + 1 ?>;"
-                 alt="wheat">
-        <?php } else { ?>
-            <img class="wheat"
-                 src="<?= getenv('WHEAT_END_IMG') ?>"
-                 style="grid-row: <?= $posYinit ?>/<?= $posYinit ?>; grid-column: <?= $posXinit ?>/<?= $posXinit ?>; transform: rotateY(-180deg);"
-                 alt="wheat">
-            <?php
-            for ($i = 1; $i < $size; $i++) { ?>
-                <img class="wheat"
-                     src="<?= getenv('WHEAT_IMG') ?>"
-                     style="grid-row: <?= $posYinit ?>/<?= $posYinit ?>; grid-column: <?= $posXinit + $i ?>/<?= $posXinit + $i ?>;"
-                     alt="wheat">
-            <?php } ?>
-            <img class="wheat"
-                 src="<?= getenv('WHEAT_END_IMG') ?>"
-                 style="grid-row: <?= $posYinit ?>/<?= $posYinit ?>; grid-column: <?= $posXinit + $i ?>/<?= $posXinit + $i ?>;"
-                 alt="wheat">
-        <?php }
+        $html = "";
+        if ($size == 1) {
+            $html = $html.'<img class="wheat"
+                                src="'.getenv('WHEAT_IMG').'"
+                                style="grid-row: '.$posYinit.'/'.$posYinit.'; grid-column: '.$posXinit.'/'.$posXinit.';"
+                                alt="wheat">';
+        } else if ($size == 2) {
+            $html = $html.'<img class="wheat"
+                                src="'.getenv('WHEAT_END_IMG').'"
+                                style="grid-row: '.$posYinit.'/'.$posYinit.'; grid-column: '.$posXinit.'/'.$posXinit.'; transform: rotateY(-180deg);"
+                                alt="wheat">';
+            $html = $html.'<img class="wheat"
+                                src="'.getenv('WHEAT_END_IMG').'"
+                                style="grid-row: '.$posYinit.'/'.$posYinit.'; grid-column: '.($posXinit+1).'/'.($posXinit+1).';"
+                                alt="wheat">';
+        } else {
+            $html = $html.'<img class="wheat"
+                                src="'.getenv('WHEAT_END_IMG').'"
+                                style="grid-row: '.$posYinit.'/'.$posYinit.'; grid-column: '.$posXinit.'/'.$posXinit.'; transform: rotateY(-180deg);"
+                                alt="wheat">';
+            for ($i = 1; $i < $size; $i++) {
+                $html = $html.'<img class="wheat"
+                                src="'.getenv('WHEAT_IMG').'"
+                                style="grid-row: '.$posYinit.'/'.$posYinit.'; grid-column: '.($posXinit+$i).'/'.($posXinit+$i).';"
+                                alt="wheat">';
+            }
+            $html = $html.'<img class="wheat"
+                                src="'.getenv('WHEAT_END_IMG').'"
+                                style="grid-row: '.$posYinit.'/'.$posYinit.'; grid-column: '.($posXinit+$i).'/'.($posXinit+$i).';"
+                                alt="wheat">';
+        }
+
+        return $html;
     }
 
     public static function generateTree($posXinit, $posYinit, $size, $zIndex = 0, $extraStyle = "")

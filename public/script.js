@@ -35,8 +35,10 @@ function floorResize()
                 "width": width
             },
             success: function (html) {
+                // TODO Don't remove wheat, change this part
                 while (floor.firstChild)
                     floor.removeChild(floor.firstChild);
+                // TODO ------------------------------------
                 floor.insertAdjacentHTML('beforeend', html);
             }
         });
@@ -52,7 +54,7 @@ function floorResize()
         rock_bottom_right.style.gridRowStart = "4";
     }
 }
-$(floorResize);     // document ready
+$(floorResize);     // document on ready
 window.addEventListener("resize", floorResize);
 
 /**
