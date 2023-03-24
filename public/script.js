@@ -18,9 +18,6 @@ const corner_rock = document.getElementById("rock-corner");
 const floor = document.getElementById("floor");
 const village = document.getElementById("village");
 
-const moulins = document.getElementsByClassName("moulins");
-
-
 let floors = [];
 let _grass = [];
 function floorResize()
@@ -103,44 +100,6 @@ function floorResize()
 
 floorResize();
 window.addEventListener("resize", floorResize);
-
-
-function createMoulin()
-{
-    for(let i = 0; i < moulins.length; i++)
-    {
-        let moulin = moulins[i];
-
-        for (let i = 1; i < 3; i++)
-            for (let j = 6; j >= 1; j--)
-            {
-                let moulin_tile = document.createElement("img");
-
-                if (i == 1)
-                    moulin_tile.src = "<?=getenv('MOULIN_" + j + "')?>";
-                else moulin_tile.src = "<?=getenv('MOULIN_" + (j+5) + "')?>";
-                moulin_tile.style.gridColumn = i + "/" + i;
-                moulin_tile.style.gridRow = (6-j) + "/" + (6-j);
-
-                // Bidouillage
-                if (j == 5 && i == 1 || j == 4 && i == 1) {
-                    moulin_tile.style.position = "relative";
-                    moulin_tile.style.top = "-20px"
-                }
-
-                moulin.appendChild(moulin_tile);
-            }
-
-        let moulin_final_tile = document.createElement("img");
-        moulin_final_tile.src = "<?=getenv('MOULIN_11')?>";
-        moulin_final_tile.style.gridColumn = "3/3";
-        moulin_final_tile.style.gridRow = "5/5";
-
-        moulin.appendChild(moulin_final_tile);
-    }
-}
-createMoulin();
-
 
 /**
  * Fait disparaitre ou non la barre de navigation selon la taille de la fenêtre.

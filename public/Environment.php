@@ -104,19 +104,41 @@ class Environment
         <?php }
     }
 
-    public static function generateTree($posXinit, $posYinit, $size, $zIndex=0)
+    public static function generateTree($posXinit, $posYinit, $size, $zIndex=0, $extraStyle="")
     { ?>
         <img src="<?=getenv('TREE_LOG_1')?>"
-             style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit?>/<?=$posYinit?>; z-index: <?=$zIndex?>;"
+             style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit?>/<?=$posYinit?>; z-index: <?=$zIndex?>; <?=$extraStyle?>"
              alt="TREE_LOG=0;Tile=1">
         <?php
-            for ($i = 1; $i < $size; $i++) { ?>
+            for ($i = 1; $size > 2 && $i < $size; $i++) { ?>
         <img src="<?=getenv('TREE_1')?>"
-             style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit-$i?>/<?=$posYinit-$i?>; z-index: <?=$zIndex?>;"
+             style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit-$i?>/<?=$posYinit-$i?>; z-index: <?=$zIndex?>; <?=$extraStyle?>"
              alt="TREE=0;Tile=1">
         <?php } ?>
         <img src="<?=getenv('TREE_2')?>"
-             style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit-$i?>/<?=$posYinit-$i?>; z-index: <?=$zIndex?>;"
+             style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit-$i?>/<?=$posYinit-$i?>; z-index: <?=$zIndex?>; <?=$extraStyle?>"
              alt="TREE=0;Tile=2">
+    <?php }
+
+    public static function generateMoulin($posXinit, $posYinit, $zIndex=0)
+    { ?>
+        <div class="moulins" style="grid-column: <?=$posXinit?>/<?=$posXinit?>; grid-row: <?=$posYinit?>/<?=$posYinit?>; z-index: <?=$zIndex?>">
+        <?php for ($i = 1; $i < 3; $i++) {
+            for ($j = 6; $j >= 1; $j--) {
+                if ($j == 5 && $i == 1 || $j == 4 && $i == 1) { ?>
+                    <img src="<?=getenv("MOULIN_".($j+5))?>"
+                         style="grid-column: <?=$i?>/<?=$i?>; grid-row: <?=6-$j?>/<?=6-$j?>; position: relative; top: -20px; z-index: <?=$zIndex?>"
+                         alt="MOULIN_<?=$j+5?>">
+                <?php } else { ?>
+                    <img src="<?=getenv("MOULIN_".(($i == 1) ? $j : $j+5))?>"
+                         style="grid-column: <?=$i?>/<?=$i?>; grid-row: <?=6-$j?>/<?=6-$j?>; z-index: <?=$zIndex?>"
+                         alt="MOULIN_<?=$j?>">
+                <?php }
+            }
+        } ?>
+        <img src="<?=getenv("MOULIN_11)")?>"
+             style="grid-column: 3/3; grid-row: 5/5; z-index: <?=$zIndex?>"
+             alt="MOULIN_11">
+        </div>
     <?php }
 }

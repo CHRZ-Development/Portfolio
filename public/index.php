@@ -67,10 +67,10 @@ require_once "Environment.php";
                         <?=Environment::generateHouse0(3, 4)?>
 
                         <?=Environment::generateTree(2, 5, 3, -1)?>
-                        <?=Environment::generateTree(2, 5, 4)?>
+                        <?=Environment::generateTree(2, 5, 4, -1, "position: relative; left: 45px")?>
+                        <?=Environment::generateTree(6, 5, 3, -1, "position: relative; left: 45px")?>
 
-                        <!-- first moulin -->
-                        <div class="moulins" style="grid-column: 10/10; grid-row: 1/1;"></div>
+                        <?=Environment::generateMoulin(10, 1)?>
 
                         <div class="birds-brun-fly" style="z-index: 1;"></div>
                         <div class="birds-brun-fly" style="z-index: 1; top: -5px; animation: birds-fly-frames 375ms linear infinite, birds-fly-move 29s linear infinite;"></div>
