@@ -4,97 +4,71 @@ const nav1button2 = document.getElementById("nav1Button2");
 const nav1button3 = document.getElementById("nav1Button3");
 // const nav1button4 = document.getElementById("nav1Button4");
 const navBar1 = document.getElementById("sectionNavBar1");
-
-const buttonsNavImg = document.getElementsByClassName("navBar1");
-
 const header = document.getElementById("header");
-
-const navMenuButton = document.getElementById("icon-drop-down-navigation-bar");
 const dropDownMenu = document.getElementById("drop-down-menu");
 
-const rock_bottom_right = document.getElementById("rock-bottom-right");
-const corner_right = document.getElementById("corner-right");
-const corner_rock = document.getElementById("rock-corner");
+const buttonsNavImg = document.getElementsByClassName("navBar1");
+const navMenuButton = document.getElementById("icon-drop-down-navigation-bar");
+
+function navBarShowOrNot(_width)
+{
+    buttonsNavImg.item(0).parentElement.style.display = (_width < 1350) ? "none" : "grid";
+    navMenuButton.style.display = (_width < 1350) ? "block" : "none";
+}
+
 const floor = document.getElementById("floor");
+function floorResize(_width)
+{
+    const floorTileSize = 48;
+
+    let style = floorTileSize + "px ";
+    for (let i = 0; i < _width/floorTileSize; i++) style = style + floorTileSize + "px ";
+    style = style + floorTileSize + "px";
+    floor.style.gridTemplateColumns = style;
+
+    $.ajax({
+        type: "POST",
+        url: "./environments/resizeFloor.php",
+        data: {
+            "width": _width
+        },
+        success: function (html) {
+            const wheat = $('#floor .wheat').detach()
+            $('#floor').empty().append(wheat);
+
+            floor.insertAdjacentHTML('beforeend', html);
+        }
+    });
+}
+
 const village = document.getElementById("village");
-
-function floorResize()
+function villageResize(_width)
 {
-    if (floor != null) {
-        let width = document.body.clientWidth;
+    const villageTileSize = 64;
 
-        let style = "48px ";
-        for (let i = 0; i < width/48; i++) style = style + "48px ";
-        style = style + "48px";
-        floor.style.gridTemplateColumns = style;
+    let style = villageTileSize + "px ";
+    for (let i = 0; i < _width/villageTileSize; i++) style = style + villageTileSize + "px ";
+    style = style + villageTileSize + "px";
 
-        $.ajax({
-            type: "POST",
-            url: "./environments/resizeFloor.php",
-            data: {
-                "width": width
-            },
-            success: function (html) {
-                let wheat = $('#floor .wheat').detach()
-                $('#floor').empty().append(wheat);
-
-                floor.insertAdjacentHTML('beforeend', html);
-            }
-        });
-
-        corner_right.style.gridColumnStart = (Math.round(width/48)+2).toString();
-        corner_right.style.gridColumnEnd = (Math.round(width/48)+2).toString();
-        corner_right.style.gridRowStart = "2";
-        corner_rock.style.gridColumnStart = (Math.round(width/48)+2).toString();
-        corner_rock.style.gridColumnEnd = (Math.round(width/48)+2).toString();
-        corner_rock.style.gridRowStart = "3";
-        rock_bottom_right.style.gridColumnStart = (Math.round(width/48)+2).toString();
-        rock_bottom_right.style.gridColumnEnd = (Math.round(width/48)+2).toString();
-        rock_bottom_right.style.gridRowStart = "4";
-    }
-}
-$(floorResize);     // document on ready
-window.addEventListener("resize", floorResize);
-
-/**
- * Fait disparaitre ou non la barre de navigation selon la taille de la fenêtre.
- * @param width Taille de la fenêtre où est afficher le site internet.
- */
-function navBarShowOrNot(width)
-{
-    if (width < 1350) {
-        buttonsNavImg.item(0).parentElement.style.display = "none";
-        navMenuButton.style.display = "block";
-    } else {
-        buttonsNavImg.item(0).parentElement.style.display = "grid";
-        navMenuButton.style.display = "none";
-    }
+    village.style.gridTemplateColumns = style;
 }
 
-/**
- * Augmente ou reduit la taille du sol selon la taille de la fenêtre.
- * @param width Taille de la fenêtre où est afficher le site internet.
- */
-function resizeFloor(width)
-{
-    if (floor != null) {
-        let style = "";
-        for (let i = 0; i < width/64; i++) style = style + "64px ";
-
-        village.style.gridTemplateColumns = style;
-    }
-}
-
-resizeFloor(document.body.clientWidth);
-navBarShowOrNot(document.body.clientWidth);
+let oldWidth = document.body.clientWidth;
+$(() => {   // Document on ready
+    floorResize(oldWidth);
+    villageResize(oldWidth);
+    navBarShowOrNot(oldWidth);
+});
 window.addEventListener("resize", () => {
-    // Fait grandir ou réduit la taille du sol selon la taille de la fenêtre.
-    let width = document.body.clientWidth;
+    const width = document.body.clientWidth;
+    if (floor != null && oldWidth !== width) {
+        floorResize(width);
+        villageResize(width);
+        navBarShowOrNot(width);
 
-    resizeFloor(width);
-    navBarShowOrNot(width);
-})
-
+        oldWidth = width;
+    }
+});
 
 let isMenuClick = false;
 // Fait disparaître le menu quand il est trop haut pour ne pas qu'il fasse moche

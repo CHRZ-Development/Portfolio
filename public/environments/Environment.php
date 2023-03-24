@@ -121,25 +121,26 @@ class Environment
     }
 
     public static function generateMoulin($posXinit, $posYinit, $zIndex = 0)
-    { ?>
-        <div class="moulins"
-             style="grid-column: <?= $posXinit ?>/<?= $posXinit ?>; grid-row: <?= $posYinit ?>/<?= $posYinit ?>; z-index: <?= $zIndex ?>">
-            <?php for ($i = 1; $i < 3; $i++) {
-                for ($j = 6; $j >= 1; $j--) {
-                    if ($j == 5 && $i == 1 || $j == 4 && $i == 1) { ?>
-                        <img src="<?= getenv("MOULIN_" . ($j + 5)) ?>"
-                             style="grid-column: <?= $i ?>/<?= $i ?>; grid-row: <?= 6 - $j ?>/<?= 6 - $j ?>; position: relative; top: -20px; z-index: <?= $zIndex ?>"
-                             alt="MOULIN_<?= $j + 5 ?>">
-                    <?php } else { ?>
-                        <img src="<?= getenv("MOULIN_" . (($i == 1) ? $j : $j + 5)) ?>"
-                             style="grid-column: <?= $i ?>/<?= $i ?>; grid-row: <?= 6 - $j ?>/<?= 6 - $j ?>; z-index: <?= $zIndex ?>"
-                             alt="MOULIN_<?= $j ?>">
-                    <?php }
+    {
+        $html = '<div class="moulins" 
+                      style="grid-column: '.$posXinit.'/'.$posXinit.'; grid-row: '.$posYinit.'/'.$posYinit.'; z-index: '.$zIndex.'">';
+        for ($i = 1; $i < 3; $i++) {
+            for ($j = 6; $j >= 1; $j--) {
+                if ($i == 1 && $j == 5 || $i == 1 && $j == 4) {
+                    $html = $html.'<img src="'.getenv("MOULIN_".($j+5)).'"
+                                        style="grid-column: '.$i.'/'.$i.'; grid-row: '.(6-$j).'/'.(6-$j).'; position: relative; top: -20px; z-index:'.$zIndex.'
+                                        alt="MOULIN_'.($j + 5).'">';
+                } else {
+                    $html = $html.'<img src="'.getenv("MOULIN_".(($i == 1) ? $j : $j + 5)).'"
+                                        style="grid-column: '.$i.'/'.$i.'; grid-row: '.(6-$j).'/'.(6-$j).'; z-index:'.$zIndex.'
+                                        alt="MOULIN_'.$j.'">';
                 }
-            } ?>
-            <img src="<?= getenv("MOULIN_11)") ?>"
-                 style="grid-column: 3/3; grid-row: 5/5; z-index: <?= $zIndex ?>"
-                 alt="MOULIN_11">
-        </div>
-    <?php }
+            }
+        }
+        $html = $html.'<img src="'.getenv("MOULIN_11").'"
+                                    style="grid-column: 3/3; grid-row: 5/5; z-index: '.$zIndex.'"
+                                    alt="MOULIN_11">';
+
+        return $html.'</div>';
+    }
 }
