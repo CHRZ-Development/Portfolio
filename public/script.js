@@ -70,6 +70,20 @@ window.addEventListener("resize", () => {
     }
 });
 
+// PLAYER ON THE VILLAGE
+const playerMoveSpeed = 5;
+$(document).keydown((key) => {
+    const player = $("#bucheronPerso");
+    switch (key.which) {
+        case 68: // D key
+            player.css('left', player.offset().left + playerMoveSpeed);
+            break;
+        case 81: // Q key
+            player.css('left', player.offset().left - playerMoveSpeed);
+            break;
+    }
+});
+
 let isMenuClick = false;
 // Fait disparaître le menu quand il est trop haut pour ne pas qu'il fasse moche
 window.addEventListener("scroll", (ev) => {
