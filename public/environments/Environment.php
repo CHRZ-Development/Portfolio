@@ -143,4 +143,13 @@ class Environment
 
         return $html.'</div>';
     }
+
+    public static function spawnBird($y=0, $frameSpeed=500, $moveSpeed=30, $zIndex=1)
+    {
+        return '<div class="birds-brun-fly" 
+                     style="z-index: '.$zIndex.';
+                            top: '.$y.';
+                            animation: birds-fly-frames '.$frameSpeed.'ms linear infinite, 
+                                       birds-fly-move '.$moveSpeed.'s linear infinite;"></div>';
+    }
 }

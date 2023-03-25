@@ -52,33 +52,33 @@
                         <!-- FIXME Wrong tile display on head of Moulin -->
                         <?=Environment::generateMoulin(10, 1)?>
 
-                        <div class="birds-brun-fly" style="z-index: 1;"></div>
-                        <div class="birds-brun-fly" style="z-index: 1; top: -5px; animation: birds-fly-frames 375ms linear infinite, birds-fly-move 29s linear infinite;"></div>
-                        <div class="birds-brun-fly" style="z-index: 1; top: 30px; animation: birds-fly-frames 250ms linear infinite, birds-fly-move 25s linear infinite;"></div>
+                        <?=Environment::spawnBird()?>
+                        <?=Environment::spawnBird(-5, 375, 29)?>
+                        <?=Environment::spawnBird(30, 250, 25)?>
                     </div>
 
                     <div class="palle-moulin" style="left: 442px; top: -440px;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle3.png" style="grid-column: 1/1; grid-row: 5/5;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle2.png" style="grid-column: 2/2; grid-row: 5/5;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle1.png" style="grid-column: 3/3; grid-row: 5/5;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle0.png" style="grid-column: 4/4; grid-row: 5/5;">
+                        <img src="res/moulin/palle3.png" style="grid-column: 1/1; grid-row: 5/5;">
+                        <img src="res/moulin/palle2.png" style="grid-column: 2/2; grid-row: 5/5;">
+                        <img src="res/moulin/palle1.png" style="grid-column: 3/3; grid-row: 5/5;">
+                        <img src="res/moulin/palle0.png" style="grid-column: 4/4; grid-row: 5/5;">
 
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/moulin12.png" style="grid-column: 5/5; grid-row: 5/5;">
+                        <img src="res/moulin/moulin12.png" style="grid-column: 5/5; grid-row: 5/5;">
 
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle2.png" style="grid-column: 5/5; grid-row: 8/8; transform: rotate(-90deg)">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle1.png" style="grid-column: 5/5; grid-row: 7/7; transform: rotate(-90deg)">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle0.png" style="grid-column: 5/5; grid-row: 6/6; transform: rotate(-90deg)">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle3.png" style="grid-column: 5/5; grid-row: 9/9; transform: rotate(-90deg)">
+                        <img src="res/moulin/palle2.png" style="grid-column: 5/5; grid-row: 8/8; transform: rotate(-90deg)">
+                        <img src="res/moulin/palle1.png" style="grid-column: 5/5; grid-row: 7/7; transform: rotate(-90deg)">
+                        <img src="res/moulin/palle0.png" style="grid-column: 5/5; grid-row: 6/6; transform: rotate(-90deg)">
+                        <img src="res/moulin/palle3.png" style="grid-column: 5/5; grid-row: 9/9; transform: rotate(-90deg)">
 
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle3.png" style="grid-column: 9/9; grid-row: 5/5; transform: rotate(-180deg); position: relative; left: -3px;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle2.png" style="grid-column: 8/8; grid-row: 5/5; transform: rotate(-180deg); position: relative; left: -3px;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle1.png" style="grid-column: 7/7; grid-row: 5/5; transform: rotate(-180deg); position: relative; left: -3px;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle0.png" style="grid-column: 6/6; grid-row: 5/5; transform: rotate(-180deg); position: relative; left: -3px;">
+                        <img src="res/moulin/palle3.png" style="grid-column: 9/9; grid-row: 5/5; transform: rotate(-180deg); position: relative; left: -3px;">
+                        <img src="res/moulin/palle2.png" style="grid-column: 8/8; grid-row: 5/5; transform: rotate(-180deg); position: relative; left: -3px;">
+                        <img src="res/moulin/palle1.png" style="grid-column: 7/7; grid-row: 5/5; transform: rotate(-180deg); position: relative; left: -3px;">
+                        <img src="res/moulin/palle0.png" style="grid-column: 6/6; grid-row: 5/5; transform: rotate(-180deg); position: relative; left: -3px;">
 
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle3.png" style="grid-column: 5/5; grid-row: 1/1; transform: rotate(90deg); position: relative; top: 3px;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle2.png" style="grid-column: 5/5; grid-row: 2/2; transform: rotate(90deg); position: relative; top: 3px;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle1.png" style="grid-column: 5/5; grid-row: 3/3; transform: rotate(90deg); position: relative; top: 3px;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/moulin/palle0.png" style="grid-column: 5/5; grid-row: 4/4; transform: rotate(90deg); position: relative; top: 3px;">
+                        <img src="res/moulin/palle3.png" style="grid-column: 5/5; grid-row: 1/1; transform: rotate(90deg); position: relative; top: 3px;">
+                        <img src="res/moulin/palle2.png" style="grid-column: 5/5; grid-row: 2/2; transform: rotate(90deg); position: relative; top: 3px;">
+                        <img src="res/moulin/palle1.png" style="grid-column: 5/5; grid-row: 3/3; transform: rotate(90deg); position: relative; top: 3px;">
+                        <img src="res/moulin/palle0.png" style="grid-column: 5/5; grid-row: 4/4; transform: rotate(90deg); position: relative; top: 3px;">
                     </div>
 
                     <div id="bucheronPerso"></div>
@@ -86,7 +86,7 @@
 
                 <div style="width: 96vw; display: flex; justify-content: center; align-items: center; column-gap: 5%">
                     <div id="iconSectionNavBar1">
-                        <img id="iconNavBar1" src="https://github.com/NaulaN/CHRZ-development_website/blob/master/res/logos/beetleAnimated.gif?raw=true"
+                        <img id="iconNavBar1" src="res/logos/beetleAnimated.gif?raw=true"
                              alt="Icon animated CHRZ Development">
                         <p><b>CHRZ Development</b></p>
                     </div>
@@ -94,7 +94,7 @@
                     <div id="icon-drop-down-navigation-bar"></div>
 
                     <div id="drop-down-menu">
-                        <p><a href="./index.html">ACCEUIL</a></p>
+                        <p><a href="./index.php">ACCEUIL</a></p>
                         <p><a href="projets/index.php">PROJETS</a></p>
                         <p><a href="skills/index.php">COMPETENCE</a></p>
                         <p><a href="contact/index.php">CONTACT</a></p>
@@ -145,129 +145,129 @@
                     <div class="hexagon  light-torch" style="position: relative; left: -5px; top: -10px; opacity: 25%;"></div>
 
                     <div class="first-torch" style="grid-column: 1/1; grid-row: 1/1; position: absolute; left: 20px; width: 48px; height: 48px"></div>
-                    <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-sticks.png" style="grid-column: 1/1; grid-row: 2/2; position: absolute; left: 20px;">
-                    <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-sticks-end.png" style="grid-column: 1/1; grid-row: 3/3; position: absolute; left: 20px;">
+                    <img src="res/torch-sticks.png" style="grid-column: 1/1; grid-row: 2/2; position: absolute; left: 20px;">
+                    <img src="res/torch-sticks-end.png" style="grid-column: 1/1; grid-row: 3/3; position: absolute; left: 20px;">
                 </div>
 
                 <div class="torch" style="grid-column: 4/4; left: -675px; top: -20px;">
                     <div class="hexagon  light-torch" style="position: relative; left: -5px; top: -10px; opacity: 25%;"></div>
 
                     <div class="first-torch" style="grid-column: 1/1; grid-row: 1/1; position: absolute; left: 20px; width: 48px; height: 48px"></div>
-                    <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-sticks.png" style="grid-column: 1/1; grid-row: 2/2; position: absolute; left: 20px;">
-                    <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-sticks-end.png" style="grid-column: 1/1; grid-row: 3/3; position: absolute; left: 20px;">
+                    <img src="res/torch-sticks.png" style="grid-column: 1/1; grid-row: 2/2; position: absolute; left: 20px;">
+                    <img src="res/torch-sticks-end.png" style="grid-column: 1/1; grid-row: 3/3; position: absolute; left: 20px;">
                 </div>
 
                 <div style="grid-column: 4/4; width: 1px; height: 1px; z-index: 9;">
                     <div class="platform" style="top: -225px; left: -895px;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/corner-left.png" style="grid-row: 3/3; grid-column: 1/1; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/grass.png" style="grid-row: 2/2; grid-column: 1/1; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/grass.png" style="grid-row: 1/1; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/grass.png" style="grid-row: 1/1; grid-column: 5/5; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/grass.png" style="grid-row: 1/1; grid-column: 6/6; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/buisson.png" style="grid-row: 1/1; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/corner-right.png" style="grid-row: 2/2; grid-column: 6/6; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 5/5; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/corner-left.png" style="grid-row: 2/2; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/dirt-left.png" style="grid-row: 3/3; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 6/6; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 6/6; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 5/5; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 5/5; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png" style="grid-row: 4/4; grid-column: 6/6; width: 100%; height: 100%; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png" style="grid-row: 5/5; grid-column: 6/6; width: 100%; height: 100%; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-pick.png" style="grid-row: 6/6; grid-column: 6/6; width: 100%; height: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-pick.png" style="grid-row: 6/6; grid-column: 5/5; width: 100%; height: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-big-pick.png" style="grid-row: 7/7; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_0.png" style="grid-row: 3/3; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_1.png" style="grid-row: 3/3; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_0.png" style="grid-row: 3/3; grid-column: 5/5; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png" style="grid-row: 5/5; grid-column: 1/1; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/dirt-left.png" style="grid-row: 4/4; grid-column: 1/1; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png" style="grid-row: 6/6; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png" style="grid-row: 7/7; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-big-pick.png" style="grid-row: 8/8; grid-column: 2/2; width: 100%; height: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-pick.png" style="grid-row: 7/7; grid-column: 3/3; width: 100%; height: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-big-pick.png" style="grid-row: 6/6; grid-column: 1/1; width: 100%; height: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/dirt-left.png" style="grid-row: 3/3; grid-column: 6/6; width: 100%; height: 100%; -ms-transform: rotateY(180deg); transform: rotateY(180deg);">
+                        <img src="res/floors/corner-left.png" style="grid-row: 3/3; grid-column: 1/1; width: 100%; height: 100%">
+                        <img src="res/grass.png" style="grid-row: 2/2; grid-column: 1/1; width: 100%; height: 100%">
+                        <img src="res/grass.png" style="grid-row: 1/1; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/grass.png" style="grid-row: 1/1; grid-column: 5/5; width: 100%; height: 100%">
+                        <img src="res/grass.png" style="grid-row: 1/1; grid-column: 6/6; width: 100%; height: 100%">
+                        <img src="res/buisson.png" style="grid-row: 1/1; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/corner-right.png" style="grid-row: 2/2; grid-column: 6/6; width: 100%; height: 100%">
+                        <img src="res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 5/5; width: 100%; height: 100%">
+                        <img src="res/floors/corner-left.png" style="grid-row: 2/2; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/dirt-left.png" style="grid-row: 3/3; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 6/6; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 6/6; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 5/5; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 5/5; width: 100%; height: 100%">
+                        <img src="res/floors/rock-bottom.png" style="grid-row: 4/4; grid-column: 6/6; width: 100%; height: 100%; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
+                        <img src="res/floors/rock-bottom.png" style="grid-row: 5/5; grid-column: 6/6; width: 100%; height: 100%; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
+                        <img src="res/floors/rock-pick.png" style="grid-row: 6/6; grid-column: 6/6; width: 100%; height: 100%;">
+                        <img src="res/floors/rock-pick.png" style="grid-row: 6/6; grid-column: 5/5; width: 100%; height: 100%;">
+                        <img src="res/floors/rock-big-pick.png" style="grid-row: 7/7; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/rock-top_0.png" style="grid-row: 3/3; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/floors/rock-top_1.png" style="grid-row: 3/3; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/rock-top_0.png" style="grid-row: 3/3; grid-column: 5/5; width: 100%; height: 100%">
+                        <img src="res/floors/rock-bottom.png" style="grid-row: 5/5; grid-column: 1/1; width: 100%; height: 100%">
+                        <img src="res/floors/dirt-left.png" style="grid-row: 4/4; grid-column: 1/1; width: 100%; height: 100%">
+                        <img src="res/floors/rock-bottom.png" style="grid-row: 6/6; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/rock-bottom.png" style="grid-row: 7/7; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/rock-big-pick.png" style="grid-row: 8/8; grid-column: 2/2; width: 100%; height: 100%;">
+                        <img src="res/floors/rock-pick.png" style="grid-row: 7/7; grid-column: 3/3; width: 100%; height: 100%;">
+                        <img src="res/floors/rock-big-pick.png" style="grid-row: 6/6; grid-column: 1/1; width: 100%; height: 100%;">
+                        <img src="res/floors/dirt-left.png" style="grid-row: 3/3; grid-column: 6/6; width: 100%; height: 100%; -ms-transform: rotateY(180deg); transform: rotateY(180deg);">
                     </div>
                 </div>
 
                 <div style="grid-column: 4/4; width: 1px; height: 1px; z-index: 9;">
                     <div class="platform" style="top: -225px; left: -20px;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/buisson.png" style="grid-row: 2/2; grid-column: 1/1; width: 100%; height: 100%; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/corner-left.png" style="grid-row: 3/3; grid-column: 1/1; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/grass.png" style="grid-row: 2/2; grid-column: 1/1; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/grass.png" style="grid-row: 1/1; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/grass.png" style="grid-row: 1/1; grid-column: 5/5; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/grass.png" style="grid-row: 1/1; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/corner-right.png" style="grid-row: 2/2; grid-column: 6/6; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 5/5; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/corner-left.png" style="grid-row: 2/2; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/dirt-left.png" style="grid-row: 3/3; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 6/6; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 6/6; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 5/5; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 5/5; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png" style="grid-row: 4/4; grid-column: 6/6; width: 100%; height: 100%; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-pick.png" style="grid-row: 5/5; grid-column: 6/6; width: 100%; height: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-pick.png" style="grid-row: 6/6; grid-column: 5/5; width: 100%; height: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-big-pick.png" style="grid-row: 7/7; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_0.png" style="grid-row: 3/3; grid-column: 3/3; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_1.png" style="grid-row: 3/3; grid-column: 4/4; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-top_0.png" style="grid-row: 3/3; grid-column: 5/5; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png" style="grid-row: 5/5; grid-column: 1/1; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/dirt-left.png" style="grid-row: 4/4; grid-column: 1/1; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png" style="grid-row: 6/6; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-bottom.png" style="grid-row: 7/7; grid-column: 2/2; width: 100%; height: 100%">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-big-pick.png" style="grid-row: 8/8; grid-column: 2/2; width: 100%; height: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-pick.png" style="grid-row: 7/7; grid-column: 3/3; width: 100%; height: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/rock-big-pick.png" style="grid-row: 6/6; grid-column: 1/1; width: 100%; height: 100%;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/dirt-left.png" style="grid-row: 3/3; grid-column: 6/6; width: 100%; height: 100%; -ms-transform: rotateY(180deg); transform: rotateY(180deg);">
+                        <img src="res/buisson.png" style="grid-row: 2/2; grid-column: 1/1; width: 100%; height: 100%; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
+                        <img src="res/floors/corner-left.png" style="grid-row: 3/3; grid-column: 1/1; width: 100%; height: 100%">
+                        <img src="res/grass.png" style="grid-row: 2/2; grid-column: 1/1; width: 100%; height: 100%">
+                        <img src="res/grass.png" style="grid-row: 1/1; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/grass.png" style="grid-row: 1/1; grid-column: 5/5; width: 100%; height: 100%">
+                        <img src="res/grass.png" style="grid-row: 1/1; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/corner-right.png" style="grid-row: 2/2; grid-column: 6/6; width: 100%; height: 100%">
+                        <img src="res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/floor-top.png" style="grid-row: 2/2; grid-column: 5/5; width: 100%; height: 100%">
+                        <img src="res/floors/corner-left.png" style="grid-row: 2/2; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/dirt-left.png" style="grid-row: 3/3; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 6/6; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 6/6; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 4/4; grid-column: 5/5; width: 100%; height: 100%">
+                        <img src="res/floors/rock-fill.png" style="grid-row: 5/5; grid-column: 5/5; width: 100%; height: 100%">
+                        <img src="res/floors/rock-bottom.png" style="grid-row: 4/4; grid-column: 6/6; width: 100%; height: 100%; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
+                        <img src="res/floors/rock-pick.png" style="grid-row: 5/5; grid-column: 6/6; width: 100%; height: 100%;">
+                        <img src="res/floors/rock-pick.png" style="grid-row: 6/6; grid-column: 5/5; width: 100%; height: 100%;">
+                        <img src="res/floors/rock-big-pick.png" style="grid-row: 7/7; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/rock-top_0.png" style="grid-row: 3/3; grid-column: 3/3; width: 100%; height: 100%">
+                        <img src="res/floors/rock-top_1.png" style="grid-row: 3/3; grid-column: 4/4; width: 100%; height: 100%">
+                        <img src="res/floors/rock-top_0.png" style="grid-row: 3/3; grid-column: 5/5; width: 100%; height: 100%">
+                        <img src="res/floors/rock-bottom.png" style="grid-row: 5/5; grid-column: 1/1; width: 100%; height: 100%">
+                        <img src="res/floors/dirt-left.png" style="grid-row: 4/4; grid-column: 1/1; width: 100%; height: 100%">
+                        <img src="res/floors/rock-bottom.png" style="grid-row: 6/6; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/rock-bottom.png" style="grid-row: 7/7; grid-column: 2/2; width: 100%; height: 100%">
+                        <img src="res/floors/rock-big-pick.png" style="grid-row: 8/8; grid-column: 2/2; width: 100%; height: 100%;">
+                        <img src="res/floors/rock-pick.png" style="grid-row: 7/7; grid-column: 3/3; width: 100%; height: 100%;">
+                        <img src="res/floors/rock-big-pick.png" style="grid-row: 6/6; grid-column: 1/1; width: 100%; height: 100%;">
+                        <img src="res/floors/dirt-left.png" style="grid-row: 3/3; grid-column: 6/6; width: 100%; height: 100%; -ms-transform: rotateY(180deg); transform: rotateY(180deg);">
                     </div>
                 </div>
 
                 <div style="grid-column: 4/4; width: 1px; height: 1px; z-index: 11;">
                     <div id="platform-profile">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border-end.png" style="grid-row: 1/1; grid-column: 1/1;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 2/2;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 3/3;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 4/4;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 5/5;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 6/6;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 7/7;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 8/8;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 9/9;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 10/10;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 11/11;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 12/12;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 13/13;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 14/14;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 15/15;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/floors/platform-border-end.png" style="grid-row: 1/1; grid-column: 16/16; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
+                        <img src="res/floors/platform-border-end.png" style="grid-row: 1/1; grid-column: 1/1;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 2/2;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 3/3;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 4/4;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 5/5;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 6/6;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 7/7;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 8/8;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 9/9;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 10/10;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 11/11;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 12/12;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 13/13;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 14/14;">
+                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 15/15;">
+                        <img src="res/floors/platform-border-end.png" style="grid-row: 1/1; grid-column: 16/16; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
                     </div>
                 </div>
 
                 <div style="grid-column: 4/4; width: 1px; height: 1px">
                     <div style="position: relative; display: grid; grid-template-rows: 48px 48px 48px; grid-template-columns: 48px; top: -275px; left: -900px;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-log-1.png" style="grid-column: 1/1; grid-row: 3/3; width: 100%; height: 100%; image-rendering: pixelated;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-1.png" style="grid-column: 1/1; grid-row: 2/2; width: 100%; height: 100%; image-rendering: pixelated;">
-                        <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/trees/tree-2.png" style="grid-column: 1/1; grid-row: 1/1; width: 100%; height: 100%; image-rendering: pixelated;">
+                        <img src="res/trees/tree-log-1.png" style="grid-column: 1/1; grid-row: 3/3; width: 100%; height: 100%; image-rendering: pixelated;">
+                        <img src="res/trees/tree-1.png" style="grid-column: 1/1; grid-row: 2/2; width: 100%; height: 100%; image-rendering: pixelated;">
+                        <img src="res/trees/tree-2.png" style="grid-column: 1/1; grid-row: 1/1; width: 100%; height: 100%; image-rendering: pixelated;">
                     </div>
                 </div>
             </div>
@@ -276,7 +276,7 @@
             <div class="sectionAccueil">
                 <div id="bio" style="position: relative; width: 100%; height: auto; top: -30px; background: rgb(23,25,23); background: linear-gradient(180deg, rgba(23,25,23,1) 5%, rgba(23,25,23,0) 50%, rgba(23,25,23,1) 95%);">
                     <video id="bgVideo" preload="true" autoplay  loop muted style="position: relative;  height: auto; z-index: -1; width: 100%;">
-                        <source src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/BIO-background.mp4" type="video/mp4" >
+                        <source src="res/BIO-background.mp4" type="video/mp4" >
                     </video>
 
                     <div style="position: absolute; border-left: solid 5px white; height: 300px; width: 1px; top: 300px; left: 95px;"></div>
@@ -338,7 +338,7 @@
                     <section style="text-align: center;">
                         <img style="width: 10%; cursor: pointer;"
                              onclick="window.location.href = 'https://github.com/NaulaN/SuperMarioBros3-pygame'"
-                             src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/github.png"
+                             src="res/logos/github.png"
                              alt="Github logo">
                     </section>
                 </div>
@@ -365,7 +365,7 @@
                     <!--Logo for access the project-->
                     <section style="text-align: center">
                         <a href="https://github.com/NaulaN/Escarbot-java">
-                            <img src="https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/logos/github.png" style="width: 10%; cursor: pointer;"
+                            <img src="res/logos/github.png" style="width: 10%; cursor: pointer;"
                                  alt="Github logo">
                         </a>
                     </section>
