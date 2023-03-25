@@ -57,6 +57,7 @@
                         <?=Environment::spawnBird(30, 250, 25)?>
                     </div>
 
+                    <!-- TODO Tru to simplify this part into generateMoulin function -->
                     <div class="palle-moulin" style="left: 442px; top: -440px;">
                         <img src="res/moulin/palle3.png" style="grid-column: 1/1; grid-row: 5/5;">
                         <img src="res/moulin/palle2.png" style="grid-column: 2/2; grid-row: 5/5;">
@@ -141,21 +142,8 @@
                     </div>
                 </div>
 
-                <div class="torch" style="grid-column: 4/4; left: -30px; top: -20px;">
-                    <div class="hexagon  light-torch" style="position: relative; left: -5px; top: -10px; opacity: 25%;"></div>
-
-                    <div class="first-torch" style="grid-column: 1/1; grid-row: 1/1; position: absolute; left: 20px; width: 48px; height: 48px"></div>
-                    <img src="res/torch-sticks.png" style="grid-column: 1/1; grid-row: 2/2; position: absolute; left: 20px;">
-                    <img src="res/torch-sticks-end.png" style="grid-column: 1/1; grid-row: 3/3; position: absolute; left: 20px;">
-                </div>
-
-                <div class="torch" style="grid-column: 4/4; left: -675px; top: -20px;">
-                    <div class="hexagon  light-torch" style="position: relative; left: -5px; top: -10px; opacity: 25%;"></div>
-
-                    <div class="first-torch" style="grid-column: 1/1; grid-row: 1/1; position: absolute; left: 20px; width: 48px; height: 48px"></div>
-                    <img src="res/torch-sticks.png" style="grid-column: 1/1; grid-row: 2/2; position: absolute; left: 20px;">
-                    <img src="res/torch-sticks-end.png" style="grid-column: 1/1; grid-row: 3/3; position: absolute; left: 20px;">
-                </div>
+                <?=Environment::generateTorch(-30, -20, "grid-column: 4/4")?>
+                <?=Environment::generateTorch(-675, -20, "grid-column: 4/4")?>
 
                 <div style="grid-column: 4/4; width: 1px; height: 1px; z-index: 9;">
                     <div class="platform" style="top: -225px; left: -895px;">
