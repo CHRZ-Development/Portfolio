@@ -105,7 +105,7 @@ class Environment
         return $html;
     }
 
-    public static function generateTree($x, $y, $size, $zIndex = 0, $extraStyle = "")
+    public static function generateTree($x, $y, $size, $zIndex=0, $extraStyle="")
     {
         $html = '<img src="'.getenv("TREE_LOG_1").'"
                       style="grid-column: '.$x.'/'.$x.'; grid-row: '.$y.'/'.$y.'; z-index: '.$zIndex.'; '.$extraStyle.'"
@@ -120,7 +120,7 @@ class Environment
                            alt="TREE_LOG=0;Tile=1">';
     }
 
-    public static function generateMoulin($x, $y, $zIndex = 0)
+    public static function generateMoulin($x, $y, $zIndex=0)
     {
         $html = '<div class="moulins" 
                       style="grid-column: '.$x.'/'.$x.'; grid-row: '.$y.'/'.$y.'; z-index: '.$zIndex.'">';
@@ -144,7 +144,7 @@ class Environment
         return $html.'</div>';
     }
 
-    public static function generateTorch($x, $y, $extraStyle)
+    public static function generateTorch($x, $y, $extraStyle="")
     {
         $html = '<div class="torch" 
                       style="left: '.$x.'px; top: '.$y.'px; '.$extraStyle.'">';
@@ -159,6 +159,25 @@ class Environment
                             style="grid-column: 1/1; grid-row: 3/3; position: absolute; left: 20px;" 
                             alt="torch">';
         return $html.'</div>';
+    }
+
+    public static function generateLogBridge($x, $y, $size, $extraStyle="")
+    {
+        $columns = "";
+        for ($i = 0; $i < $size; $i++)
+            $columns = $columns.'48px ';
+        $html = '<div class="logs-bridge" 
+                      style="top: '.$y.'px; left: '.$x.'px; grid-template-columns: '.$columns.'; '.$extraStyle.'">';
+        $html = $html.'<img src="res/floors/platform-border-end.png" 
+                            style="grid-row: 1/1; grid-column: 1/1;"
+                            alt="logs-bridge-start">';
+        for ($i = 2; $i < $size; $i++)
+            $html = $html.'<img src="res/floors/platform-border1.png" 
+                                style="grid-row: 1/1; grid-column: '.$i.'/'.$i.';"
+                                alt="logs-bridge-'.$i.'">';
+        return $html.'<img src="res/floors/platform-border-end.png" 
+                           style="grid-row: 1/1; grid-column: '.$size.'/'.$size.'; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);"
+                           alt="logs-bridge-end"></div>';
     }
 
     public static function spawnBird($y=0, $frameSpeed=500, $moveSpeed=30, $zIndex=1)

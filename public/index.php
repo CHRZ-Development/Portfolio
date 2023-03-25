@@ -230,26 +230,7 @@
                     </div>
                 </div>
 
-                <div style="grid-column: 4/4; width: 1px; height: 1px; z-index: 11;">
-                    <div id="platform-profile">
-                        <img src="res/floors/platform-border-end.png" style="grid-row: 1/1; grid-column: 1/1;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 2/2;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 3/3;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 4/4;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 5/5;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 6/6;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 7/7;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 8/8;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 9/9;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 10/10;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 11/11;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 12/12;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 13/13;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 14/14;">
-                        <img src="res/floors/platform-border1.png" style="grid-row: 1/1; grid-column: 15/15;">
-                        <img src="res/floors/platform-border-end.png" style="grid-row: 1/1; grid-column: 16/16; -ms-transform: rotateY(-180deg); transform: rotateY(-180deg);">
-                    </div>
-                </div>
+                <?=Environment::generateLogBridge(-690, -50, 16, "grid-column: 4/4; width: 1px; height: 1px; z-index: 11;")?>
 
                 <div style="grid-column: 4/4; width: 1px; height: 1px">
                     <div style="position: relative; display: grid; grid-template-rows: 48px 48px 48px; grid-template-columns: 48px; top: -275px; left: -900px;">
