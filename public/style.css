@@ -55,9 +55,9 @@
 }
 
 @keyframes torch-anim {
-    0% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch0.png"); }
-    50% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch1.png"); }
-    100% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/torch-frames/torch2.png"); }
+    0% { background-image: url("res/torch-frames/torch0.png"); }
+    50% { background-image: url("res/torch-frames/torch1.png"); }
+    100% { background-image: url("res/torch-frames/torch2.png"); }
 }
 
 @keyframes moulin-anim {
@@ -66,12 +66,12 @@
 }
 
 @keyframes birds-fly-frames {
-    0% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_1.png"); }
-    34% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_1.png"); }
-    35% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_2.png"); }
-    59% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_2.png"); }
-    60% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_3.png"); }
-    100% { background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/birds/birds_brun_3.png"); }
+    0% { background-image: url("res/birds/birds_brun_1.png"); }
+    34% { background-image: url("res/birds/birds_brun_1.png"); }
+    35% { background-image: url("res/birds/birds_brun_2.png"); }
+    59% { background-image: url("res/birds/birds_brun_2.png"); }
+    60% { background-image: url("res/birds/birds_brun_3.png"); }
+    100% { background-image: url("res/birds/birds_brun_3.png"); }
 }
 
 @keyframes birds-fly-move {
@@ -304,7 +304,6 @@ header {
     z-index: 1;
 
     background-image: url("https://eapi.pcloud.com/getpubthumb?code=XZC6DJZL5nMQBio1XfCimi0kgf82uJuAvFy&linkpassword=undefined&size=32x58&crop=0&type=auto");
-
 }
 #homeTop {
     display: flex;
@@ -475,7 +474,7 @@ header {
     z-index: -1;
     box-shadow: 0 0 10px black;
 
-    background-image: url("https://raw.githubusercontent.com/NaulaN/CHRZ-development_website/master/res/wood.png");
+    background-image: url("res/wood.png");
     background-repeat: repeat-x;
     background-size: contain;
 }

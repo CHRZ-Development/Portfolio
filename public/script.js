@@ -92,7 +92,7 @@ window.addEventListener("scroll", (ev) => {
             dropDownMenu.style.display = "none";
             isMenuClick = false;
         }
-})
+});
 
 navMenuButton.addEventListener("click", () => {
     if (!isMenuClick) {
