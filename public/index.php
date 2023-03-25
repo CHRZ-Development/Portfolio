@@ -45,9 +45,9 @@
                     <div id="village">
                         <?=Environment::generateHouse0(3, 4)?>
 
-                        <?=Environment::generateTree(2, 5, 3, -1)?>
-                        <?=Environment::generateTree(2, 5, 4, -1, "position: relative; left: 45px")?>
-                        <?=Environment::generateTree(6, 5, 3, -1, "position: relative; left: 45px")?>
+                        <?=Environment::generateTree(2, 5, 4, -1)?>
+                        <?=Environment::generateTree(2, 5, 5, -1, "position: relative; left: 45px")?>
+                        <?=Environment::generateTree(6, 5, 4, -1, "position: relative; left: 45px")?>
 
                         <!-- FIXME Wrong tile display on head of Moulin -->
                         <?=Environment::generateMoulin(10, 1)?>
@@ -231,13 +231,8 @@
                 </div>
 
                 <?=Environment::generateLogBridge(-690, -50, 16, "grid-column: 4/4; width: 1px; height: 1px; z-index: 11;")?>
-
-                <div style="grid-column: 4/4; width: 1px; height: 1px">
-                    <div style="position: relative; display: grid; grid-template-rows: 48px 48px 48px; grid-template-columns: 48px; top: -275px; left: -900px;">
-                        <img src="res/trees/tree-log-1.png" style="grid-column: 1/1; grid-row: 3/3; width: 100%; height: 100%; image-rendering: pixelated;">
-                        <img src="res/trees/tree-1.png" style="grid-column: 1/1; grid-row: 2/2; width: 100%; height: 100%; image-rendering: pixelated;">
-                        <img src="res/trees/tree-2.png" style="grid-column: 1/1; grid-row: 1/1; width: 100%; height: 100%; image-rendering: pixelated;">
-                    </div>
+                <div style="grid-column: 4/4; width: 1px; height: 1px; position: relative; display: grid; grid-template-rows: 48px 48px 48px; grid-template-columns: 48px; top: -275px; left: -900px;">
+                    <?=Environment::generateTree(1, 3, 3, "width: 100%; height: 100%;")?>
                 </div>
             </div>
 

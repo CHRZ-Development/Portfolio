@@ -110,11 +110,10 @@ class Environment
         $html = '<img src="'.getenv("TREE_LOG_1").'"
                       style="grid-column: '.$x.'/'.$x.'; grid-row: '.$y.'/'.$y.'; z-index: '.$zIndex.'; '.$extraStyle.'"
                       alt="TREE_LOG=0;Tile=1">';
-        for ($i = 1; $size > 2 && $i < $size; $i++) {
+        for ($i = 1; $size > 2 && $i < $size-1; $i++)
             $html = $html.'<img src="'.getenv("TREE_1").'"
                                 style="grid-column: '.$x.'/'.$x.'; grid-row: '.($y-$i).'/'.($y-$i).'; z-index: '.$zIndex.'; '.$extraStyle.'"
                                 alt="TREE_LOG=0;Tile=1">';
-        }
         return $html.'<img src="'.getenv("TREE_2").'"
                            style="grid-column: '.$x.'/'.$x.'; grid-row: '.($y-$i).'/'.($y-$i).'; z-index: '.$zIndex.'; '.$extraStyle.'"
                            alt="TREE_LOG=0;Tile=1">';
