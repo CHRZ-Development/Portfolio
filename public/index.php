@@ -137,8 +137,8 @@
                     <img src="https://eapi.pcloud.com/getpubthumb?code=XZ2qfzZ6aJNHKtLkpH9g3zA14MhAJyXNAOV&linkpassword=undefined&size=1430x1430&crop=0&type=auto"
                          alt="Linkedin photo profile">
                     <div>
-                        <h1><u>CHRZASZCZ Naulan</u></h1>
-                        <h2>Futur apprenti a l’IGN | Étudiant à IUT de Montreuil en 2ᵉ année</h2>
+                        <h1><u><?=getenv("PROFILE_NAME")?></u></h1>
+                        <h2><?=getenv("PROFILE_SUBTEXT")?></h2>
                     </div>
                 </div>
 
@@ -231,7 +231,7 @@
                 </div>
 
                 <?=Environment::generateLogBridge(-690, -50, 16, "grid-column: 4/4; width: 1px; height: 1px; z-index: 11;")?>
-                <div style="grid-column: 4/4; width: 1px; height: 1px; position: relative; display: grid; grid-template-rows: 48px 48px 48px; grid-template-columns: 48px; top: -275px; left: -900px;">
+                <div style="grid-column: 4/4; width: 1px; height: 1px; position: relative; display: grid; grid-template-rows: 48px 48px 48px; grid-template-columns: 48px; top: -275px; left: -900px; image-rendering: pixelated;">
                     <?=Environment::generateTree(1, 3, 3, "width: 100%; height: 100%;")?>
                 </div>
             </div>
@@ -243,25 +243,13 @@
                         <source src="res/BIO-background.mp4" type="video/mp4" >
                     </video>
 
-                    <div style="position: absolute; border-left: solid 5px white; height: 300px; width: 1px; top: 300px; left: 95px;"></div>
-
-                    <p style="position: absolute; top: 200px; left: 50px; font-size: 300%">👋</p>
-                    <p style="position: absolute; top: 260px; left: 100px; font-size: 300%">18ans</p>
-                    <p style="position: absolute; top: 320px; left: 100px; font-size: 300%">💻 Passionné dans l'informatique</p>
-                    <p style="position: absolute; top: 380px; left: 100px; font-size: 300%">
-                        <img id="lorraine-flag"
-                             src="https://www.flagsonline.fr/uploads/2019-11-21/1200-0/province_Lorraine_drapeau-flag-bandiere.jpg"
-                             alt="lorraine-flag">
-                        Lorrain avant tous
-                    </p>
-                    <p style="position: absolute; top: 440px; left: 100px; font-size: 300%">🎮 Game développeur sur mon temps libre</p>
-                    <p style="position: absolute; top: 500px; left: 100px; font-size: 300%">
-                        📧
-                        <a class="email-link"
-                           href="https://mail.google.com/mail/?view=cm&source=mailto&to=nchrzaszcz.pro@gmail.com">
-                            nchrzaszcz.pro@gmail.com
-                        </a>
-                    </p>
+                    <div style="position: absolute; border-left: solid 5px white; height: 300px; width: 1px; top: 250px; left: 175px;"></div>
+                    <p style="position: absolute; top: 175px; left: 190px; font-size: 200%"><?=getenv("BIO_LINE_0")?></p>
+                    <p style="position: absolute; top: 230px; left: 190px; font-size: 200%"><?=getenv("BIO_LINE_1")?></p>
+                    <p style="position: absolute; top: 290px; left: 190px; font-size: 200%"><?=getenv("BIO_LINE_2")?></p>
+                    <p style="position: absolute; top: 350px; left: 190px; font-size: 200%"><?=getenv("BIO_LINE_3")?></p>
+                    <p style="position: absolute; top: 410px; left: 190px; font-size: 200%"><?=getenv("BIO_LINE_4")?></p>
+                    <p style="position: absolute; top: 470px; left: 190px; font-size: 200%"><?=getenv("BIO_LINE_5")?></p>
                 </div>
             </div>
 

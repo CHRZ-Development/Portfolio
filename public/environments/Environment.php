@@ -70,39 +70,34 @@ class Environment
 
     public static function generateWheat($x, $y, $size)
     {
-        $html = "";
         if ($size == 1) {
+            return '<img class="wheat"
+                         src="'.getenv('WHEAT_IMG').'"
+                         style="grid-row: '.$y.'/'.$y.'; grid-column: '.$x.'/'.$x.';"
+                         alt="wheat">';
+        } else if ($size == 2)
+            return '
+            <img class="wheat"
+                 src="'.getenv('WHEAT_END_IMG').'"
+                 style="grid-row: '.$y.'/'.$y.'; grid-column: '.$x.'/'.$x.'; transform: rotateY(-180deg);"
+                 alt="wheat">
+            <img class="wheat"
+                 src="'.getenv('WHEAT_END_IMG').'"
+                 style="grid-row: '.$y.'/'.$y.'; grid-column: '.($x+1).'/'.($x+1).';"
+                 alt="wheat">';
+        $html = '<img class="wheat"
+                      src="'.getenv('WHEAT_END_IMG').'"
+                      style="grid-row: '.$y.'/'.$y.'; grid-column: '.$x.'/'.$x.'; transform: rotateY(-180deg);"
+                      alt="wheat">';
+        for ($i = 1; $i < $size; $i++)
             $html = $html.'<img class="wheat"
-                                src="'.getenv('WHEAT_IMG').'"
-                                style="grid-row: '.$y.'/'.$y.'; grid-column: '.$x.'/'.$x.';"
-                                alt="wheat">';
-        } else if ($size == 2) {
-            $html = $html.'<img class="wheat"
-                                src="'.getenv('WHEAT_END_IMG').'"
-                                style="grid-row: '.$y.'/'.$y.'; grid-column: '.$x.'/'.$x.'; transform: rotateY(-180deg);"
-                                alt="wheat">';
-            $html = $html.'<img class="wheat"
-                                src="'.getenv('WHEAT_END_IMG').'"
-                                style="grid-row: '.$y.'/'.$y.'; grid-column: '.($x+1).'/'.($x+1).';"
-                                alt="wheat">';
-        } else {
-            $html = $html.'<img class="wheat"
-                                src="'.getenv('WHEAT_END_IMG').'"
-                                style="grid-row: '.$y.'/'.$y.'; grid-column: '.$x.'/'.$x.'; transform: rotateY(-180deg);"
-                                alt="wheat">';
-            for ($i = 1; $i < $size; $i++) {
-                $html = $html.'<img class="wheat"
-                                src="'.getenv('WHEAT_IMG').'"
-                                style="grid-row: '.$y.'/'.$y.'; grid-column: '.($x+$i).'/'.($x+$i).';"
-                                alt="wheat">';
-            }
-            $html = $html.'<img class="wheat"
-                                src="'.getenv('WHEAT_END_IMG').'"
-                                style="grid-row: '.$y.'/'.$y.'; grid-column: '.($x+$i).'/'.($x+$i).';"
-                                alt="wheat">';
-        }
-
-        return $html;
+                            src="'.getenv('WHEAT_IMG').'"
+                            style="grid-row: '.$y.'/'.$y.'; grid-column: '.($x+$i).'/'.($x+$i).';"
+                            alt="wheat">';
+        return $html.'<img class="wheat"
+                           src="'.getenv('WHEAT_END_IMG').'"
+                           style="grid-row: '.$y.'/'.$y.'; grid-column: '.($x+$i).'/'.($x+$i).';"
+                           alt="wheat">';
     }
 
     public static function generateTree($x, $y, $size, $zIndex=0, $extraStyle="")
@@ -126,38 +121,41 @@ class Environment
         for ($i = 1; $i < 3; $i++) {
             for ($j = 6; $j >= 1; $j--) {
                 if ($i == 1 && $j == 5 || $i == 1 && $j == 4) {
-                    $html = $html.'<img src="'.getenv("MOULIN_".($j+5)).'"
-                                        style="grid-column: '.$i.'/'.$i.'; grid-row: '.(6-$j).'/'.(6-$j).'; position: relative; top: -20px; z-index:'.$zIndex.'
-                                        alt="MOULIN_'.($j + 5).'">';
+                    $html = $html.'
+                    <img src="'.getenv("MOULIN_".($j+5)).'"
+                         style="grid-column: '.$i.'/'.$i.'; grid-row: '.(6-$j).'/'.(6-$j).'; position: relative; top: -20px; z-index:'.$zIndex.'"
+                         alt="MOULIN_'.($j + 5).'">';
                 } else {
-                    $html = $html.'<img src="'.getenv("MOULIN_".(($i == 1) ? $j : $j + 5)).'"
-                                        style="grid-column: '.$i.'/'.$i.'; grid-row: '.(6-$j).'/'.(6-$j).'; z-index:'.$zIndex.'
-                                        alt="MOULIN_'.$j.'">';
+                    $html = $html.'
+                    <img src="'.getenv("MOULIN_".(($i == 1) ? $j : $j + 5)).'"
+                         style="grid-column: '.$i.'/'.$i.'; grid-row: '.(6-$j).'/'.(6-$j).'; z-index:'.$zIndex.'"
+                         alt="MOULIN_'.$j.'">';
                 }
             }
         }
-        $html = $html.'<img src="'.getenv("MOULIN_11").'"
-                            style="grid-column: 3/3; grid-row: 5/5; z-index: '.$zIndex.'"
-                            alt="MOULIN_11">';
-
-        return $html.'</div>';
+        return $html.'
+        <img src="'.getenv("MOULIN_11").'"
+             style="grid-column: 3/3; grid-row: 5/5; z-index: '.$zIndex.'"
+             alt="MOULIN_11">
+         </div>';
     }
 
     public static function generateTorch($x, $y, $extraStyle="")
     {
-        $html = '<div class="torch" 
-                      style="left: '.$x.'px; top: '.$y.'px; '.$extraStyle.'">';
-        $html = $html.'<div class="hexagon  light-torch" 
-                            style="position: relative; left: -5px; top: -10px; opacity: 25%;"></div>';
-        $html = $html.'<div class="first-torch" 
-                            style="grid-column: 1/1; grid-row: 1/1; position: absolute; left: 20px; width: 48px; height: 48px"></div>';
-        $html = $html.'<img src="res/torch-sticks.png" 
-                            style="grid-column: 1/1; grid-row: 2/2; position: absolute; left: 20px;" 
-                            alt="torch">';
-        $html = $html.'<img src="res/torch-sticks-end.png" 
-                            style="grid-column: 1/1; grid-row: 3/3; position: absolute; left: 20px;" 
-                            alt="torch">';
-        return $html.'</div>';
+        return '
+        <div class="torch" 
+             style="left: '.$x.'px; top: '.$y.'px; '.$extraStyle.'">
+            <div class="hexagon  light-torch" 
+                 style="position: relative; left: -5px; top: -10px; opacity: 25%;"></div>
+            <div class="first-torch" 
+                 style="grid-column: 1/1; grid-row: 1/1; position: absolute; left: 20px; width: 48px; height: 48px"></div>
+            <img src="res/torch-sticks.png" 
+                 style="grid-column: 1/1; grid-row: 2/2; position: absolute; left: 20px;" 
+                 alt="torch">
+            <img src="res/torch-sticks-end.png" 
+                 style="grid-column: 1/1; grid-row: 3/3; position: absolute; left: 20px;" 
+                 alt="torch">
+        </div>';
     }
 
     public static function generateLogBridge($x, $y, $size, $extraStyle="")
@@ -166,10 +164,10 @@ class Environment
         for ($i = 0; $i < $size; $i++)
             $columns = $columns.'48px ';
         $html = '<div class="logs-bridge" 
-                      style="top: '.$y.'px; left: '.$x.'px; grid-template-columns: '.$columns.'; '.$extraStyle.'">';
-        $html = $html.'<img src="res/floors/platform-border-end.png" 
-                            style="grid-row: 1/1; grid-column: 1/1;"
-                            alt="logs-bridge-start">';
+                      style="top: '.$y.'px; left: '.$x.'px; grid-template-columns: '.$columns.'; '.$extraStyle.'">
+                    <img src="res/floors/platform-border-end.png" 
+                         style="grid-row: 1/1; grid-column: 1/1;"
+                         alt="logs-bridge-start">';
         for ($i = 2; $i < $size; $i++)
             $html = $html.'<img src="res/floors/platform-border1.png" 
                                 style="grid-row: 1/1; grid-column: '.$i.'/'.$i.';"
